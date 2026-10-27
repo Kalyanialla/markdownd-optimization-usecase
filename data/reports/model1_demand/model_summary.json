@@ -1,0 +1,171 @@
+{
+  "model_name": "demand_forecasting_xgboost",
+  "model_version": "1.0.0",
+  "random_seed": 20241018,
+  "target_column": "target_units_sold",
+  "feature_count": 65,
+  "validation_metrics": {
+    "baseline": {
+      "baseline_mae": 0.7804,
+      "baseline_rmse": 1.1775,
+      "baseline_wape_pct": 100.28,
+      "baseline_sample_size": 22140,
+      "baseline_negative_predictions_clipped": 0
+    },
+    "xgboost": {
+      "xgboost_mae": 0.757,
+      "xgboost_rmse": 1.1135,
+      "xgboost_wape_pct": 97.28,
+      "xgboost_sample_size": 22140,
+      "xgboost_negative_predictions_clipped": 0
+    }
+  },
+  "test_metrics": {
+    "baseline": {
+      "baseline_mae": 0.4553,
+      "baseline_rmse": 0.8422,
+      "baseline_wape_pct": 115.67,
+      "baseline_sample_size": 23660,
+      "baseline_negative_predictions_clipped": 0
+    },
+    "xgboost": {
+      "xgboost_mae": 0.4228,
+      "xgboost_rmse": 0.7702,
+      "xgboost_wape_pct": 107.42,
+      "xgboost_sample_size": 23660,
+      "xgboost_negative_predictions_clipped": 0
+    }
+  },
+  "test_subgroup_performance": {
+    "by_stockout_mask (0=in_stock, 1=stockout)": {
+      "0": {
+        "mae": 0.5098,
+        "rmse": 0.8468,
+        "wape_pct": 107.43,
+        "sample_size": 19232,
+        "negative_predictions_clipped": 0
+      },
+      "1": {
+        "mae": 0.0448,
+        "rmse": 0.2355,
+        "wape_pct": 106.61,
+        "sample_size": 4428,
+        "negative_predictions_clipped": 0
+      }
+    },
+    "by_category": {
+      "Activewear": {
+        "mae": 0.3065,
+        "rmse": 0.5271,
+        "wape_pct": 144.21,
+        "sample_size": 5915,
+        "negative_predictions_clipped": 0
+      },
+      "Dress": {
+        "mae": 0.3631,
+        "rmse": 0.6588,
+        "wape_pct": 112.05,
+        "sample_size": 7280,
+        "negative_predictions_clipped": 0
+      },
+      "Jeans": {
+        "mae": 0.4629,
+        "rmse": 0.6712,
+        "wape_pct": 135.81,
+        "sample_size": 4550,
+        "negative_predictions_clipped": 0
+      },
+      "TShirt": {
+        "mae": 0.5818,
+        "rmse": 1.102,
+        "wape_pct": 83.0,
+        "sample_size": 5915,
+        "negative_predictions_clipped": 0
+      }
+    },
+    "by_store": {
+      "STORE-01": {
+        "mae": 0.486,
+        "rmse": 0.8961,
+        "wape_pct": 100.18,
+        "sample_size": 5005,
+        "negative_predictions_clipped": 0
+      },
+      "STORE-02": {
+        "mae": 0.4996,
+        "rmse": 0.8516,
+        "wape_pct": 102.62,
+        "sample_size": 4550,
+        "negative_predictions_clipped": 0
+      },
+      "STORE-03": {
+        "mae": 0.414,
+        "rmse": 0.759,
+        "wape_pct": 103.49,
+        "sample_size": 4550,
+        "negative_predictions_clipped": 0
+      },
+      "STORE-04": {
+        "mae": 0.384,
+        "rmse": 0.6596,
+        "wape_pct": 121.63,
+        "sample_size": 4095,
+        "negative_predictions_clipped": 0
+      },
+      "STORE-05": {
+        "mae": 0.3373,
+        "rmse": 0.651,
+        "wape_pct": 118.3,
+        "sample_size": 5460,
+        "negative_predictions_clipped": 0
+      }
+    }
+  },
+  "top_10_features": [
+    {
+      "feature": "sales_rolling_mean_14d",
+      "importance": 0.12872889637947083
+    },
+    {
+      "feature": "sales_rolling_mean_7d",
+      "importance": 0.06710733473300934
+    },
+    {
+      "feature": "sales_rolling_mean_28d",
+      "importance": 0.059030964970588684
+    },
+    {
+      "feature": "is_weekend",
+      "importance": 0.04738066717982292
+    },
+    {
+      "feature": "discount_pct",
+      "importance": 0.03736870735883713
+    },
+    {
+      "feature": "opening_stock_units",
+      "importance": 0.033597432076931
+    },
+    {
+      "feature": "price_ratio_to_regular",
+      "importance": 0.03218912333250046
+    },
+    {
+      "feature": "promotion_flag",
+      "importance": 0.031406015157699585
+    },
+    {
+      "feature": "inventory_to_capacity_ratio",
+      "importance": 0.02447322942316532
+    },
+    {
+      "feature": "sales_rolling_std_7d",
+      "importance": 0.023765096440911293
+    }
+  ],
+  "artifacts": {
+    "model_path": "ml\\artifacts\\model1\\xgboost_demand_model.joblib",
+    "encoder_path": "ml\\artifacts\\model1\\categorical_encoder.joblib",
+    "predictions_path": "ml\\artifacts\\model1\\test_predictions_demand.csv"
+  }
+}

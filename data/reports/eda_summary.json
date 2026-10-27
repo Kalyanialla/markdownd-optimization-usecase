@@ -1,0 +1,231 @@
+{
+  "dataset_rows": 149270,
+  "total_revenue_inr": 223842750.0,
+  "total_units_sold": 114668,
+  "total_returns_units": 9666,
+  "gross_margin_pct": 50.76,
+  "avg_discount_pct": 12.96,
+  "stockout_count": 18696,
+  "stockout_rate_pct": 12.52,
+  "latent_demand_units": 157422.0,
+  "unmet_demand_units": 42754.0,
+  "unmet_demand_pct": 27.16,
+  "category_metrics": [
+    {
+      "category": "Activewear",
+      "revenue": 55111775,
+      "units_sold": 29827,
+      "returns_units": 2055,
+      "avg_price": 1873.2026770942998,
+      "avg_discount": 11.83232516167845,
+      "stockouts": 4218,
+      "total_records": 33245,
+      "latent_demand": 40048,
+      "gross_margin_pct": 54.129880592668265,
+      "stockout_rate_pct": 12.687622198826892,
+      "lost_demand_pct": 25.5218737514982
+    },
+    {
+      "category": "Dress",
+      "revenue": 59888697,
+      "units_sold": 22145,
+      "returns_units": 3136,
+      "avg_price": 2929.9004074702884,
+      "avg_discount": 11.227360950764007,
+      "stockouts": 3279,
+      "total_records": 29450,
+      "latent_demand": 30060,
+      "gross_margin_pct": 52.05008885065574,
+      "stockout_rate_pct": 11.134125636672326,
+      "lost_demand_pct": 26.330671989354627
+    },
+    {
+      "category": "Jacket",
+      "revenue": 21069372,
+      "units_sold": 5977,
+      "returns_units": 469,
+      "avg_price": 3915.51796966161,
+      "avg_discount": 23.476541423570595,
+      "stockouts": 3316,
+      "total_records": 17140,
+      "latent_demand": 14519,
+      "gross_margin_pct": 34.77389359303163,
+      "stockout_rate_pct": 19.346557759626602,
+      "lost_demand_pct": 58.833252978855285
+    },
+    {
+      "category": "Jeans",
+      "revenue": 62969219,
+      "units_sold": 29379,
+      "returns_units": 2662,
+      "avg_price": 2299.8969180131658,
+      "avg_discount": 11.80676092160383,
+      "stockouts": 3463,
+      "total_records": 33420,
+      "latent_demand": 36002,
+      "gross_margin_pct": 49.34969734974798,
+      "stockout_rate_pct": 10.362058647516458,
+      "lost_demand_pct": 18.396200211099384
+    },
+    {
+      "category": "TShirt",
+      "revenue": 24803687,
+      "units_sold": 27340,
+      "returns_units": 1344,
+      "avg_price": 914.4210467860613,
+      "avg_discount": 11.492833263917813,
+      "stockouts": 4420,
+      "total_records": 36015,
+      "latent_demand": 36793,
+      "gross_margin_pct": 57.33298440671341,
+      "stockout_rate_pct": 12.2726641677079,
+      "lost_demand_pct": 25.692387138857935
+    }
+  ],
+  "store_metrics": [
+    {
+      "store_id": "STORE-01",
+      "store_name": "Metro Mall Mumbai",
+      "city": "Mumbai",
+      "store_type": "MALL",
+      "revenue": 64589117,
+      "units_sold": 32726,
+      "stockouts": 4384,
+      "total_records": 31565,
+      "latent_demand": 43401,
+      "stockout_rate_pct": 13.88880088705845,
+      "lost_demand_pct": 24.59620746065759
+    },
+    {
+      "store_id": "STORE-02",
+      "store_name": "Central Plaza Delhi",
+      "city": "Delhi",
+      "store_type": "MALL",
+      "revenue": 47621951,
+      "units_sold": 23370,
+      "stockouts": 3558,
+      "total_records": 29160,
+      "latent_demand": 32570,
+      "stockout_rate_pct": 12.201646090534979,
+      "lost_demand_pct": 28.246852932146147
+    },
+    {
+      "store_id": "STORE-03",
+      "store_name": "Garden Street Bengaluru",
+      "city": "Bengaluru",
+      "store_type": "HIGH_STREET",
+      "revenue": 49423736,
+      "units_sold": 25076,
+      "stockouts": 3989,
+      "total_records": 32500,
+      "latent_demand": 33365,
+      "stockout_rate_pct": 12.273846153846153,
+      "lost_demand_pct": 24.84339877116739
+    },
+    {
+      "store_id": "STORE-04",
+      "store_name": "Charminar Outlet Hyderabad",
+      "city": "Hyderabad",
+      "store_type": "OUTLET",
+      "revenue": 32300909,
+      "units_sold": 18661,
+      "stockouts": 4023,
+      "total_records": 26955,
+      "latent_demand": 28491,
+      "stockout_rate_pct": 14.924874791318866,
+      "lost_demand_pct": 34.502123477589414
+    },
+    {
+      "store_id": "STORE-05",
+      "store_name": "Park Avenue Kolkata",
+      "city": "Kolkata",
+      "store_type": "HIGH_STREET",
+      "revenue": 29907037,
+      "units_sold": 14835,
+      "stockouts": 2742,
+      "total_records": 29090,
+      "latent_demand": 19595,
+      "stockout_rate_pct": 9.42591955998625,
+      "lost_demand_pct": 24.291911201837205
+    }
+  ],
+  "discount_band_metrics": [
+    {
+      "discount_band": "0% (Full Price)",
+      "records": 79010,
+      "units_sold": 52742,
+      "revenue": 115835858,
+      "avg_units_per_day": 0.6675357549677257,
+      "stockout_rate": 0.061599797493988105,
+      "stockout_rate_pct": 6.15997974939881
+    },
+    {
+      "discount_band": "0.1-10%",
+      "records": 7690,
+      "units_sold": 7148,
+      "revenue": 17112112,
+      "avg_units_per_day": 0.929518855656697,
+      "stockout_rate": 0.047724317295188556,
+      "stockout_rate_pct": 4.772431729518855
+    },
+    {
+      "discount_band": "10.1-20%",
+      "records": 16770,
+      "units_sold": 14514,
+      "revenue": 23769314,
+      "avg_units_per_day": 0.865474060822898,
+      "stockout_rate": 0.12152653548002386,
+      "stockout_rate_pct": 12.152653548002386
+    },
+    {
+      "discount_band": "20.1-30%",
+      "records": 14667,
+      "units_sold": 9156,
+      "revenue": 17909229,
+      "avg_units_per_day": 0.624258539578646,
+      "stockout_rate": 0.19410922479034567,
+      "stockout_rate_pct": 19.410922479034568
+    },
+    {
+      "discount_band": "30.1-40%",
+      "records": 8443,
+      "units_sold": 7382,
+      "revenue": 12213148,
+      "avg_units_per_day": 0.8743337676181452,
+      "stockout_rate": 0.23984365746772474,
+      "stockout_rate_pct": 23.984365746772475
+    },
+    {
+      "discount_band": "40.1-50%",
+      "records": 22690,
+      "units_sold": 23726,
+      "revenue": 37003089,
+      "avg_units_per_day": 1.0456588805641251,
+      "stockout_rate": 0.2887615689731159,
+      "stockout_rate_pct": 28.87615689731159
+    },
+    {
+      "discount_band": ">50%",
+      "records": 0,
+      "units_sold": 0,
+      "revenue": 0,
+      "avg_units_per_day": NaN,
+      "stockout_rate": NaN,
+      "stockout_rate_pct": NaN
+    }
+  ],
+  "promotional_impact": {
+    "non_promo_avg_daily_units": 0.746,
+    "promo_avg_daily_units": 0.846,
+    "non_promo_in_stock_avg_units": 0.825,
+    "promo_in_stock_avg_units": 1.054,
+    "raw_promotional_lift_pct": 13.43
+  },
+  "descriptive_correlations_with_units_sold": {
+    "discount_pct": 0.077,
+    "selling_price": -0.105,
+    "competitor_price": 0.168,
+    "temperature_forecast": -0.056,
+    "rainfall_forecast": -0.044
+  }
+}

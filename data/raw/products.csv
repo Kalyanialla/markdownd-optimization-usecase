@@ -1,0 +1,201 @@
+sku_id,product_name,style_id,category,subcategory,brand,size,color,season_id,launch_date,season_end_date,unit_cost,regular_price,minimum_price,maximum_discount_pct,product_status
+SKU-0001,Aurelia V-Neck T-Shirt - Beige (XS),STY-001,TShirt,V-Neck,Aurelia,XS,Beige,SS24,2024-01-01,2024-06-30,417,1099,468,60,DISCONTINUED
+SKU-0002,Aurelia V-Neck T-Shirt - Beige (S),STY-001,TShirt,V-Neck,Aurelia,S,Beige,SS24,2024-01-01,2024-06-30,417,1099,468,60,DISCONTINUED
+SKU-0003,Aurelia V-Neck T-Shirt - Beige (M),STY-001,TShirt,V-Neck,Aurelia,M,Beige,SS24,2024-01-01,2024-06-30,417,1099,468,60,DISCONTINUED
+SKU-0004,Aurelia V-Neck T-Shirt - Beige (L),STY-001,TShirt,V-Neck,Aurelia,L,Beige,SS24,2024-01-01,2024-06-30,417,1099,468,60,DISCONTINUED
+SKU-0005,Aurelia V-Neck T-Shirt - Beige (XL),STY-001,TShirt,V-Neck,Aurelia,XL,Beige,SS24,2024-01-01,2024-06-30,417,1099,468,60,DISCONTINUED
+SKU-0006,NorthWeave Crew Neck T-Shirt - Olive (XS),STY-002,TShirt,Crew Neck,NorthWeave,XS,Olive,SS24,2024-01-15,2024-06-30,370,999,415,60,DISCONTINUED
+SKU-0007,NorthWeave Crew Neck T-Shirt - Olive (S),STY-002,TShirt,Crew Neck,NorthWeave,S,Olive,SS24,2024-01-15,2024-06-30,370,999,415,60,DISCONTINUED
+SKU-0008,NorthWeave Crew Neck T-Shirt - Olive (M),STY-002,TShirt,Crew Neck,NorthWeave,M,Olive,SS24,2024-01-15,2024-06-30,370,999,415,60,DISCONTINUED
+SKU-0009,NorthWeave Crew Neck T-Shirt - Olive (L),STY-002,TShirt,Crew Neck,NorthWeave,L,Olive,SS24,2024-01-15,2024-06-30,370,999,415,60,DISCONTINUED
+SKU-0010,NorthWeave Crew Neck T-Shirt - Olive (XL),STY-002,TShirt,Crew Neck,NorthWeave,XL,Olive,SS24,2024-01-15,2024-06-30,370,999,415,60,DISCONTINUED
+SKU-0011,Indigo Row Crew Neck T-Shirt - Indigo (XS),STY-003,TShirt,Crew Neck,Indigo Row,XS,Indigo,SS24,2024-01-15,2024-06-30,335,899,376,60,DISCONTINUED
+SKU-0012,Indigo Row Crew Neck T-Shirt - Indigo (S),STY-003,TShirt,Crew Neck,Indigo Row,S,Indigo,SS24,2024-01-15,2024-06-30,335,899,376,60,DISCONTINUED
+SKU-0013,Indigo Row Crew Neck T-Shirt - Indigo (M),STY-003,TShirt,Crew Neck,Indigo Row,M,Indigo,SS24,2024-01-15,2024-06-30,335,899,376,60,DISCONTINUED
+SKU-0014,Indigo Row Crew Neck T-Shirt - Indigo (L),STY-003,TShirt,Crew Neck,Indigo Row,L,Indigo,SS24,2024-01-15,2024-06-30,335,899,376,60,DISCONTINUED
+SKU-0015,Indigo Row Crew Neck T-Shirt - Indigo (XL),STY-003,TShirt,Crew Neck,Indigo Row,XL,Indigo,SS24,2024-01-15,2024-06-30,335,899,376,60,DISCONTINUED
+SKU-0016,NorthWeave V-Neck T-Shirt - Charcoal (XS),STY-004,TShirt,V-Neck,NorthWeave,XS,Charcoal,SS24,2024-01-01,2024-06-30,432,1199,484,60,DISCONTINUED
+SKU-0017,NorthWeave V-Neck T-Shirt - Charcoal (S),STY-004,TShirt,V-Neck,NorthWeave,S,Charcoal,SS24,2024-01-01,2024-06-30,432,1199,484,60,DISCONTINUED
+SKU-0018,NorthWeave V-Neck T-Shirt - Charcoal (M),STY-004,TShirt,V-Neck,NorthWeave,M,Charcoal,SS24,2024-01-01,2024-06-30,432,1199,484,60,DISCONTINUED
+SKU-0019,NorthWeave V-Neck T-Shirt - Charcoal (L),STY-004,TShirt,V-Neck,NorthWeave,L,Charcoal,SS24,2024-01-01,2024-06-30,432,1199,484,60,DISCONTINUED
+SKU-0020,NorthWeave V-Neck T-Shirt - Charcoal (XL),STY-004,TShirt,V-Neck,NorthWeave,XL,Charcoal,SS24,2024-01-01,2024-06-30,432,1199,484,60,DISCONTINUED
+SKU-0021,Indigo Row Maxi Dress - Rose (XS),STY-005,Dress,Maxi,Indigo Row,XS,Rose,SS24,2024-01-01,2024-06-30,1303,2999,1434,60,DISCONTINUED
+SKU-0022,Indigo Row Maxi Dress - Rose (S),STY-005,Dress,Maxi,Indigo Row,S,Rose,SS24,2024-01-01,2024-06-30,1303,2999,1434,60,DISCONTINUED
+SKU-0023,Indigo Row Maxi Dress - Rose (M),STY-005,Dress,Maxi,Indigo Row,M,Rose,SS24,2024-01-01,2024-06-30,1303,2999,1434,60,DISCONTINUED
+SKU-0024,Indigo Row Maxi Dress - Rose (L),STY-005,Dress,Maxi,Indigo Row,L,Rose,SS24,2024-01-01,2024-06-30,1303,2999,1434,60,DISCONTINUED
+SKU-0025,Indigo Row Maxi Dress - Rose (XL),STY-005,Dress,Maxi,Indigo Row,XL,Rose,SS24,2024-01-01,2024-06-30,1303,2999,1434,60,DISCONTINUED
+SKU-0026,StrideCo Midi Dress - Navy (XS),STY-006,Dress,Midi,StrideCo,XS,Navy,SS24,2024-01-01,2024-06-30,1301,3799,1520,60,DISCONTINUED
+SKU-0027,StrideCo Midi Dress - Navy (S),STY-006,Dress,Midi,StrideCo,S,Navy,SS24,2024-01-01,2024-06-30,1301,3799,1520,60,DISCONTINUED
+SKU-0028,StrideCo Midi Dress - Navy (M),STY-006,Dress,Midi,StrideCo,M,Navy,SS24,2024-01-01,2024-06-30,1301,3799,1520,60,DISCONTINUED
+SKU-0029,StrideCo Midi Dress - Navy (L),STY-006,Dress,Midi,StrideCo,L,Navy,SS24,2024-01-01,2024-06-30,1301,3799,1520,60,DISCONTINUED
+SKU-0030,StrideCo Midi Dress - Navy (XL),STY-006,Dress,Midi,StrideCo,XL,Navy,SS24,2024-01-01,2024-06-30,1301,3799,1520,60,DISCONTINUED
+SKU-0031,Aurelia Wrap Dress - White (XS),STY-007,Dress,Wrap,Aurelia,XS,White,SS24,2024-01-15,2024-06-30,1383,3799,1522,60,DISCONTINUED
+SKU-0032,Aurelia Wrap Dress - White (S),STY-007,Dress,Wrap,Aurelia,S,White,SS24,2024-01-15,2024-06-30,1383,3799,1522,60,DISCONTINUED
+SKU-0033,Aurelia Wrap Dress - White (M),STY-007,Dress,Wrap,Aurelia,M,White,SS24,2024-01-15,2024-06-30,1383,3799,1522,60,DISCONTINUED
+SKU-0034,Aurelia Wrap Dress - White (L),STY-007,Dress,Wrap,Aurelia,L,White,SS24,2024-01-15,2024-06-30,1383,3799,1522,60,DISCONTINUED
+SKU-0035,Aurelia Wrap Dress - White (XL),STY-007,Dress,Wrap,Aurelia,XL,White,SS24,2024-01-15,2024-06-30,1383,3799,1522,60,DISCONTINUED
+SKU-0036,UrbanLoom A-Line Dress - Black (XS),STY-008,Dress,A-Line,UrbanLoom,XS,Black,SS24,2024-01-01,2024-06-30,1469,3799,1616,60,DISCONTINUED
+SKU-0037,UrbanLoom A-Line Dress - Black (S),STY-008,Dress,A-Line,UrbanLoom,S,Black,SS24,2024-01-01,2024-06-30,1469,3799,1616,60,DISCONTINUED
+SKU-0038,UrbanLoom A-Line Dress - Black (M),STY-008,Dress,A-Line,UrbanLoom,M,Black,SS24,2024-01-01,2024-06-30,1469,3799,1616,60,DISCONTINUED
+SKU-0039,UrbanLoom A-Line Dress - Black (L),STY-008,Dress,A-Line,UrbanLoom,L,Black,SS24,2024-01-01,2024-06-30,1469,3799,1616,60,DISCONTINUED
+SKU-0040,UrbanLoom A-Line Dress - Black (XL),STY-008,Dress,A-Line,UrbanLoom,XL,Black,SS24,2024-01-01,2024-06-30,1469,3799,1616,60,DISCONTINUED
+SKU-0041,StrideCo Hoodie Activewear - Rose (XS),STY-009,Activewear,Hoodie,StrideCo,XS,Rose,SS24,2024-01-15,2024-06-30,641,1799,900,50,DISCONTINUED
+SKU-0042,StrideCo Hoodie Activewear - Rose (S),STY-009,Activewear,Hoodie,StrideCo,S,Rose,SS24,2024-01-15,2024-06-30,641,1799,900,50,DISCONTINUED
+SKU-0043,StrideCo Hoodie Activewear - Rose (M),STY-009,Activewear,Hoodie,StrideCo,M,Rose,SS24,2024-01-15,2024-06-30,641,1799,900,50,DISCONTINUED
+SKU-0044,StrideCo Hoodie Activewear - Rose (L),STY-009,Activewear,Hoodie,StrideCo,L,Rose,SS24,2024-01-15,2024-06-30,641,1799,900,50,DISCONTINUED
+SKU-0045,StrideCo Hoodie Activewear - Rose (XL),STY-009,Activewear,Hoodie,StrideCo,XL,Rose,SS24,2024-01-15,2024-06-30,641,1799,900,50,DISCONTINUED
+SKU-0046,UrbanLoom Sports Tee Activewear - Beige (XS),STY-010,Activewear,Sports Tee,UrbanLoom,XS,Beige,SS24,2024-01-01,2024-06-30,1032,2399,1200,50,DISCONTINUED
+SKU-0047,UrbanLoom Sports Tee Activewear - Beige (S),STY-010,Activewear,Sports Tee,UrbanLoom,S,Beige,SS24,2024-01-01,2024-06-30,1032,2399,1200,50,DISCONTINUED
+SKU-0048,UrbanLoom Sports Tee Activewear - Beige (M),STY-010,Activewear,Sports Tee,UrbanLoom,M,Beige,SS24,2024-01-01,2024-06-30,1032,2399,1200,50,DISCONTINUED
+SKU-0049,UrbanLoom Sports Tee Activewear - Beige (L),STY-010,Activewear,Sports Tee,UrbanLoom,L,Beige,SS24,2024-01-01,2024-06-30,1032,2399,1200,50,DISCONTINUED
+SKU-0050,UrbanLoom Sports Tee Activewear - Beige (XL),STY-010,Activewear,Sports Tee,UrbanLoom,XL,Beige,SS24,2024-01-01,2024-06-30,1032,2399,1200,50,DISCONTINUED
+SKU-0051,Aurelia Hoodie Activewear - Mustard (XS),STY-011,Activewear,Hoodie,Aurelia,XS,Mustard,SS24,2024-01-01,2024-06-30,903,2399,1200,50,DISCONTINUED
+SKU-0052,Aurelia Hoodie Activewear - Mustard (S),STY-011,Activewear,Hoodie,Aurelia,S,Mustard,SS24,2024-01-01,2024-06-30,903,2399,1200,50,DISCONTINUED
+SKU-0053,Aurelia Hoodie Activewear - Mustard (M),STY-011,Activewear,Hoodie,Aurelia,M,Mustard,SS24,2024-01-01,2024-06-30,903,2399,1200,50,DISCONTINUED
+SKU-0054,Aurelia Hoodie Activewear - Mustard (L),STY-011,Activewear,Hoodie,Aurelia,L,Mustard,SS24,2024-01-01,2024-06-30,903,2399,1200,50,DISCONTINUED
+SKU-0055,Aurelia Hoodie Activewear - Mustard (XL),STY-011,Activewear,Hoodie,Aurelia,XL,Mustard,SS24,2024-01-01,2024-06-30,903,2399,1200,50,DISCONTINUED
+SKU-0056,NorthWeave Skinny Fit Jeans - Navy (28),STY-012,Jeans,Skinny Fit,NorthWeave,28,Navy,SS24,2024-01-29,2024-06-30,1008,2199,1129,50,DISCONTINUED
+SKU-0057,NorthWeave Skinny Fit Jeans - Navy (30),STY-012,Jeans,Skinny Fit,NorthWeave,30,Navy,SS24,2024-01-29,2024-06-30,1008,2199,1129,50,DISCONTINUED
+SKU-0058,NorthWeave Skinny Fit Jeans - Navy (32),STY-012,Jeans,Skinny Fit,NorthWeave,32,Navy,SS24,2024-01-29,2024-06-30,1008,2199,1129,50,DISCONTINUED
+SKU-0059,NorthWeave Skinny Fit Jeans - Navy (34),STY-012,Jeans,Skinny Fit,NorthWeave,34,Navy,SS24,2024-01-29,2024-06-30,1008,2199,1129,50,DISCONTINUED
+SKU-0060,NorthWeave Skinny Fit Jeans - Navy (36),STY-012,Jeans,Skinny Fit,NorthWeave,36,Navy,SS24,2024-01-29,2024-06-30,1008,2199,1129,50,DISCONTINUED
+SKU-0061,NorthWeave Straight Fit Jeans - Navy (28),STY-013,Jeans,Straight Fit,NorthWeave,28,Navy,SS24,2024-01-01,2024-06-30,1109,2499,1250,50,DISCONTINUED
+SKU-0062,NorthWeave Straight Fit Jeans - Navy (30),STY-013,Jeans,Straight Fit,NorthWeave,30,Navy,SS24,2024-01-01,2024-06-30,1109,2499,1250,50,DISCONTINUED
+SKU-0063,NorthWeave Straight Fit Jeans - Navy (32),STY-013,Jeans,Straight Fit,NorthWeave,32,Navy,SS24,2024-01-01,2024-06-30,1109,2499,1250,50,DISCONTINUED
+SKU-0064,NorthWeave Straight Fit Jeans - Navy (34),STY-013,Jeans,Straight Fit,NorthWeave,34,Navy,SS24,2024-01-01,2024-06-30,1109,2499,1250,50,DISCONTINUED
+SKU-0065,NorthWeave Straight Fit Jeans - Navy (36),STY-013,Jeans,Straight Fit,NorthWeave,36,Navy,SS24,2024-01-01,2024-06-30,1109,2499,1250,50,DISCONTINUED
+SKU-0066,Indigo Row Straight Fit Jeans - Mustard (28),STY-014,Jeans,Straight Fit,Indigo Row,28,Mustard,SS24,2024-01-01,2024-06-30,818,2099,1050,50,DISCONTINUED
+SKU-0067,Indigo Row Straight Fit Jeans - Mustard (30),STY-014,Jeans,Straight Fit,Indigo Row,30,Mustard,SS24,2024-01-01,2024-06-30,818,2099,1050,50,DISCONTINUED
+SKU-0068,Indigo Row Straight Fit Jeans - Mustard (32),STY-014,Jeans,Straight Fit,Indigo Row,32,Mustard,SS24,2024-01-01,2024-06-30,818,2099,1050,50,DISCONTINUED
+SKU-0069,Indigo Row Straight Fit Jeans - Mustard (34),STY-014,Jeans,Straight Fit,Indigo Row,34,Mustard,SS24,2024-01-01,2024-06-30,818,2099,1050,50,DISCONTINUED
+SKU-0070,Indigo Row Straight Fit Jeans - Mustard (36),STY-014,Jeans,Straight Fit,Indigo Row,36,Mustard,SS24,2024-01-01,2024-06-30,818,2099,1050,50,DISCONTINUED
+SKU-0071,Indigo Row Bomber Jacket - Rose (XS),STY-015,Jacket,Bomber,Indigo Row,XS,Rose,FW24,2024-07-01,2024-12-31,2427,4899,3430,30,DISCONTINUED
+SKU-0072,Indigo Row Bomber Jacket - Rose (S),STY-015,Jacket,Bomber,Indigo Row,S,Rose,FW24,2024-07-01,2024-12-31,2427,4899,3430,30,DISCONTINUED
+SKU-0073,Indigo Row Bomber Jacket - Rose (M),STY-015,Jacket,Bomber,Indigo Row,M,Rose,FW24,2024-07-01,2024-12-31,2427,4899,3430,30,DISCONTINUED
+SKU-0074,Indigo Row Bomber Jacket - Rose (L),STY-015,Jacket,Bomber,Indigo Row,L,Rose,FW24,2024-07-01,2024-12-31,2427,4899,3430,30,DISCONTINUED
+SKU-0075,Indigo Row Bomber Jacket - Rose (XL),STY-015,Jacket,Bomber,Indigo Row,XL,Rose,FW24,2024-07-01,2024-12-31,2427,4899,3430,30,DISCONTINUED
+SKU-0076,Aurelia Windcheater Jacket - Grey (XS),STY-016,Jacket,Windcheater,Aurelia,XS,Grey,FW24,2024-07-01,2024-12-31,2708,6099,3115,50,DISCONTINUED
+SKU-0077,Aurelia Windcheater Jacket - Grey (S),STY-016,Jacket,Windcheater,Aurelia,S,Grey,FW24,2024-07-01,2024-12-31,2708,6099,3115,50,DISCONTINUED
+SKU-0078,Aurelia Windcheater Jacket - Grey (M),STY-016,Jacket,Windcheater,Aurelia,M,Grey,FW24,2024-07-01,2024-12-31,2708,6099,3115,50,DISCONTINUED
+SKU-0079,Aurelia Windcheater Jacket - Grey (L),STY-016,Jacket,Windcheater,Aurelia,L,Grey,FW24,2024-07-01,2024-12-31,2708,6099,3115,50,DISCONTINUED
+SKU-0080,Aurelia Windcheater Jacket - Grey (XL),STY-016,Jacket,Windcheater,Aurelia,XL,Grey,FW24,2024-07-01,2024-12-31,2708,6099,3115,50,DISCONTINUED
+SKU-0081,Indigo Row Bomber Jacket - Charcoal (XS),STY-017,Jacket,Bomber,Indigo Row,XS,Charcoal,FW24,2024-07-29,2024-12-31,2497,5699,2872,50,DISCONTINUED
+SKU-0082,Indigo Row Bomber Jacket - Charcoal (S),STY-017,Jacket,Bomber,Indigo Row,S,Charcoal,FW24,2024-07-29,2024-12-31,2497,5699,2872,50,DISCONTINUED
+SKU-0083,Indigo Row Bomber Jacket - Charcoal (M),STY-017,Jacket,Bomber,Indigo Row,M,Charcoal,FW24,2024-07-29,2024-12-31,2497,5699,2872,50,DISCONTINUED
+SKU-0084,Indigo Row Bomber Jacket - Charcoal (L),STY-017,Jacket,Bomber,Indigo Row,L,Charcoal,FW24,2024-07-29,2024-12-31,2497,5699,2872,50,DISCONTINUED
+SKU-0085,Indigo Row Bomber Jacket - Charcoal (XL),STY-017,Jacket,Bomber,Indigo Row,XL,Charcoal,FW24,2024-07-29,2024-12-31,2497,5699,2872,50,DISCONTINUED
+SKU-0086,StrideCo Puffer Jacket - Rose (XS),STY-018,Jacket,Puffer,StrideCo,XS,Rose,FW24,2024-07-01,2024-12-31,1699,3899,1954,50,DISCONTINUED
+SKU-0087,StrideCo Puffer Jacket - Rose (S),STY-018,Jacket,Puffer,StrideCo,S,Rose,FW24,2024-07-01,2024-12-31,1699,3899,1954,50,DISCONTINUED
+SKU-0088,StrideCo Puffer Jacket - Rose (M),STY-018,Jacket,Puffer,StrideCo,M,Rose,FW24,2024-07-01,2024-12-31,1699,3899,1954,50,DISCONTINUED
+SKU-0089,StrideCo Puffer Jacket - Rose (L),STY-018,Jacket,Puffer,StrideCo,L,Rose,FW24,2024-07-01,2024-12-31,1699,3899,1954,50,DISCONTINUED
+SKU-0090,StrideCo Puffer Jacket - Rose (XL),STY-018,Jacket,Puffer,StrideCo,XL,Rose,FW24,2024-07-01,2024-12-31,1699,3899,1954,50,DISCONTINUED
+SKU-0091,Indigo Row Puffer Jacket - Olive (XS),STY-019,Jacket,Puffer,Indigo Row,XS,Olive,FW24,2024-07-29,2024-12-31,2277,5299,2650,50,DISCONTINUED
+SKU-0092,Indigo Row Puffer Jacket - Olive (S),STY-019,Jacket,Puffer,Indigo Row,S,Olive,FW24,2024-07-29,2024-12-31,2277,5299,2650,50,DISCONTINUED
+SKU-0093,Indigo Row Puffer Jacket - Olive (M),STY-019,Jacket,Puffer,Indigo Row,M,Olive,FW24,2024-07-29,2024-12-31,2277,5299,2650,50,DISCONTINUED
+SKU-0094,Indigo Row Puffer Jacket - Olive (L),STY-019,Jacket,Puffer,Indigo Row,L,Olive,FW24,2024-07-29,2024-12-31,2277,5299,2650,50,DISCONTINUED
+SKU-0095,Indigo Row Puffer Jacket - Olive (XL),STY-019,Jacket,Puffer,Indigo Row,XL,Olive,FW24,2024-07-29,2024-12-31,2277,5299,2650,50,DISCONTINUED
+SKU-0096,Aurelia Slim Fit Jeans - Rose (28),STY-020,Jeans,Slim Fit,Aurelia,28,Rose,FW24,2024-07-01,2024-12-31,1017,2299,1150,50,DISCONTINUED
+SKU-0097,Aurelia Slim Fit Jeans - Rose (30),STY-020,Jeans,Slim Fit,Aurelia,30,Rose,FW24,2024-07-01,2024-12-31,1017,2299,1150,50,DISCONTINUED
+SKU-0098,Aurelia Slim Fit Jeans - Rose (32),STY-020,Jeans,Slim Fit,Aurelia,32,Rose,FW24,2024-07-01,2024-12-31,1017,2299,1150,50,DISCONTINUED
+SKU-0099,Aurelia Slim Fit Jeans - Rose (34),STY-020,Jeans,Slim Fit,Aurelia,34,Rose,FW24,2024-07-01,2024-12-31,1017,2299,1150,50,DISCONTINUED
+SKU-0100,Aurelia Slim Fit Jeans - Rose (36),STY-020,Jeans,Slim Fit,Aurelia,36,Rose,FW24,2024-07-01,2024-12-31,1017,2299,1150,50,DISCONTINUED
+SKU-0101,Aurelia Relaxed Fit Jeans - Indigo (28),STY-021,Jeans,Relaxed Fit,Aurelia,28,Indigo,FW24,2024-07-01,2024-12-31,1058,2499,1250,50,DISCONTINUED
+SKU-0102,Aurelia Relaxed Fit Jeans - Indigo (30),STY-021,Jeans,Relaxed Fit,Aurelia,30,Indigo,FW24,2024-07-01,2024-12-31,1058,2499,1250,50,DISCONTINUED
+SKU-0103,Aurelia Relaxed Fit Jeans - Indigo (32),STY-021,Jeans,Relaxed Fit,Aurelia,32,Indigo,FW24,2024-07-01,2024-12-31,1058,2499,1250,50,DISCONTINUED
+SKU-0104,Aurelia Relaxed Fit Jeans - Indigo (34),STY-021,Jeans,Relaxed Fit,Aurelia,34,Indigo,FW24,2024-07-01,2024-12-31,1058,2499,1250,50,DISCONTINUED
+SKU-0105,Aurelia Relaxed Fit Jeans - Indigo (36),STY-021,Jeans,Relaxed Fit,Aurelia,36,Indigo,FW24,2024-07-01,2024-12-31,1058,2499,1250,50,DISCONTINUED
+SKU-0106,StrideCo Slim Fit Jeans - Rose (28),STY-022,Jeans,Slim Fit,StrideCo,28,Rose,FW24,2024-07-01,2024-12-31,1495,3199,1675,50,DISCONTINUED
+SKU-0107,StrideCo Slim Fit Jeans - Rose (30),STY-022,Jeans,Slim Fit,StrideCo,30,Rose,FW24,2024-07-01,2024-12-31,1495,3199,1675,50,DISCONTINUED
+SKU-0108,StrideCo Slim Fit Jeans - Rose (32),STY-022,Jeans,Slim Fit,StrideCo,32,Rose,FW24,2024-07-01,2024-12-31,1495,3199,1675,50,DISCONTINUED
+SKU-0109,StrideCo Slim Fit Jeans - Rose (34),STY-022,Jeans,Slim Fit,StrideCo,34,Rose,FW24,2024-07-01,2024-12-31,1495,3199,1675,50,DISCONTINUED
+SKU-0110,StrideCo Slim Fit Jeans - Rose (36),STY-022,Jeans,Slim Fit,StrideCo,36,Rose,FW24,2024-07-01,2024-12-31,1495,3199,1675,50,DISCONTINUED
+SKU-0111,Aurelia Hoodie Activewear - Forest Green (XS),STY-023,Activewear,Hoodie,Aurelia,XS,Forest Green,FW24,2024-07-15,2024-12-31,988,2199,1107,50,DISCONTINUED
+SKU-0112,Aurelia Hoodie Activewear - Forest Green (S),STY-023,Activewear,Hoodie,Aurelia,S,Forest Green,FW24,2024-07-15,2024-12-31,988,2199,1107,50,DISCONTINUED
+SKU-0113,Aurelia Hoodie Activewear - Forest Green (M),STY-023,Activewear,Hoodie,Aurelia,M,Forest Green,FW24,2024-07-15,2024-12-31,988,2199,1107,50,DISCONTINUED
+SKU-0114,Aurelia Hoodie Activewear - Forest Green (L),STY-023,Activewear,Hoodie,Aurelia,L,Forest Green,FW24,2024-07-15,2024-12-31,988,2199,1107,50,DISCONTINUED
+SKU-0115,Aurelia Hoodie Activewear - Forest Green (XL),STY-023,Activewear,Hoodie,Aurelia,XL,Forest Green,FW24,2024-07-15,2024-12-31,988,2199,1107,50,DISCONTINUED
+SKU-0116,UrbanLoom Hoodie Activewear - White (XS),STY-024,Activewear,Hoodie,UrbanLoom,XS,White,FW24,2024-07-15,2024-12-31,983,2499,1250,50,DISCONTINUED
+SKU-0117,UrbanLoom Hoodie Activewear - White (S),STY-024,Activewear,Hoodie,UrbanLoom,S,White,FW24,2024-07-15,2024-12-31,983,2499,1250,50,DISCONTINUED
+SKU-0118,UrbanLoom Hoodie Activewear - White (M),STY-024,Activewear,Hoodie,UrbanLoom,M,White,FW24,2024-07-15,2024-12-31,983,2499,1250,50,DISCONTINUED
+SKU-0119,UrbanLoom Hoodie Activewear - White (L),STY-024,Activewear,Hoodie,UrbanLoom,L,White,FW24,2024-07-15,2024-12-31,983,2499,1250,50,DISCONTINUED
+SKU-0120,UrbanLoom Hoodie Activewear - White (XL),STY-024,Activewear,Hoodie,UrbanLoom,XL,White,FW24,2024-07-15,2024-12-31,983,2499,1250,50,DISCONTINUED
+SKU-0121,StrideCo Sports Tee Activewear - Black (XS),STY-025,Activewear,Sports Tee,StrideCo,XS,Black,FW24,2024-07-29,2024-12-31,907,2099,1050,50,DISCONTINUED
+SKU-0122,StrideCo Sports Tee Activewear - Black (S),STY-025,Activewear,Sports Tee,StrideCo,S,Black,FW24,2024-07-29,2024-12-31,907,2099,1050,50,DISCONTINUED
+SKU-0123,StrideCo Sports Tee Activewear - Black (M),STY-025,Activewear,Sports Tee,StrideCo,M,Black,FW24,2024-07-29,2024-12-31,907,2099,1050,50,DISCONTINUED
+SKU-0124,StrideCo Sports Tee Activewear - Black (L),STY-025,Activewear,Sports Tee,StrideCo,L,Black,FW24,2024-07-29,2024-12-31,907,2099,1050,50,DISCONTINUED
+SKU-0125,StrideCo Sports Tee Activewear - Black (XL),STY-025,Activewear,Sports Tee,StrideCo,XL,Black,FW24,2024-07-29,2024-12-31,907,2099,1050,50,DISCONTINUED
+SKU-0126,StrideCo Polo T-Shirt - Forest Green (XS),STY-026,TShirt,Polo,StrideCo,XS,Forest Green,FW24,2024-07-01,2024-12-31,392,999,440,60,DISCONTINUED
+SKU-0127,StrideCo Polo T-Shirt - Forest Green (S),STY-026,TShirt,Polo,StrideCo,S,Forest Green,FW24,2024-07-01,2024-12-31,392,999,440,60,DISCONTINUED
+SKU-0128,StrideCo Polo T-Shirt - Forest Green (M),STY-026,TShirt,Polo,StrideCo,M,Forest Green,FW24,2024-07-01,2024-12-31,392,999,440,60,DISCONTINUED
+SKU-0129,StrideCo Polo T-Shirt - Forest Green (L),STY-026,TShirt,Polo,StrideCo,L,Forest Green,FW24,2024-07-01,2024-12-31,392,999,440,60,DISCONTINUED
+SKU-0130,StrideCo Polo T-Shirt - Forest Green (XL),STY-026,TShirt,Polo,StrideCo,XL,Forest Green,FW24,2024-07-01,2024-12-31,392,999,440,60,DISCONTINUED
+SKU-0131,NorthWeave V-Neck T-Shirt - Rose (XS),STY-027,TShirt,V-Neck,NorthWeave,XS,Rose,FW24,2024-07-01,2024-12-31,346,899,388,60,DISCONTINUED
+SKU-0132,NorthWeave V-Neck T-Shirt - Rose (S),STY-027,TShirt,V-Neck,NorthWeave,S,Rose,FW24,2024-07-01,2024-12-31,346,899,388,60,DISCONTINUED
+SKU-0133,NorthWeave V-Neck T-Shirt - Rose (M),STY-027,TShirt,V-Neck,NorthWeave,M,Rose,FW24,2024-07-01,2024-12-31,346,899,388,60,DISCONTINUED
+SKU-0134,NorthWeave V-Neck T-Shirt - Rose (L),STY-027,TShirt,V-Neck,NorthWeave,L,Rose,FW24,2024-07-01,2024-12-31,346,899,388,60,DISCONTINUED
+SKU-0135,NorthWeave V-Neck T-Shirt - Rose (XL),STY-027,TShirt,V-Neck,NorthWeave,XL,Rose,FW24,2024-07-01,2024-12-31,346,899,388,60,DISCONTINUED
+SKU-0136,UrbanLoom Polo T-Shirt - Mustard (XS),STY-028,TShirt,Polo,UrbanLoom,XS,Mustard,FW24,2024-07-01,2024-12-31,342,899,384,60,DISCONTINUED
+SKU-0137,UrbanLoom Polo T-Shirt - Mustard (S),STY-028,TShirt,Polo,UrbanLoom,S,Mustard,FW24,2024-07-01,2024-12-31,342,899,384,60,DISCONTINUED
+SKU-0138,UrbanLoom Polo T-Shirt - Mustard (M),STY-028,TShirt,Polo,UrbanLoom,M,Mustard,FW24,2024-07-01,2024-12-31,342,899,384,60,DISCONTINUED
+SKU-0139,UrbanLoom Polo T-Shirt - Mustard (L),STY-028,TShirt,Polo,UrbanLoom,L,Mustard,FW24,2024-07-01,2024-12-31,342,899,384,60,DISCONTINUED
+SKU-0140,UrbanLoom Polo T-Shirt - Mustard (XL),STY-028,TShirt,Polo,UrbanLoom,XL,Mustard,FW24,2024-07-01,2024-12-31,342,899,384,60,DISCONTINUED
+SKU-0141,Indigo Row V-Neck T-Shirt - Grey (XS),STY-029,TShirt,V-Neck,Indigo Row,XS,Grey,SS25,2025-01-01,2025-06-30,310,799,348,60,ACTIVE
+SKU-0142,Indigo Row V-Neck T-Shirt - Grey (S),STY-029,TShirt,V-Neck,Indigo Row,S,Grey,SS25,2025-01-01,2025-06-30,310,799,348,60,ACTIVE
+SKU-0143,Indigo Row V-Neck T-Shirt - Grey (M),STY-029,TShirt,V-Neck,Indigo Row,M,Grey,SS25,2025-01-01,2025-06-30,310,799,348,60,ACTIVE
+SKU-0144,Indigo Row V-Neck T-Shirt - Grey (L),STY-029,TShirt,V-Neck,Indigo Row,L,Grey,SS25,2025-01-01,2025-06-30,310,799,348,60,ACTIVE
+SKU-0145,Indigo Row V-Neck T-Shirt - Grey (XL),STY-029,TShirt,V-Neck,Indigo Row,XL,Grey,SS25,2025-01-01,2025-06-30,310,799,348,60,ACTIVE
+SKU-0146,StrideCo Polo T-Shirt - Forest Green (XS),STY-030,TShirt,Polo,StrideCo,XS,Forest Green,SS25,2025-01-29,2025-06-30,573,1399,642,60,ACTIVE
+SKU-0147,StrideCo Polo T-Shirt - Forest Green (S),STY-030,TShirt,Polo,StrideCo,S,Forest Green,SS25,2025-01-29,2025-06-30,573,1399,642,60,ACTIVE
+SKU-0148,StrideCo Polo T-Shirt - Forest Green (M),STY-030,TShirt,Polo,StrideCo,M,Forest Green,SS25,2025-01-29,2025-06-30,573,1399,642,60,ACTIVE
+SKU-0149,StrideCo Polo T-Shirt - Forest Green (L),STY-030,TShirt,Polo,StrideCo,L,Forest Green,SS25,2025-01-29,2025-06-30,573,1399,642,60,ACTIVE
+SKU-0150,StrideCo Polo T-Shirt - Forest Green (XL),STY-030,TShirt,Polo,StrideCo,XL,Forest Green,SS25,2025-01-29,2025-06-30,573,1399,642,60,ACTIVE
+SKU-0151,StrideCo Graphic Tee T-Shirt - Mustard (XS),STY-031,TShirt,Graphic Tee,StrideCo,XS,Mustard,SS25,2025-01-01,2025-06-30,408,1099,457,60,ACTIVE
+SKU-0152,StrideCo Graphic Tee T-Shirt - Mustard (S),STY-031,TShirt,Graphic Tee,StrideCo,S,Mustard,SS25,2025-01-01,2025-06-30,408,1099,457,60,ACTIVE
+SKU-0153,StrideCo Graphic Tee T-Shirt - Mustard (M),STY-031,TShirt,Graphic Tee,StrideCo,M,Mustard,SS25,2025-01-01,2025-06-30,408,1099,457,60,ACTIVE
+SKU-0154,StrideCo Graphic Tee T-Shirt - Mustard (L),STY-031,TShirt,Graphic Tee,StrideCo,L,Mustard,SS25,2025-01-01,2025-06-30,408,1099,457,60,ACTIVE
+SKU-0155,StrideCo Graphic Tee T-Shirt - Mustard (XL),STY-031,TShirt,Graphic Tee,StrideCo,XL,Mustard,SS25,2025-01-01,2025-06-30,408,1099,457,60,ACTIVE
+SKU-0156,StrideCo Midi Dress - Maroon (XS),STY-032,Dress,Midi,StrideCo,XS,Maroon,SS25,2025-01-01,2025-06-30,1393,3499,1533,60,ACTIVE
+SKU-0157,StrideCo Midi Dress - Maroon (S),STY-032,Dress,Midi,StrideCo,S,Maroon,SS25,2025-01-01,2025-06-30,1393,3499,1533,60,ACTIVE
+SKU-0158,StrideCo Midi Dress - Maroon (M),STY-032,Dress,Midi,StrideCo,M,Maroon,SS25,2025-01-01,2025-06-30,1393,3499,1533,60,ACTIVE
+SKU-0159,StrideCo Midi Dress - Maroon (L),STY-032,Dress,Midi,StrideCo,L,Maroon,SS25,2025-01-01,2025-06-30,1393,3499,1533,60,ACTIVE
+SKU-0160,StrideCo Midi Dress - Maroon (XL),STY-032,Dress,Midi,StrideCo,XL,Maroon,SS25,2025-01-01,2025-06-30,1393,3499,1533,60,ACTIVE
+SKU-0161,Aurelia Wrap Dress - White (XS),STY-033,Dress,Wrap,Aurelia,XS,White,SS25,2025-01-01,2025-06-30,923,2499,1016,60,ACTIVE
+SKU-0162,Aurelia Wrap Dress - White (S),STY-033,Dress,Wrap,Aurelia,S,White,SS25,2025-01-01,2025-06-30,923,2499,1016,60,ACTIVE
+SKU-0163,Aurelia Wrap Dress - White (M),STY-033,Dress,Wrap,Aurelia,M,White,SS25,2025-01-01,2025-06-30,923,2499,1016,60,ACTIVE
+SKU-0164,Aurelia Wrap Dress - White (L),STY-033,Dress,Wrap,Aurelia,L,White,SS25,2025-01-01,2025-06-30,923,2499,1016,60,ACTIVE
+SKU-0165,Aurelia Wrap Dress - White (XL),STY-033,Dress,Wrap,Aurelia,XL,White,SS25,2025-01-01,2025-06-30,923,2499,1016,60,ACTIVE
+SKU-0166,Indigo Row Maxi Dress - Black (XS),STY-034,Dress,Maxi,Indigo Row,XS,Black,SS25,2025-01-01,2025-06-30,1211,3399,1360,60,ACTIVE
+SKU-0167,Indigo Row Maxi Dress - Black (S),STY-034,Dress,Maxi,Indigo Row,S,Black,SS25,2025-01-01,2025-06-30,1211,3399,1360,60,ACTIVE
+SKU-0168,Indigo Row Maxi Dress - Black (M),STY-034,Dress,Maxi,Indigo Row,M,Black,SS25,2025-01-01,2025-06-30,1211,3399,1360,60,ACTIVE
+SKU-0169,Indigo Row Maxi Dress - Black (L),STY-034,Dress,Maxi,Indigo Row,L,Black,SS25,2025-01-01,2025-06-30,1211,3399,1360,60,ACTIVE
+SKU-0170,Indigo Row Maxi Dress - Black (XL),STY-034,Dress,Maxi,Indigo Row,XL,Black,SS25,2025-01-01,2025-06-30,1211,3399,1360,60,ACTIVE
+SKU-0171,Aurelia Wrap Dress - Mustard (XS),STY-035,Dress,Wrap,Aurelia,XS,Mustard,SS25,2025-01-01,2025-06-30,1047,2499,1152,60,ACTIVE
+SKU-0172,Aurelia Wrap Dress - Mustard (S),STY-035,Dress,Wrap,Aurelia,S,Mustard,SS25,2025-01-01,2025-06-30,1047,2499,1152,60,ACTIVE
+SKU-0173,Aurelia Wrap Dress - Mustard (M),STY-035,Dress,Wrap,Aurelia,M,Mustard,SS25,2025-01-01,2025-06-30,1047,2499,1152,60,ACTIVE
+SKU-0174,Aurelia Wrap Dress - Mustard (L),STY-035,Dress,Wrap,Aurelia,L,Mustard,SS25,2025-01-01,2025-06-30,1047,2499,1152,60,ACTIVE
+SKU-0175,Aurelia Wrap Dress - Mustard (XL),STY-035,Dress,Wrap,Aurelia,XL,Mustard,SS25,2025-01-01,2025-06-30,1047,2499,1152,60,ACTIVE
+SKU-0176,NorthWeave Leggings Activewear - Beige (XS),STY-036,Activewear,Leggings,NorthWeave,XS,Beige,SS25,2025-01-01,2025-06-30,808,2299,1150,50,ACTIVE
+SKU-0177,NorthWeave Leggings Activewear - Beige (S),STY-036,Activewear,Leggings,NorthWeave,S,Beige,SS25,2025-01-01,2025-06-30,808,2299,1150,50,ACTIVE
+SKU-0178,NorthWeave Leggings Activewear - Beige (M),STY-036,Activewear,Leggings,NorthWeave,M,Beige,SS25,2025-01-01,2025-06-30,808,2299,1150,50,ACTIVE
+SKU-0179,NorthWeave Leggings Activewear - Beige (L),STY-036,Activewear,Leggings,NorthWeave,L,Beige,SS25,2025-01-01,2025-06-30,808,2299,1150,50,ACTIVE
+SKU-0180,NorthWeave Leggings Activewear - Beige (XL),STY-036,Activewear,Leggings,NorthWeave,XL,Beige,SS25,2025-01-01,2025-06-30,808,2299,1150,50,ACTIVE
+SKU-0181,Indigo Row Track Pants Activewear - Charcoal (XS),STY-037,Activewear,Track Pants,Indigo Row,XS,Charcoal,SS25,2025-01-01,2025-06-30,835,1999,1000,50,ACTIVE
+SKU-0182,Indigo Row Track Pants Activewear - Charcoal (S),STY-037,Activewear,Track Pants,Indigo Row,S,Charcoal,SS25,2025-01-01,2025-06-30,835,1999,1000,50,ACTIVE
+SKU-0183,Indigo Row Track Pants Activewear - Charcoal (M),STY-037,Activewear,Track Pants,Indigo Row,M,Charcoal,SS25,2025-01-01,2025-06-30,835,1999,1000,50,ACTIVE
+SKU-0184,Indigo Row Track Pants Activewear - Charcoal (L),STY-037,Activewear,Track Pants,Indigo Row,L,Charcoal,SS25,2025-01-01,2025-06-30,835,1999,1000,50,ACTIVE
+SKU-0185,Indigo Row Track Pants Activewear - Charcoal (XL),STY-037,Activewear,Track Pants,Indigo Row,XL,Charcoal,SS25,2025-01-01,2025-06-30,835,1999,1000,50,ACTIVE
+SKU-0186,Indigo Row Hoodie Activewear - White (XS),STY-038,Activewear,Hoodie,Indigo Row,XS,White,SS25,2025-01-01,2025-06-30,579,1599,800,50,ACTIVE
+SKU-0187,Indigo Row Hoodie Activewear - White (S),STY-038,Activewear,Hoodie,Indigo Row,S,White,SS25,2025-01-01,2025-06-30,579,1599,800,50,ACTIVE
+SKU-0188,Indigo Row Hoodie Activewear - White (M),STY-038,Activewear,Hoodie,Indigo Row,M,White,SS25,2025-01-01,2025-06-30,579,1599,800,50,ACTIVE
+SKU-0189,Indigo Row Hoodie Activewear - White (L),STY-038,Activewear,Hoodie,Indigo Row,L,White,SS25,2025-01-01,2025-06-30,579,1599,800,50,ACTIVE
+SKU-0190,Indigo Row Hoodie Activewear - White (XL),STY-038,Activewear,Hoodie,Indigo Row,XL,White,SS25,2025-01-01,2025-06-30,579,1599,800,50,ACTIVE
+SKU-0191,Indigo Row Slim Fit Jeans - Teal (28),STY-039,Jeans,Slim Fit,Indigo Row,28,Teal,SS25,2025-01-29,2025-06-30,1146,2599,1300,50,ACTIVE
+SKU-0192,Indigo Row Slim Fit Jeans - Teal (30),STY-039,Jeans,Slim Fit,Indigo Row,30,Teal,SS25,2025-01-29,2025-06-30,1146,2599,1300,50,ACTIVE
+SKU-0193,Indigo Row Slim Fit Jeans - Teal (32),STY-039,Jeans,Slim Fit,Indigo Row,32,Teal,SS25,2025-01-29,2025-06-30,1146,2599,1300,50,ACTIVE
+SKU-0194,Indigo Row Slim Fit Jeans - Teal (34),STY-039,Jeans,Slim Fit,Indigo Row,34,Teal,SS25,2025-01-29,2025-06-30,1146,2599,1300,50,ACTIVE
+SKU-0195,Indigo Row Slim Fit Jeans - Teal (36),STY-039,Jeans,Slim Fit,Indigo Row,36,Teal,SS25,2025-01-29,2025-06-30,1146,2599,1300,50,ACTIVE
+SKU-0196,NorthWeave Relaxed Fit Jeans - Sky Blue (28),STY-040,Jeans,Relaxed Fit,NorthWeave,28,Sky Blue,SS25,2025-01-01,2025-06-30,1315,3199,1600,50,ACTIVE
+SKU-0197,NorthWeave Relaxed Fit Jeans - Sky Blue (30),STY-040,Jeans,Relaxed Fit,NorthWeave,30,Sky Blue,SS25,2025-01-01,2025-06-30,1315,3199,1600,50,ACTIVE
+SKU-0198,NorthWeave Relaxed Fit Jeans - Sky Blue (32),STY-040,Jeans,Relaxed Fit,NorthWeave,32,Sky Blue,SS25,2025-01-01,2025-06-30,1315,3199,1600,50,ACTIVE
+SKU-0199,NorthWeave Relaxed Fit Jeans - Sky Blue (34),STY-040,Jeans,Relaxed Fit,NorthWeave,34,Sky Blue,SS25,2025-01-01,2025-06-30,1315,3199,1600,50,ACTIVE
+SKU-0200,NorthWeave Relaxed Fit Jeans - Sky Blue (36),STY-040,Jeans,Relaxed Fit,NorthWeave,36,Sky Blue,SS25,2025-01-01,2025-06-30,1315,3199,1600,50,ACTIVE

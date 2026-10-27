@@ -1,0 +1,49 @@
+{
+  "model_name": "price_response_estimation",
+  "model_version": "1.0.0",
+  "classification": "EXPERIMENTAL_DECISION_SUPPORT (Controlled Pilot Only)",
+  "random_seed": 20241018,
+  "target_column": "target_units_sold",
+  "validation_metrics": {
+    "baseline_ridge": {
+      "baseline_ridge_mae": 0.695,
+      "baseline_ridge_rmse": 1.1487,
+      "baseline_ridge_wape_pct": 89.32,
+      "baseline_ridge_sample_size": 22140,
+      "baseline_ridge_negative_predictions_clipped": 0
+    },
+    "candidate_xgboost": {
+      "candidate_xgboost_mae": 0.7485,
+      "candidate_xgboost_rmse": 1.1023,
+      "candidate_xgboost_wape_pct": 96.18,
+      "candidate_xgboost_sample_size": 22140,
+      "candidate_xgboost_negative_predictions_clipped": 0
+    }
+  },
+  "test_metrics": {
+    "baseline_ridge": {
+      "baseline_ridge_mae": 0.4047,
+      "baseline_ridge_rmse": 0.8012,
+      "baseline_ridge_wape_pct": 102.83,
+      "baseline_ridge_sample_size": 23660,
+      "baseline_ridge_negative_predictions_clipped": 0
+    },
+    "candidate_xgboost": {
+      "candidate_xgboost_mae": 0.416,
+      "candidate_xgboost_rmse": 0.7658,
+      "candidate_xgboost_wape_pct": 105.68,
+      "candidate_xgboost_sample_size": 23660,
+      "candidate_xgboost_negative_predictions_clipped": 0
+    }
+  },
+  "counterfactual_stability": {
+    "scenario_count": 24,
+    "monotonicity_observed": "Substantially monotonic demand expansion as discount increases",
+    "scenario_file": "data\\reports\\model2_price_response\\price_scenario_stability.csv"
+  },
+  "artifacts": {
+    "model_path": "ml\\artifacts\\model2\\xgboost_price_response_model.joblib",
+    "encoder_path": "ml\\artifacts\\model2\\categorical_encoder.joblib",
+    "predictions_path": "ml\\artifacts\\model2\\test_predictions_price_response.csv"
+  }
+}

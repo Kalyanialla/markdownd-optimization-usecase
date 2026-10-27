@@ -1,0 +1,28 @@
+.industrial-appshell {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-base);
+}
+
+.appshell-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.appshell-content {
+  flex: 1;
+  padding: 28px 32px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .appshell-content {
+    padding: 20px 16px;
+  }
+}

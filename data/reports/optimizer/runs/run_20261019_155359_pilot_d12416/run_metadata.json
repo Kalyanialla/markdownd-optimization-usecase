@@ -1,0 +1,10 @@
+{
+  "run_id": "run_20261019_155359_pilot_d12416",
+  "created_at": "2026-10-19T15:53:59.618384",
+  "total_items_evaluated": 10,
+  "feasible_recommendations_count": 10,
+  "infeasible_count": 0,
+  "extra_metadata": {
+    "model2_scenario_notes": "observational demand estimates"
+  }
+}

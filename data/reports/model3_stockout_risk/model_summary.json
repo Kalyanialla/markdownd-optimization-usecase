@@ -1,0 +1,90 @@
+{
+  "model_name": "seven_day_stockout_risk_classifier",
+  "model_version": "1.0.0",
+  "random_seed": 20241018,
+  "target_column": "stockout_within_next_7_days",
+  "prediction_horizon": "T+1 to T+7",
+  "validation_metrics": {
+    "baseline": {
+      "baseline_rule_precision": 0.5688,
+      "baseline_rule_recall": 0.6667,
+      "baseline_rule_f1_score": 0.6139,
+      "baseline_rule_confusion_matrix": [
+        [
+          20180,
+          47
+        ],
+        [
+          31,
+          62
+        ]
+      ],
+      "baseline_rule_sample_size": 20320,
+      "baseline_rule_positive_prevalence_pct": 0.46
+    },
+    "candidate_xgboost": {
+      "candidate_xgboost_precision": 0.4286,
+      "candidate_xgboost_recall": 0.6774,
+      "candidate_xgboost_f1_score": 0.525,
+      "candidate_xgboost_confusion_matrix": [
+        [
+          20143,
+          84
+        ],
+        [
+          30,
+          63
+        ]
+      ],
+      "candidate_xgboost_sample_size": 20320,
+      "candidate_xgboost_positive_prevalence_pct": 0.46,
+      "candidate_xgboost_pr_auc": 0.546,
+      "candidate_xgboost_roc_auc": 0.9955,
+      "candidate_xgboost_brier_score": 0.0041
+    }
+  },
+  "test_metrics": {
+    "baseline": {
+      "baseline_rule_precision": 0.7939,
+      "baseline_rule_recall": 0.2377,
+      "baseline_rule_f1_score": 0.3658,
+      "baseline_rule_confusion_matrix": [
+        [
+          12595,
+          600
+        ],
+        [
+          7412,
+          2311
+        ]
+      ],
+      "baseline_rule_sample_size": 22918,
+      "baseline_rule_positive_prevalence_pct": 42.43
+    },
+    "candidate_xgboost": {
+      "candidate_xgboost_precision": 0.8049,
+      "candidate_xgboost_recall": 0.9717,
+      "candidate_xgboost_f1_score": 0.8805,
+      "candidate_xgboost_confusion_matrix": [
+        [
+          10905,
+          2290
+        ],
+        [
+          275,
+          9448
+        ]
+      ],
+      "candidate_xgboost_sample_size": 22918,
+      "candidate_xgboost_positive_prevalence_pct": 42.43,
+      "candidate_xgboost_pr_auc": 0.9421,
+      "candidate_xgboost_roc_auc": 0.9623,
+      "candidate_xgboost_brier_score": 0.0885
+    }
+  },
+  "artifacts": {
+    "model_path": "ml\\artifacts\\model3\\xgboost_stockout_model.joblib",
+    "encoder_path": "ml\\artifacts\\model3\\categorical_encoder.joblib",
+    "predictions_path": "ml\\artifacts\\model3\\test_predictions_stockout.csv"
+  }
+}

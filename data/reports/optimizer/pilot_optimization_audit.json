@@ -1,0 +1,1302 @@
+[
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-01",
+    "sku_id": "SKU-0141",
+    "category": "TShirt",
+    "policy_id_applied": "POL-003",
+    "regular_price": 799.0,
+    "unit_cost": 310.0,
+    "opening_stock_units": 12.0,
+    "seven_day_stockout_probability": 0.2413,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 10.0,
+    "recommended_price": 719.1,
+    "expected_daily_sales": 1.283,
+    "expected_7d_profit": 3673.15,
+    "risk_adjusted_7d_profit": 3673.15,
+    "expected_terminal_stock_7d": 3.0,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 799.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 799.0,
+          "predicted_daily_demand": 1.02,
+          "expected_fulfilled_units_7d": 7.14,
+          "expected_revenue_7d": 5704.53,
+          "expected_gross_profit_7d": 3491.26,
+          "risk_adjusted_profit_7d": 3491.26,
+          "expected_terminal_stock_7d": 4.9,
+          "stockout_probability": 0.2413,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 719.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 719.1,
+          "predicted_daily_demand": 1.283,
+          "expected_fulfilled_units_7d": 8.98,
+          "expected_revenue_7d": 6456.52,
+          "expected_gross_profit_7d": 3673.15,
+          "risk_adjusted_profit_7d": 3673.15,
+          "expected_terminal_stock_7d": 3.0,
+          "stockout_probability": 0.2413,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 639.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 639.2,
+          "predicted_daily_demand": 1.446,
+          "expected_fulfilled_units_7d": 10.12,
+          "expected_revenue_7d": 6470.69,
+          "expected_gross_profit_7d": 3332.52,
+          "risk_adjusted_profit_7d": 3332.52,
+          "expected_terminal_stock_7d": 1.9,
+          "stockout_probability": 0.2413,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 559.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 559.3,
+          "predicted_daily_demand": 1.539,
+          "expected_fulfilled_units_7d": 10.77,
+          "expected_revenue_7d": 6024.95,
+          "expected_gross_profit_7d": 2685.54,
+          "risk_adjusted_profit_7d": 2685.54,
+          "expected_terminal_stock_7d": 1.2,
+          "stockout_probability": 0.2413,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 479.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 479.4,
+          "predicted_daily_demand": 1.691,
+          "expected_fulfilled_units_7d": 11.84,
+          "expected_revenue_7d": 5674.91,
+          "expected_gross_profit_7d": 2005.28,
+          "risk_adjusted_profit_7d": 2005.28,
+          "expected_terminal_stock_7d": 0.2,
+          "stockout_probability": 0.2413,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 399.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 399.5,
+          "predicted_daily_demand": 1.852,
+          "expected_fulfilled_units_7d": 12.0,
+          "expected_revenue_7d": 4794.0,
+          "expected_gross_profit_7d": 1074.0,
+          "risk_adjusted_profit_7d": 1074.0,
+          "expected_terminal_stock_7d": 0.0,
+          "stockout_probability": 0.2413,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 319.6,
+        "is_feasible": false,
+        "rejection_reason": "Margin 3.0% is below minimum required 12.0%",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-01",
+    "sku_id": "SKU-0161",
+    "category": "Dress",
+    "policy_id_applied": "POL-005",
+    "regular_price": 2499.0,
+    "unit_cost": 923.0,
+    "opening_stock_units": 33.0,
+    "seven_day_stockout_probability": 0.0001,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 2499.0,
+    "expected_daily_sales": 0.281,
+    "expected_7d_profit": 3102.14,
+    "risk_adjusted_7d_profit": 3102.14,
+    "expected_terminal_stock_7d": 31.0,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 2499.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2499.0,
+          "predicted_daily_demand": 0.281,
+          "expected_fulfilled_units_7d": 1.97,
+          "expected_revenue_7d": 4918.94,
+          "expected_gross_profit_7d": 3102.14,
+          "risk_adjusted_profit_7d": 3102.14,
+          "expected_terminal_stock_7d": 31.0,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 2249.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2249.1,
+          "predicted_daily_demand": 0.318,
+          "expected_fulfilled_units_7d": 2.23,
+          "expected_revenue_7d": 5005.99,
+          "expected_gross_profit_7d": 2951.6,
+          "risk_adjusted_profit_7d": 2951.6,
+          "expected_terminal_stock_7d": 30.8,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 1999.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1999.2,
+          "predicted_daily_demand": 0.354,
+          "expected_fulfilled_units_7d": 2.48,
+          "expected_revenue_7d": 4952.14,
+          "expected_gross_profit_7d": 2665.81,
+          "risk_adjusted_profit_7d": 2665.81,
+          "expected_terminal_stock_7d": 30.5,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 1749.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1749.3,
+          "predicted_daily_demand": 0.423,
+          "expected_fulfilled_units_7d": 2.96,
+          "expected_revenue_7d": 5179.34,
+          "expected_gross_profit_7d": 2446.51,
+          "risk_adjusted_profit_7d": 2446.51,
+          "expected_terminal_stock_7d": 30.0,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 1499.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1499.4,
+          "predicted_daily_demand": 0.462,
+          "expected_fulfilled_units_7d": 3.23,
+          "expected_revenue_7d": 4845.46,
+          "expected_gross_profit_7d": 1862.69,
+          "risk_adjusted_profit_7d": 1862.69,
+          "expected_terminal_stock_7d": 29.8,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 1249.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1249.5,
+          "predicted_daily_demand": 0.86,
+          "expected_fulfilled_units_7d": 6.02,
+          "expected_revenue_7d": 7525.12,
+          "expected_gross_profit_7d": 1966.35,
+          "risk_adjusted_profit_7d": 1966.35,
+          "expected_terminal_stock_7d": 27.0,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 999.6,
+        "is_feasible": false,
+        "rejection_reason": "Margin 7.7% is below minimum required 10.0%",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-01",
+    "sku_id": "SKU-0176",
+    "category": "Activewear",
+    "policy_id_applied": "POL-007",
+    "regular_price": 2299.0,
+    "unit_cost": 808.0,
+    "opening_stock_units": 0.0,
+    "seven_day_stockout_probability": 0.9446,
+    "stockout_risk_level": "HIGH",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 2299.0,
+    "expected_daily_sales": 0.0,
+    "expected_7d_profit": 0.0,
+    "risk_adjusted_7d_profit": 0.0,
+    "expected_terminal_stock_7d": 0.0,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 2299.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2299.0,
+          "predicted_daily_demand": 0.0,
+          "expected_fulfilled_units_7d": 0.0,
+          "expected_revenue_7d": 0.0,
+          "expected_gross_profit_7d": 0.0,
+          "risk_adjusted_profit_7d": 0.0,
+          "expected_terminal_stock_7d": 0.0,
+          "stockout_probability": 0.9446,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 2069.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2069.1,
+          "predicted_daily_demand": 0.0,
+          "expected_fulfilled_units_7d": 0.0,
+          "expected_revenue_7d": 0.0,
+          "expected_gross_profit_7d": 0.0,
+          "risk_adjusted_profit_7d": 0.0,
+          "expected_terminal_stock_7d": 0.0,
+          "stockout_probability": 0.9446,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 1839.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1839.2,
+          "predicted_daily_demand": 0.0,
+          "expected_fulfilled_units_7d": 0.0,
+          "expected_revenue_7d": 0.0,
+          "expected_gross_profit_7d": 0.0,
+          "risk_adjusted_profit_7d": 0.0,
+          "expected_terminal_stock_7d": 0.0,
+          "stockout_probability": 0.9446,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 1609.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1609.3,
+          "predicted_daily_demand": 0.0,
+          "expected_fulfilled_units_7d": 0.0,
+          "expected_revenue_7d": 0.0,
+          "expected_gross_profit_7d": 0.0,
+          "risk_adjusted_profit_7d": 0.0,
+          "expected_terminal_stock_7d": 0.0,
+          "stockout_probability": 0.9446,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 1379.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1379.4,
+          "predicted_daily_demand": 0.033,
+          "expected_fulfilled_units_7d": 0.0,
+          "expected_revenue_7d": 0.0,
+          "expected_gross_profit_7d": 0.0,
+          "risk_adjusted_profit_7d": 0.0,
+          "expected_terminal_stock_7d": 0.0,
+          "stockout_probability": 0.9446,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 1149.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1149.5,
+          "predicted_daily_demand": 0.201,
+          "expected_fulfilled_units_7d": 0.0,
+          "expected_revenue_7d": 0.0,
+          "expected_gross_profit_7d": 0.0,
+          "risk_adjusted_profit_7d": 0.0,
+          "expected_terminal_stock_7d": 0.0,
+          "stockout_probability": 0.9446,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 919.6,
+        "is_feasible": false,
+        "rejection_reason": "Discount 60.0% not in allowed markdown steps [0, 10, 20, 30, 40, 50]",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-01",
+    "sku_id": "SKU-0191",
+    "category": "Jeans",
+    "policy_id_applied": "POL-004",
+    "regular_price": 2599.0,
+    "unit_cost": 1146.0,
+    "opening_stock_units": 18.0,
+    "seven_day_stockout_probability": 0.0011,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 2599.0,
+    "expected_daily_sales": 0.235,
+    "expected_7d_profit": 2391.18,
+    "risk_adjusted_7d_profit": 2391.18,
+    "expected_terminal_stock_7d": 16.4,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 2599.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2599.0,
+          "predicted_daily_demand": 0.235,
+          "expected_fulfilled_units_7d": 1.65,
+          "expected_revenue_7d": 4277.14,
+          "expected_gross_profit_7d": 2391.18,
+          "risk_adjusted_profit_7d": 2391.18,
+          "expected_terminal_stock_7d": 16.4,
+          "stockout_probability": 0.0011,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 2339.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2339.1,
+          "predicted_daily_demand": 0.278,
+          "expected_fulfilled_units_7d": 1.94,
+          "expected_revenue_7d": 4548.36,
+          "expected_gross_profit_7d": 2319.97,
+          "risk_adjusted_profit_7d": 2319.97,
+          "expected_terminal_stock_7d": 16.1,
+          "stockout_probability": 0.0011,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 2079.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2079.2,
+          "predicted_daily_demand": 0.292,
+          "expected_fulfilled_units_7d": 2.04,
+          "expected_revenue_7d": 4251.2,
+          "expected_gross_profit_7d": 1908.05,
+          "risk_adjusted_profit_7d": 1908.05,
+          "expected_terminal_stock_7d": 16.0,
+          "stockout_probability": 0.0011,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 1819.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1819.3,
+          "predicted_daily_demand": 0.366,
+          "expected_fulfilled_units_7d": 2.56,
+          "expected_revenue_7d": 4655.17,
+          "expected_gross_profit_7d": 1722.82,
+          "risk_adjusted_profit_7d": 1722.82,
+          "expected_terminal_stock_7d": 15.4,
+          "stockout_probability": 0.0011,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 1559.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1559.4,
+          "predicted_daily_demand": 0.368,
+          "expected_fulfilled_units_7d": 2.57,
+          "expected_revenue_7d": 4014.98,
+          "expected_gross_profit_7d": 1064.38,
+          "risk_adjusted_profit_7d": 1064.38,
+          "expected_terminal_stock_7d": 15.4,
+          "stockout_probability": 0.0011,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 1299.5,
+        "is_feasible": false,
+        "rejection_reason": "Margin 11.8% is below minimum required 12.0%",
+        "financials": null
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 1039.6,
+        "is_feasible": false,
+        "rejection_reason": "Discount 60.0% not in allowed markdown steps [0, 10, 20, 30, 40, 50]",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-02",
+    "sku_id": "SKU-0141",
+    "category": "TShirt",
+    "policy_id_applied": "POL-003",
+    "regular_price": 799.0,
+    "unit_cost": 310.0,
+    "opening_stock_units": 49.0,
+    "seven_day_stockout_probability": 0.0,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 799.0,
+    "expected_daily_sales": 0.507,
+    "expected_7d_profit": 1736.17,
+    "risk_adjusted_7d_profit": 1736.17,
+    "expected_terminal_stock_7d": 45.4,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 799.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 799.0,
+          "predicted_daily_demand": 0.507,
+          "expected_fulfilled_units_7d": 3.55,
+          "expected_revenue_7d": 2836.81,
+          "expected_gross_profit_7d": 1736.17,
+          "risk_adjusted_profit_7d": 1736.17,
+          "expected_terminal_stock_7d": 45.4,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 719.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 719.1,
+          "predicted_daily_demand": 0.536,
+          "expected_fulfilled_units_7d": 3.75,
+          "expected_revenue_7d": 2696.09,
+          "expected_gross_profit_7d": 1533.82,
+          "risk_adjusted_profit_7d": 1533.82,
+          "expected_terminal_stock_7d": 45.3,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 639.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 639.2,
+          "predicted_daily_demand": 0.606,
+          "expected_fulfilled_units_7d": 4.24,
+          "expected_revenue_7d": 2710.48,
+          "expected_gross_profit_7d": 1395.95,
+          "risk_adjusted_profit_7d": 1395.95,
+          "expected_terminal_stock_7d": 44.8,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 559.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 559.3,
+          "predicted_daily_demand": 0.709,
+          "expected_fulfilled_units_7d": 4.96,
+          "expected_revenue_7d": 2774.86,
+          "expected_gross_profit_7d": 1236.86,
+          "risk_adjusted_profit_7d": 1236.86,
+          "expected_terminal_stock_7d": 44.0,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 479.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 479.4,
+          "predicted_daily_demand": 0.761,
+          "expected_fulfilled_units_7d": 5.33,
+          "expected_revenue_7d": 2553.02,
+          "expected_gross_profit_7d": 902.13,
+          "risk_adjusted_profit_7d": 902.13,
+          "expected_terminal_stock_7d": 43.7,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 399.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 399.5,
+          "predicted_daily_demand": 1.048,
+          "expected_fulfilled_units_7d": 7.34,
+          "expected_revenue_7d": 2930.88,
+          "expected_gross_profit_7d": 656.6,
+          "risk_adjusted_profit_7d": 656.6,
+          "expected_terminal_stock_7d": 41.7,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 319.6,
+        "is_feasible": false,
+        "rejection_reason": "Margin 3.0% is below minimum required 12.0%",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-02",
+    "sku_id": "SKU-0156",
+    "category": "Dress",
+    "policy_id_applied": "POL-005",
+    "regular_price": 3499.0,
+    "unit_cost": 1393.0,
+    "opening_stock_units": 37.0,
+    "seven_day_stockout_probability": 0.0,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 3499.0,
+    "expected_daily_sales": 0.379,
+    "expected_7d_profit": 5591.31,
+    "risk_adjusted_7d_profit": 5591.31,
+    "expected_terminal_stock_7d": 34.3,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 3499.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 3499.0,
+          "predicted_daily_demand": 0.379,
+          "expected_fulfilled_units_7d": 2.65,
+          "expected_revenue_7d": 9289.65,
+          "expected_gross_profit_7d": 5591.31,
+          "risk_adjusted_profit_7d": 5591.31,
+          "expected_terminal_stock_7d": 34.3,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 3149.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 3149.1,
+          "predicted_daily_demand": 0.436,
+          "expected_fulfilled_units_7d": 3.05,
+          "expected_revenue_7d": 9615.49,
+          "expected_gross_profit_7d": 5362.09,
+          "risk_adjusted_profit_7d": 5362.09,
+          "expected_terminal_stock_7d": 33.9,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 2799.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2799.2,
+          "predicted_daily_demand": 0.461,
+          "expected_fulfilled_units_7d": 3.23,
+          "expected_revenue_7d": 9038.2,
+          "expected_gross_profit_7d": 4540.41,
+          "risk_adjusted_profit_7d": 4540.41,
+          "expected_terminal_stock_7d": 33.8,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 2449.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2449.3,
+          "predicted_daily_demand": 0.519,
+          "expected_fulfilled_units_7d": 3.63,
+          "expected_revenue_7d": 8891.75,
+          "expected_gross_profit_7d": 3834.71,
+          "risk_adjusted_profit_7d": 3834.71,
+          "expected_terminal_stock_7d": 33.4,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 2099.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2099.4,
+          "predicted_daily_demand": 0.558,
+          "expected_fulfilled_units_7d": 3.9,
+          "expected_revenue_7d": 8195.23,
+          "expected_gross_profit_7d": 2757.51,
+          "risk_adjusted_profit_7d": 2757.51,
+          "expected_terminal_stock_7d": 33.1,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 1749.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1749.5,
+          "predicted_daily_demand": 0.912,
+          "expected_fulfilled_units_7d": 6.38,
+          "expected_revenue_7d": 11169.2,
+          "expected_gross_profit_7d": 2275.98,
+          "risk_adjusted_profit_7d": 2275.98,
+          "expected_terminal_stock_7d": 30.6,
+          "stockout_probability": 0.0,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 1399.6,
+        "is_feasible": false,
+        "rejection_reason": "Margin 0.5% is below minimum required 10.0%",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-02",
+    "sku_id": "SKU-0181",
+    "category": "Activewear",
+    "policy_id_applied": "POL-007",
+    "regular_price": 1999.0,
+    "unit_cost": 835.0,
+    "opening_stock_units": 17.0,
+    "seven_day_stockout_probability": 0.0004,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 1999.0,
+    "expected_daily_sales": 0.228,
+    "expected_7d_profit": 1859.83,
+    "risk_adjusted_7d_profit": 1859.83,
+    "expected_terminal_stock_7d": 15.4,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 1999.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1999.0,
+          "predicted_daily_demand": 0.228,
+          "expected_fulfilled_units_7d": 1.6,
+          "expected_revenue_7d": 3193.99,
+          "expected_gross_profit_7d": 1859.83,
+          "risk_adjusted_profit_7d": 1859.83,
+          "expected_terminal_stock_7d": 15.4,
+          "stockout_probability": 0.0004,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 1799.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1799.1,
+          "predicted_daily_demand": 0.274,
+          "expected_fulfilled_units_7d": 1.92,
+          "expected_revenue_7d": 3447.06,
+          "expected_gross_profit_7d": 1847.21,
+          "risk_adjusted_profit_7d": 1847.21,
+          "expected_terminal_stock_7d": 15.1,
+          "stockout_probability": 0.0004,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 1599.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1599.2,
+          "predicted_daily_demand": 0.284,
+          "expected_fulfilled_units_7d": 1.99,
+          "expected_revenue_7d": 3174.84,
+          "expected_gross_profit_7d": 1517.14,
+          "risk_adjusted_profit_7d": 1517.14,
+          "expected_terminal_stock_7d": 15.0,
+          "stockout_probability": 0.0004,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 1399.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1399.3,
+          "predicted_daily_demand": 0.358,
+          "expected_fulfilled_units_7d": 2.51,
+          "expected_revenue_7d": 3511.14,
+          "expected_gross_profit_7d": 1415.95,
+          "risk_adjusted_profit_7d": 1415.95,
+          "expected_terminal_stock_7d": 14.5,
+          "stockout_probability": 0.0004,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 1199.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1199.4,
+          "predicted_daily_demand": 0.392,
+          "expected_fulfilled_units_7d": 2.74,
+          "expected_revenue_7d": 3291.55,
+          "expected_gross_profit_7d": 1000.03,
+          "risk_adjusted_profit_7d": 1000.03,
+          "expected_terminal_stock_7d": 14.3,
+          "stockout_probability": 0.0004,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 999.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 999.5,
+          "predicted_daily_demand": 0.819,
+          "expected_fulfilled_units_7d": 5.73,
+          "expected_revenue_7d": 5728.21,
+          "expected_gross_profit_7d": 942.76,
+          "risk_adjusted_profit_7d": 942.76,
+          "expected_terminal_stock_7d": 11.3,
+          "stockout_probability": 0.0004,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 799.6,
+        "is_feasible": false,
+        "rejection_reason": "Discount 60.0% not in allowed markdown steps [0, 10, 20, 30, 40, 50]",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-02",
+    "sku_id": "SKU-0191",
+    "category": "Jeans",
+    "policy_id_applied": "POL-004",
+    "regular_price": 2599.0,
+    "unit_cost": 1146.0,
+    "opening_stock_units": 14.0,
+    "seven_day_stockout_probability": 0.0024,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 2599.0,
+    "expected_daily_sales": 0.214,
+    "expected_7d_profit": 2173.12,
+    "risk_adjusted_7d_profit": 2173.12,
+    "expected_terminal_stock_7d": 12.5,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 2599.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2599.0,
+          "predicted_daily_demand": 0.214,
+          "expected_fulfilled_units_7d": 1.5,
+          "expected_revenue_7d": 3887.08,
+          "expected_gross_profit_7d": 2173.12,
+          "risk_adjusted_profit_7d": 2173.12,
+          "expected_terminal_stock_7d": 12.5,
+          "stockout_probability": 0.0024,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 2339.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2339.1,
+          "predicted_daily_demand": 0.254,
+          "expected_fulfilled_units_7d": 1.78,
+          "expected_revenue_7d": 4164.39,
+          "expected_gross_profit_7d": 2124.12,
+          "risk_adjusted_profit_7d": 2124.12,
+          "expected_terminal_stock_7d": 12.2,
+          "stockout_probability": 0.0024,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 2079.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2079.2,
+          "predicted_daily_demand": 0.259,
+          "expected_fulfilled_units_7d": 1.81,
+          "expected_revenue_7d": 3772.09,
+          "expected_gross_profit_7d": 1693.01,
+          "risk_adjusted_profit_7d": 1693.01,
+          "expected_terminal_stock_7d": 12.2,
+          "stockout_probability": 0.0024,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 1819.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1819.3,
+          "predicted_daily_demand": 0.328,
+          "expected_fulfilled_units_7d": 2.3,
+          "expected_revenue_7d": 4175.56,
+          "expected_gross_profit_7d": 1545.32,
+          "risk_adjusted_profit_7d": 1545.32,
+          "expected_terminal_stock_7d": 11.7,
+          "stockout_probability": 0.0024,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 1559.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1559.4,
+          "predicted_daily_demand": 0.335,
+          "expected_fulfilled_units_7d": 2.35,
+          "expected_revenue_7d": 3659.39,
+          "expected_gross_profit_7d": 970.11,
+          "risk_adjusted_profit_7d": 970.11,
+          "expected_terminal_stock_7d": 11.7,
+          "stockout_probability": 0.0024,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 1299.5,
+        "is_feasible": false,
+        "rejection_reason": "Margin 11.8% is below minimum required 12.0%",
+        "financials": null
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 1039.6,
+        "is_feasible": false,
+        "rejection_reason": "Discount 60.0% not in allowed markdown steps [0, 10, 20, 30, 40, 50]",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-03",
+    "sku_id": "SKU-0141",
+    "category": "TShirt",
+    "policy_id_applied": "POL-003",
+    "regular_price": 799.0,
+    "unit_cost": 310.0,
+    "opening_stock_units": 22.0,
+    "seven_day_stockout_probability": 0.0032,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 0.0,
+    "recommended_price": 799.0,
+    "expected_daily_sales": 0.678,
+    "expected_7d_profit": 2322.29,
+    "risk_adjusted_7d_profit": 2322.29,
+    "expected_terminal_stock_7d": 17.3,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 799.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 799.0,
+          "predicted_daily_demand": 0.678,
+          "expected_fulfilled_units_7d": 4.75,
+          "expected_revenue_7d": 3794.51,
+          "expected_gross_profit_7d": 2322.29,
+          "risk_adjusted_profit_7d": 2322.29,
+          "expected_terminal_stock_7d": 17.3,
+          "stockout_probability": 0.0032,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 719.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 719.1,
+          "predicted_daily_demand": 0.765,
+          "expected_fulfilled_units_7d": 5.36,
+          "expected_revenue_7d": 3852.07,
+          "expected_gross_profit_7d": 2191.46,
+          "risk_adjusted_profit_7d": 2191.46,
+          "expected_terminal_stock_7d": 16.6,
+          "stockout_probability": 0.0032,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 639.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 639.2,
+          "predicted_daily_demand": 0.862,
+          "expected_fulfilled_units_7d": 6.03,
+          "expected_revenue_7d": 3856.07,
+          "expected_gross_profit_7d": 1985.95,
+          "risk_adjusted_profit_7d": 1985.95,
+          "expected_terminal_stock_7d": 16.0,
+          "stockout_probability": 0.0032,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 559.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 559.3,
+          "predicted_daily_demand": 0.932,
+          "expected_fulfilled_units_7d": 6.52,
+          "expected_revenue_7d": 3648.03,
+          "expected_gross_profit_7d": 1626.06,
+          "risk_adjusted_profit_7d": 1626.06,
+          "expected_terminal_stock_7d": 15.5,
+          "stockout_probability": 0.0032,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 479.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 479.4,
+          "predicted_daily_demand": 0.987,
+          "expected_fulfilled_units_7d": 6.91,
+          "expected_revenue_7d": 3312.98,
+          "expected_gross_profit_7d": 1170.67,
+          "risk_adjusted_profit_7d": 1170.67,
+          "expected_terminal_stock_7d": 15.1,
+          "stockout_probability": 0.0032,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 399.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 399.5,
+          "predicted_daily_demand": 1.224,
+          "expected_fulfilled_units_7d": 8.57,
+          "expected_revenue_7d": 3423.3,
+          "expected_gross_profit_7d": 766.92,
+          "risk_adjusted_profit_7d": 766.92,
+          "expected_terminal_stock_7d": 13.4,
+          "stockout_probability": 0.0032,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 319.6,
+        "is_feasible": false,
+        "rejection_reason": "Margin 3.0% is below minimum required 12.0%",
+        "financials": null
+      }
+    ]
+  },
+  {
+    "date": "2025-04-01",
+    "store_id": "STORE-03",
+    "sku_id": "SKU-0156",
+    "category": "Dress",
+    "policy_id_applied": "POL-005",
+    "regular_price": 3499.0,
+    "unit_cost": 1393.0,
+    "opening_stock_units": 33.0,
+    "seven_day_stockout_probability": 0.0001,
+    "stockout_risk_level": "LOW",
+    "recommended_discount_pct": 10.0,
+    "recommended_price": 3149.1,
+    "expected_daily_sales": 0.25,
+    "expected_7d_profit": 3070.04,
+    "risk_adjusted_7d_profit": 3070.04,
+    "expected_terminal_stock_7d": 31.3,
+    "approval_required": true,
+    "approval_status": "APPROVED_BY_RULE_AND_HUMAN",
+    "approver_id": "Retail_Category_Lead_S9",
+    "candidate_evaluations": [
+      {
+        "discount_pct": 0.0,
+        "candidate_price": 3499.0,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 3499.0,
+          "predicted_daily_demand": 0.197,
+          "expected_fulfilled_units_7d": 1.38,
+          "expected_revenue_7d": 4834.96,
+          "expected_gross_profit_7d": 2910.09,
+          "risk_adjusted_profit_7d": 2910.09,
+          "expected_terminal_stock_7d": 31.6,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 10.0,
+        "candidate_price": 3149.1,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 3149.1,
+          "predicted_daily_demand": 0.25,
+          "expected_fulfilled_units_7d": 1.75,
+          "expected_revenue_7d": 5505.29,
+          "expected_gross_profit_7d": 3070.04,
+          "risk_adjusted_profit_7d": 3070.04,
+          "expected_terminal_stock_7d": 31.3,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 20.0,
+        "candidate_price": 2799.2,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2799.2,
+          "predicted_daily_demand": 0.269,
+          "expected_fulfilled_units_7d": 1.88,
+          "expected_revenue_7d": 5272.9,
+          "expected_gross_profit_7d": 2648.88,
+          "risk_adjusted_profit_7d": 2648.88,
+          "expected_terminal_stock_7d": 31.1,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 30.0,
+        "candidate_price": 2449.3,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2449.3,
+          "predicted_daily_demand": 0.351,
+          "expected_fulfilled_units_7d": 2.45,
+          "expected_revenue_7d": 6009.4,
+          "expected_gross_profit_7d": 2591.65,
+          "risk_adjusted_profit_7d": 2591.65,
+          "expected_terminal_stock_7d": 30.5,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 40.0,
+        "candidate_price": 2099.4,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 2099.4,
+          "predicted_daily_demand": 0.378,
+          "expected_fulfilled_units_7d": 2.65,
+          "expected_revenue_7d": 5562.15,
+          "expected_gross_profit_7d": 1871.54,
+          "risk_adjusted_profit_7d": 1871.54,
+          "expected_terminal_stock_7d": 30.4,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 50.0,
+        "candidate_price": 1749.5,
+        "is_feasible": true,
+        "rejection_reason": null,
+        "financials": {
+          "candidate_price": 1749.5,
+          "predicted_daily_demand": 0.599,
+          "expected_fulfilled_units_7d": 4.19,
+          "expected_revenue_7d": 7338.5,
+          "expected_gross_profit_7d": 1495.38,
+          "risk_adjusted_profit_7d": 1495.38,
+          "expected_terminal_stock_7d": 28.8,
+          "stockout_probability": 0.0001,
+          "stockout_risk_penalty": 0.0
+        }
+      },
+      {
+        "discount_pct": 60.0,
+        "candidate_price": 1399.6,
+        "is_feasible": false,
+        "rejection_reason": "Margin 0.5% is below minimum required 10.0%",
+        "financials": null
+      }
+    ]
+  }
+]

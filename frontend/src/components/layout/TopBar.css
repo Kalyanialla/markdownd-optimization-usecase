@@ -1,0 +1,244 @@
+.industrial-topbar {
+  height: 64px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.sidebar-toggle-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid #E2E8F0;
+  color: #64748B;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-toggle-btn:hover {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Search Form */
+.topbar-search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.15s ease;
+}
+
+.topbar-search-form:focus-within {
+  background-color: #FFFFFF;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.search-icon {
+  color: #94A3B8;
+  flex-shrink: 0;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #0F172A;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #94A3B8;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Notification Bell */
+.notification-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #64748B;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.notification-btn:hover {
+  background-color: #F1F5F9;
+  color: #0F172A;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  background-color: #EF4444;
+  border-radius: 50%;
+  border: 1.5px solid #FFFFFF;
+}
+
+/* User Profile Pill */
+.user-profile-wrapper {
+  position: relative;
+}
+
+.user-profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.user-profile-pill:hover {
+  background-color: #F8FAFC;
+}
+
+.user-avatar-initial {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #EEF2FF;
+  color: #4F46E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.user-display-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.user-chevron {
+  color: #64748B;
+}
+
+/* User Dropdown */
+.user-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  width: 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-header {
+  padding: 8px 10px 10px;
+}
+
+.dropdown-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.dropdown-email {
+  font-size: 11px;
+  color: #64748B;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-role {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #4F46E5;
+  background-color: #EEF2FF;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #F1F5F9;
+  margin: 4px 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+.dropdown-item.signout:hover {
+  background-color: #FEE2E2;
+  color: #DC2626;
+}
+
+@media (max-width: 900px) {
+  .sidebar-toggle-btn {
+    display: inline-flex;
+  }
+
+  .topbar-search-form {
+    max-width: 240px;
+  }
+}

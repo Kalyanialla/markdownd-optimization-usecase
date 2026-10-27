@@ -1,0 +1,6 @@
+store_id,store_name,region,city,store_type,climate_zone,store_capacity_units,opening_date,store_closing_date,store_status,timezone,currency_code
+STORE-01,Metro Mall Mumbai,WEST,Mumbai,MALL,TROPICAL_COASTAL,20000,2022-06-01,2025-06-30,OPEN,Asia/Kolkata,INR
+STORE-02,Central Plaza Delhi,NORTH,Delhi,MALL,COMPOSITE,18000,2021-11-15,2025-06-30,OPEN,Asia/Kolkata,INR
+STORE-03,Garden Street Bengaluru,SOUTH,Bengaluru,HIGH_STREET,MODERATE,12000,2022-09-10,2025-06-30,OPEN,Asia/Kolkata,INR
+STORE-04,Charminar Outlet Hyderabad,SOUTH,Hyderabad,OUTLET,SEMI_ARID,14000,2024-03-01,2025-06-30,OPEN,Asia/Kolkata,INR
+STORE-05,Park Avenue Kolkata,EAST,Kolkata,HIGH_STREET,HUMID_SUBTROPICAL,10000,2023-01-20,2025-06-30,OPEN,Asia/Kolkata,INR

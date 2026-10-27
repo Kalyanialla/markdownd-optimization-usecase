@@ -1,0 +1,20 @@
+model_name: "demand_forecasting_xgboost"
+model_version: "1.0.0"
+random_seed: 20241018
+
+target_column: "target_units_sold"
+prediction_horizon: "1 day (store opening day T)"
+
+hyperparameters:
+  n_estimators: 450
+  max_depth: 6
+  learning_rate: 0.05
+  subsample: 0.85
+  colsample_bytree: 0.80
+  reg_lambda: 3.0
+  n_jobs: -1
+
+tuning_grid:
+  max_depth: [5, 6]
+  learning_rate: [0.03, 0.05]
+  n_estimators: [350, 450]

@@ -1,0 +1,37 @@
+{
+  "source_cleaned_csv": "data\\processed\\markdown_optimization_cleaned.csv",
+  "source_sha256": "e8348157440d4d3320100582ac8b6dfc921f89f24b76b0caa159bc001cfbe2dd",
+  "total_dataset_rows": 149270,
+  "splits": {
+    "train": {
+      "file": "data\\processed\\train.csv",
+      "date_range": [
+        "2024-01-01",
+        "2024-12-31"
+      ],
+      "row_count": 103470,
+      "pct_of_total": 69.32,
+      "sha256": "d1e08c186bed92c0af14dfc37da7fbf05cdf40831e0984baa2b65d7ab349bada"
+    },
+    "validation": {
+      "file": "data\\processed\\validation.csv",
+      "date_range": [
+        "2025-01-01",
+        "2025-03-31"
+      ],
+      "row_count": 22140,
+      "pct_of_total": 14.83,
+      "sha256": "f0b2f8622f4d610cfb05128037d2553ba14e3c920b0da40f49df36555d183aa0"
+    },
+    "test": {
+      "file": "data\\processed\\test.csv",
+      "date_range": [
+        "2025-04-01",
+        "2025-06-30"
+      ],
+      "row_count": 23660,
+      "pct_of_total": 15.85,
+      "sha256": "bd7c8bf64b1a44e0c87968f2ee53b7a191aa636e4d8b88f68ea53297c0e1d6d3"
+    }
+  }
+}

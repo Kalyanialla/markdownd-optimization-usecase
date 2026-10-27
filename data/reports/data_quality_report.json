@@ -1,0 +1,314 @@
+{
+  "build_status": "PASSED",
+  "generator_version": "1.0.0",
+  "schema_version": "1.0",
+  "seed": 20241018,
+  "config_hash": "2f53acd11f43d12ab2b74be741af6237e1f3a5f6c3a3c56c954eb2ebdbb74e6f",
+  "row_counts": {
+    "products": 200,
+    "stores": 5,
+    "calendar": 547,
+    "pricing_policies": 13,
+    "promotions": 41,
+    "external_signals": 2735,
+    "price_history": 8012,
+    "inventory_movements": 9897,
+    "inventory_snapshots": 149270,
+    "sales_history": 149270,
+    "simulated_demand": 149270
+  },
+  "date_coverage": {
+    "start": "2024-01-01",
+    "end": "2025-06-30",
+    "calendar_days": 547,
+    "sales_min_date": "2024-01-01",
+    "sales_max_date": "2025-06-30"
+  },
+  "duplicate_key_counts": {
+    "primary_keys": {
+      "products": 0,
+      "stores": 0,
+      "calendar": 0,
+      "pricing_policies": 0,
+      "promotions": 0,
+      "external_signals": 0,
+      "price_history": 0,
+      "inventory_movements": 0,
+      "inventory_snapshots": 0,
+      "sales_history": 0,
+      "simulated_demand": 0
+    },
+    "daily_business_keys": 0
+  },
+  "null_counts": {
+    "products": 0,
+    "stores": 0,
+    "calendar": 0,
+    "pricing_policies": 0,
+    "promotions": 0,
+    "external_signals": 0,
+    "price_history": 0,
+    "inventory_movements": 0,
+    "inventory_snapshots": 0,
+    "sales_history": 0,
+    "simulated_demand": 0
+  },
+  "foreign_key_failures": 0,
+  "stress_mode_defect_results": "NOT_RUN (clean baseline only)",
+  "gates": [
+    {
+      "gate": "no null / blank / whitespace-only fields in any CSV",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "primary keys unique in all 11 files",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "daily business keys unique",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "fixed counts: 200 SKUs, 5 stores, 547 dates",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "calendar covers every date 2024-01-01..2025-06-30",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "external_signals has 547 x 5 rows",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "foreign keys resolve (SKU, store, calendar date)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "enum fields contain only allowed values",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "numeric / date ranges valid (non-negative, ordered, 0-100%)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "pricing policies: no overlapping versions for the same scope",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "approved price events: no overlapping effective windows",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "price events chain: previous_price == prior approved new_price",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "approval metadata consistent (approved => approver & ts before effective date; others => sentinel)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "every sales row matches exactly one active approved price event",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "selling price >= price floor and discount <= resolved policy cap",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "approved events respect product price floor",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "no price event after assortment ends",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "discount_pct == (regular - selling) / regular",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "revenue == units_sold * selling_price",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "returns_units <= units_sold",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "sales rows only inside product lifecycle and store opening",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "completeness / open flags are 1 on all released rows",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "promotion_flag equals eligible active campaign (scope + dates, cancelled/planned excluded)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "promotion discounts never stacked (stackable_flag = 0 for all campaigns)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "sales and snapshots cover the identical SKU-store-day grid",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "closing stock = opening + movements - units_sold (exact, every row)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "opening stock = previous day's closing stock",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "first-day opening stock equals OPENING_STOCK movement",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "available = on_hand - reserved, never negative, reserved <= on_hand",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "units_sold <= opening + same-day receipts/transfers-in",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "transfers: out/in pair share reference id and quantity",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "planned/cancelled receipts never counted (cancelled rows carry sentinel arrival)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "adjustments carry an explicit reason; others NOT_APPLICABLE",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "no inbound => eta 0; inbound > 0 => eta >= 1",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "store stock never exceeds store_capacity_units",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "demand grid identical to sales grid",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "latent demand >= fulfilled sales",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "stockout_flag == (latent demand > fulfilled sales)",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "ground-truth isolation: no latent/demand fields in operational CSVs",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "signals: weather & competitor observed strictly before target date",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "signals: store region agrees with stores.csv",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "sentinel values appear only in documented fields",
+      "failures": 0,
+      "critical": true,
+      "status": "PASS"
+    }
+  ],
+  "critical_gates_failed": 0,
+  "release_decision": "RELEASE_APPROVED"
+}

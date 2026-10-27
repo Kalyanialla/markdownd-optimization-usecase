@@ -1,0 +1,875 @@
+/* ============================================================
+   PRODUCT INVENTORY — ENTERPRISE SAAS TABLE & DRAWER
+   Matches the provided Product Inventory design
+   ============================================================ */
+
+.pi-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--font-sans);
+  background-color: var(--bg-base);
+}
+
+/* ── Header ── */
+.pi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pi-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pi-header-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+.pi-header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pi-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.pi-subtitle {
+  font-size: 13px;
+  color: #64748B;
+  margin: 0;
+}
+
+.pi-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pi-last-updated-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12px;
+  color: #64748B;
+  white-space: nowrap;
+}
+
+.pi-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pi-action-btn:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+/* ── Summary / KPI Cards (Row of 3) ── */
+.pi-summary-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .pi-summary-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pi-summary-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.pi-summary-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.pi-summary-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pi-summary-icon.purple {
+  background-color: #EEF2FF;
+  color: #4F46E5;
+}
+
+.pi-summary-icon.amber {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.pi-summary-icon.green {
+  background-color: #DCFCE7;
+  color: #16A34A;
+}
+
+.pi-summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pi-summary-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748B;
+}
+
+.pi-summary-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+/* ── Filter Bar ── */
+.pi-filters-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.pi-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  flex: 1;
+  min-width: 240px;
+  max-width: 380px;
+  transition: all 0.15s ease;
+}
+
+.pi-search-box:focus-within {
+  background-color: #FFFFFF;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
+}
+
+.pi-search-icon {
+  color: #94A3B8;
+  flex-shrink: 0;
+}
+
+.pi-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #0F172A;
+  width: 100%;
+}
+
+.pi-search-input::placeholder {
+  color: #94A3B8;
+}
+
+.pi-filter-select-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pi-filter-select {
+  appearance: none;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 8px 32px 8px 12px;
+  font-size: 13px;
+  color: #0F172A;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.pi-filter-select:hover {
+  border-color: #CBD5E1;
+}
+
+.pi-filter-select:focus {
+  border-color: #4F46E5;
+}
+
+.pi-select-chevron {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  color: #94A3B8;
+}
+
+.pi-clear-filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: #4F46E5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-left: auto;
+  transition: background-color 0.15s ease;
+}
+
+.pi-clear-filters-btn:hover {
+  background-color: #EEF2FF;
+}
+
+/* ── Showing Range Text ── */
+.pi-showing-text {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Main Workspace Layout (Full Width Table) ── */
+.pi-workspace-layout {
+  display: block;
+  width: 100%;
+}
+
+.pi-workspace-layout.has-drawer {
+  display: block;
+  width: 100%;
+}
+
+/* ── Centered Product Details Modal Dialog (Middle of Screen) ── */
+.pi-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.pi-modal-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: piModalPop 0.18s ease-out;
+}
+
+@keyframes piModalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Table Container ── */
+.pi-table-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.pi-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.pi-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.pi-table thead th {
+  background-color: #F8FAFC;
+  color: #64748B;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-bottom: 1px solid #E2E8F0;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.pi-table thead th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.pi-table thead th.sortable:hover {
+  color: #0F172A;
+}
+
+.pi-table tbody tr {
+  border-bottom: 1px solid #F1F5F9;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.pi-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.pi-table tbody tr:hover {
+  background-color: #F8FAFC;
+}
+
+.pi-table tbody tr.selected {
+  background-color: #F1F5F9;
+}
+
+.pi-table td {
+  padding: 12px 14px;
+  color: #0F172A;
+  vertical-align: middle;
+}
+
+.pi-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #CBD5E1;
+  cursor: pointer;
+  accent-color: #4F46E5;
+}
+
+/* Product Cell with Title + SKU */
+.pi-product-info-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pi-product-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pi-product-sku {
+  font-size: 11px;
+  color: #64748B;
+  font-family: var(--font-mono);
+}
+
+.pi-category-cell,
+.pi-store-cell {
+  color: #475569;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.pi-price-cell {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.pi-cost-margin-cell {
+  font-size: 13px;
+  color: #475569;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.pi-margin-tag {
+  color: #16A34A;
+  font-weight: 600;
+}
+
+.pi-stock-cell {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0F172A;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Status Badges */
+.pi-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.pi-status-badge.in-stock {
+  background-color: #DCFCE7;
+  color: #16A34A;
+}
+
+.pi-status-badge.low-stock {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.pi-status-badge.out-of-stock {
+  background-color: #FEE2E2;
+  color: #DC2626;
+}
+
+.pi-status-badge.discontinued {
+  background-color: #F1F5F9;
+  color: #64748B;
+}
+
+.pi-last-updated-cell {
+  font-size: 12px;
+  color: #64748B;
+  white-space: nowrap;
+}
+
+/* Actions Cell with View Button */
+.pi-actions-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.pi-view-btn {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pi-view-btn:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.pi-view-caret {
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Pagination ── */
+.pi-pagination-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pi-pages-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pi-page-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pi-page-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pi-page-arrow:not(:disabled):hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.pi-page-num-btn {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pi-page-num-btn:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.pi-page-num-btn.active {
+  background-color: #4F46E5;
+  border-color: #4F46E5;
+  color: #FFFFFF;
+}
+
+.pi-items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748B;
+}
+
+.pi-per-page-select {
+  appearance: none;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding: 4px 24px 4px 8px;
+  font-size: 12px;
+  color: #0F172A;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ── Product Details Drawer (Right Panel) ── */
+.pi-details-drawer {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.pi-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.pi-drawer-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.pi-drawer-close-btn {
+  background: transparent;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.pi-drawer-close-btn:hover {
+  background-color: #F1F5F9;
+  color: #0F172A;
+}
+
+/* Drawer Hero Card */
+.pi-drawer-hero {
+  padding: 16px 20px;
+  border-bottom: 1px solid #F1F5F9;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pi-hero-title-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pi-hero-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.pi-hero-sku {
+  font-size: 12px;
+  color: #64748B;
+  font-family: var(--font-mono);
+}
+
+/* Drawer Navigation Tabs */
+.pi-drawer-tabs {
+  display: flex;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.pi-drawer-tab {
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748B;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.pi-drawer-tab:hover {
+  color: #0F172A;
+}
+
+.pi-drawer-tab.active {
+  color: #4F46E5;
+}
+
+.pi-drawer-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #4F46E5;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Drawer Body & Sections */
+.pi-drawer-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.pi-drawer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pi-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.pi-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 4px 0;
+}
+
+.pi-detail-label {
+  color: #64748B;
+}
+
+.pi-detail-value {
+  color: #0F172A;
+  font-weight: 500;
+  text-align: right;
+}
+
+.pi-detail-value.bold {
+  font-weight: 700;
+}
+
+.pi-status-dot-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #16A34A;
+}
+
+.pi-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #16A34A;
+}
+
+/* Drawer Footer Actions */
+.pi-drawer-footer {
+  padding: 16px 20px;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #FFFFFF;
+}
+
+.pi-btn-go-optimize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(79, 70, 229, 0.2);
+}
+
+.pi-btn-go-optimize:hover {
+  background-color: #4338CA;
+  transform: translateY(-1px);
+}
+
+.pi-btn-drawer-close {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  border-radius: 8px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pi-btn-drawer-close:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.pi-modal-card .pi-drawer-body {
+  overflow-y: auto;
+  max-height: calc(90vh - 220px);
+}
+
+.pi-modal-card .pi-drawer-footer {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Empty / Loading State Row */
+.pi-state-row td {
+  padding: 48px 16px;
+  text-align: center;
+  color: #94A3B8;
+  font-size: 13px;
+}

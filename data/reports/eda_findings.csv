@@ -1,0 +1,10 @@
+domain,metric,observed_value,business_implication
+Overall,Gross Revenue,"₹223,842,750.00",Baseline revenue across 547 calendar days
+Overall,Gross Margin,50.76%,Healthy initial apparel margins before end-of-season markdown dilution
+Demand Censoring,Stockout Rate,"12.52% (18,696 events)",Units sold underestimate customer demand on 12.5% of store-days
+Demand Censoring,Unmet Demand Gap,"42,754 units (27.16%)",Significant lost sales due to inventory exhaustion prior to demand fulfillment
+Category,Jacket Stockout & Markdown,"58.83% lost demand, 23.48% avg discount",Severe seasonal mismatch; rapid liquidation occurring after supply deficit
+Category,TShirt Inelasticity,"Disc-Vol Corr: -0.014, 57.33% margin",Everyday staple; high discounting needlessly erodes margin without volume lift
+Store,STORE-04 (Outlet) Penalty,"45.67% margin, 34.50% lost demand",Heaviest discounting combined with highest stockouts creates compounding revenue drag
+Promotions,Promotional Volume Lift,+13.43% raw lift (+27.76% in-stock lift),"Promotions stimulate volume, but higher discount (+13.47pp) tightens gross margin"
+Pricing,Discount Band Shift,Mean sales rise from 0.67 (0% disc) to 1.05 (40-50% disc),Descriptive association showing consumer responsiveness; requires causal estimation for optimization

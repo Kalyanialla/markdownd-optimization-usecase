@@ -1,0 +1,236 @@
+{
+  "dataset_name": "UC-RT-03 Markdown Optimization - synthetic apparel retail raw data",
+  "dataset_version": "1.0",
+  "generator_version": "1.0.0",
+  "build_timestamp": "2026-10-18T07:50:58.427130+00:00",
+  "seed": 20241018,
+  "date_range": [
+    "2024-01-01",
+    "2025-06-30"
+  ],
+  "currency": "INR",
+  "config_hash": "2f53acd11f43d12ab2b74be741af6237e1f3a5f6c3a3c56c954eb2ebdbb74e6f",
+  "files": {
+    "products": {
+      "path": "data/raw/products.csv",
+      "rows": 200,
+      "columns": [
+        "sku_id",
+        "product_name",
+        "style_id",
+        "category",
+        "subcategory",
+        "brand",
+        "size",
+        "color",
+        "season_id",
+        "launch_date",
+        "season_end_date",
+        "unit_cost",
+        "regular_price",
+        "minimum_price",
+        "maximum_discount_pct",
+        "product_status"
+      ],
+      "sha256": "2b9d18152344db09c2e0e3d5ece1d618f0d8e942992958adf0708744019e9733"
+    },
+    "stores": {
+      "path": "data/raw/stores.csv",
+      "rows": 5,
+      "columns": [
+        "store_id",
+        "store_name",
+        "region",
+        "city",
+        "store_type",
+        "climate_zone",
+        "store_capacity_units",
+        "opening_date",
+        "store_closing_date",
+        "store_status",
+        "timezone",
+        "currency_code"
+      ],
+      "sha256": "c6147feb7cfa25569ac4f5aca2c41ba416db34fa0d26735c6c391b5bd1545d0b"
+    },
+    "calendar": {
+      "path": "data/raw/calendar.csv",
+      "rows": 547,
+      "columns": [
+        "date",
+        "year",
+        "month",
+        "quarter",
+        "week_of_year",
+        "day_of_week",
+        "is_weekend",
+        "is_public_holiday",
+        "holiday_name",
+        "season_id",
+        "week_of_season",
+        "days_to_season_end",
+        "season_phase"
+      ],
+      "sha256": "98b426a65cce33e18513db4b941916dadcc012e85de498c039d6389f2cd071ee"
+    },
+    "pricing_policies": {
+      "path": "data/raw/pricing_policies.csv",
+      "rows": 13,
+      "columns": [
+        "policy_id",
+        "policy_version",
+        "scope_type",
+        "scope_id",
+        "effective_from",
+        "effective_to",
+        "minimum_margin_pct",
+        "minimum_price",
+        "maximum_discount_pct",
+        "allowed_markdown_steps",
+        "minimum_days_between_changes",
+        "requires_approval",
+        "policy_status"
+      ],
+      "sha256": "4016a9571a1f33ed2cfd82cdf548bcc4468d507685aa5607442eafb139977b56"
+    },
+    "promotions": {
+      "path": "data/raw/promotions.csv",
+      "rows": 41,
+      "columns": [
+        "promotion_id",
+        "promotion_type",
+        "scope_type",
+        "scope_id",
+        "store_id",
+        "start_date",
+        "end_date",
+        "promotion_discount_pct",
+        "stackable_flag",
+        "campaign_cost",
+        "promotion_status"
+      ],
+      "sha256": "2ec77031a79758206d136fd3c684bcd59c7ff70fb124e6d48bb9d718a1e3ecc9"
+    },
+    "external_signals": {
+      "path": "data/raw/external_signals.csv",
+      "rows": 2735,
+      "columns": [
+        "signal_id",
+        "target_date",
+        "region",
+        "store_id",
+        "signal_type",
+        "temperature_forecast",
+        "rainfall_forecast",
+        "weather_observed_at",
+        "competitor_id",
+        "competitor_price",
+        "competitor_observed_at",
+        "local_event_flag",
+        "signal_source"
+      ],
+      "sha256": "987cbf00c4f6054ceb0794adcff105d66ade17dd1fc038e0281ca79f8b1237a7"
+    },
+    "price_history": {
+      "path": "data/raw/price_history.csv",
+      "rows": 8012,
+      "columns": [
+        "price_event_id",
+        "sku_id",
+        "store_id",
+        "effective_from",
+        "effective_to",
+        "previous_price",
+        "new_price",
+        "price_change_type",
+        "change_reason",
+        "approval_status",
+        "approved_by",
+        "approved_at"
+      ],
+      "sha256": "c41116c415230d9a9e4c7fc6d6decd28b2608193c717530676615ac56e909d06"
+    },
+    "inventory_movements": {
+      "path": "data/raw/inventory_movements.csv",
+      "rows": 9897,
+      "columns": [
+        "movement_id",
+        "sku_id",
+        "movement_type",
+        "source_store_id",
+        "destination_store_id",
+        "movement_date",
+        "quantity_units",
+        "unit_cost",
+        "expected_arrival_date",
+        "actual_arrival_date",
+        "movement_status",
+        "reference_id",
+        "adjustment_reason"
+      ],
+      "sha256": "7ac23ef704ee88d10c1138b6af8e8d6a324ec6647b2f73c617d183c14834a51b"
+    },
+    "inventory_snapshots": {
+      "path": "data/raw/inventory_snapshots.csv",
+      "rows": 149270,
+      "columns": [
+        "snapshot_id",
+        "snapshot_date",
+        "sku_id",
+        "store_id",
+        "opening_stock_units",
+        "on_hand_units",
+        "reserved_units",
+        "available_units",
+        "inbound_units",
+        "incoming_eta_days",
+        "stockout_flag",
+        "inventory_data_complete_flag"
+      ],
+      "sha256": "7e175e9b430a0528e9404b2b7fbe6fc1a16c67da8a1fec74d895f69acb9a4f41"
+    },
+    "sales_history": {
+      "path": "data/raw/sales_history.csv",
+      "rows": 149270,
+      "columns": [
+        "sales_record_id",
+        "date",
+        "sku_id",
+        "store_id",
+        "units_sold",
+        "returns_units",
+        "selling_price",
+        "regular_price",
+        "discount_pct",
+        "revenue",
+        "promotion_flag",
+        "stockout_flag",
+        "store_open_flag",
+        "sales_data_complete_flag"
+      ],
+      "sha256": "1b8b63e85da6148429aab327a13b5e91975809b98f2ca169436897add89fa097"
+    },
+    "simulated_demand": {
+      "path": "data/ground_truth/simulated_demand.csv",
+      "rows": 149270,
+      "columns": [
+        "demand_record_id",
+        "date",
+        "sku_id",
+        "store_id",
+        "latent_demand_units",
+        "demand_model_profile",
+        "generation_seed_version"
+      ],
+      "sha256": "854976a826b486726dc4c671af51028f4608b7c379664059c62a06c627e2f930"
+    }
+  },
+  "synthetic_data_declaration": "Fully synthetic data produced by a simulator. It does not represent any real retailer, customer or market observation.",
+  "ground_truth_classification": {
+    "file": "data/ground_truth/simulated_demand.csv",
+    "classification": "SYNTHETIC_EVALUATION_ONLY",
+    "note": "Latent demand must never be joined into model-facing features."
+  },
+  "validation_report_path": "data/reports/data_quality_report.json",
+  "release_decision": "RELEASE_APPROVED"
+}
