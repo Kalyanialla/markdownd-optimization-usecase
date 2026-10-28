@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Terminal, Lock, Eye, EyeOff, AlertCircle, ArrowRight } from 'lucide-react';
+import { Sparkles, Lock, Mail, Eye, EyeOff, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { ApiError } from '../lib/api';
 import './Auth.css';
@@ -45,31 +45,37 @@ export const LoginPage: React.FC = () => {
 
   return (
     <div className="auth-container">
+      {/* Decorative ambient background glows */}
+      <div className="auth-glow-top" />
+      <div className="auth-glow-bottom" />
+
       <motion.div
         className="auth-card"
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.25, ease: 'easeOut' }}
+        transition={{ duration: 0.35, ease: 'easeOut' }}
       >
-        <div className="auth-header">
-          <div className="auth-badge">
-            <Terminal size={14} />
-            <span>AUTHENTICATION SUBSYSTEM</span>
+        {/* Brand Icon & Welcome */}
+        <div className="auth-brand-logo">
+          <div className="auth-logo-badge">
+            <Sparkles size={22} className="auth-sparkle-icon" />
           </div>
-          <h2 className="auth-title">Operator Sign In</h2>
+        </div>
+
+        <div className="auth-header">
+          <h1 className="auth-title">Welcome back</h1>
           <p className="auth-subtitle">
-            Sign in with your enterprise credentials to access markdown optimization, inventory scoring, and approval workflows.
+            Sign in to your Markdown Optimizer workspace
           </p>
         </div>
 
         {errorMessage && (
           <motion.div
             className="auth-alert error"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            style={{ marginBottom: '16px' }}
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
           >
-            <AlertCircle size={16} style={{ flexShrink: 0, marginTop: '2px' }} />
+            <AlertCircle size={16} className="auth-alert-icon" />
             <span>{errorMessage}</span>
           </motion.div>
         )}
@@ -77,26 +83,32 @@ export const LoginPage: React.FC = () => {
         <form onSubmit={handleSubmit} className="auth-form" noValidate>
           <div className="form-group">
             <label className="form-label" htmlFor="email-input">
-              Work Email Address
+              Work Email
             </label>
-            <input
-              id="email-input"
-              type="email"
-              autoComplete="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="operator@enterprise-retail.com"
-              className="form-input"
-              disabled={isLoading}
-            />
+            <div className="input-wrapper">
+              <Mail size={16} className="input-lead-icon" />
+              <input
+                id="email-input"
+                type="email"
+                autoComplete="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="name@company.com"
+                className="form-input with-lead-icon"
+                disabled={isLoading}
+              />
+            </div>
           </div>
 
           <div className="form-group">
-            <label className="form-label" htmlFor="password-input">
-              Security Password
-            </label>
+            <div className="form-label-row">
+              <label className="form-label" htmlFor="password-input">
+                Password
+              </label>
+            </div>
             <div className="input-wrapper">
+              <Lock size={16} className="input-lead-icon" />
               <input
                 id="password-input"
                 type={showPassword ? 'text' : 'password'}
@@ -104,8 +116,8 @@ export const LoginPage: React.FC = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••••••"
-                className="form-input"
+                placeholder="Enter your password"
+                className="form-input with-lead-icon with-trail-icon"
                 disabled={isLoading}
               />
               <button
@@ -126,10 +138,10 @@ export const LoginPage: React.FC = () => {
             disabled={isLoading}
           >
             {isLoading ? (
-              <span>VERIFYING CREDENTIALS...</span>
+              <span className="btn-loading-text">Signing in...</span>
             ) : (
               <>
-                <span>SIGN IN TO CONSOLE</span>
+                <span>Sign in</span>
                 <ArrowRight size={16} />
               </>
             )}
@@ -137,13 +149,13 @@ export const LoginPage: React.FC = () => {
         </form>
 
         <div className="auth-footer">
-          Don't have an operator account?
-          <Link to="/signup">Register Here</Link>
+          Don't have an account?
+          <Link to="/signup" className="auth-footer-link">Create account</Link>
         </div>
 
         <div className="security-note">
-          <Lock size={13} />
-          <span>Sessions secured with HttpOnly cookies & encrypted JWT</span>
+          <ShieldCheck size={14} className="security-note-icon" />
+          <span>Enterprise 256-bit SSL encrypted & audited sessions</span>
         </div>
       </motion.div>
     </div>
