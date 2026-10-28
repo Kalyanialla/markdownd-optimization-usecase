@@ -871,7 +871,7 @@ export const ReviewsPage: React.FC = () => {
                     type="button"
                     className="reviews-reject-btn"
                     onClick={() => openActionModal('REJECT')}
-                    disabled={!canApprove}
+                    
                     style={{ padding: '8px 16px' }}
                   >
                     <Trash2 size={14} />
@@ -881,7 +881,7 @@ export const ReviewsPage: React.FC = () => {
                     type="button"
                     className="reviews-approve-btn"
                     onClick={() => openActionModal('APPROVE')}
-                    disabled={!canApprove}
+                    
                     style={{ padding: '8px 18px' }}
                   >
                     <Check size={14} />
