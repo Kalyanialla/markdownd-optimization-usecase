@@ -8,13 +8,6 @@
 
 html, body {
   background-color: var(--bg-base);
-  background-image: 
-    radial-gradient(circle at 10% 10%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 85%, rgba(168, 85, 247, 0.07) 0%, transparent 45%),
-    linear-gradient(rgba(0, 240, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.02) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
-  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 14px;
@@ -31,14 +24,13 @@ html, body {
 }
 
 a {
-  color: var(--accent-primary);
+  color: var(--accent-mint);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--accent-primary-hover);
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  color: var(--accent-lime);
 }
 
 button, input, select, textarea {
@@ -49,222 +41,29 @@ button, input, select, textarea {
 :focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
 }
 
-/* Discreet Cyber Scrollbars */
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg-base);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
+  background: var(--border-prominent);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 240, 255, 0.4);
+  background: var(--text-secondary);
 }
 
-/* Tabular numeric alignment */
+/* Tabular numeric alignment for finance/quant dashboards */
 .tabular-nums {
   font-variant-numeric: tabular-nums;
   font-family: var(--font-mono);
-}
-
-/* ============================================================
-   GLOBAL DARK GLASSMORPHIC & ACCENT OVERRIDES
-   Ensures EVERY page (Dashboard, Products, Optimize, Audit, Reviews)
-   renders with high-contrast, linear, non-bugged styling
-   ============================================================ */
-
-/* Universal Cards & Containers */
-.kpi-card,
-.next-steps-card,
-.recent-activity-card,
-.opt-product-summary-card,
-.opt-config-card,
-.opt-results-card,
-.industrial-card,
-.pi-table-card,
-.pi-stat-card,
-.audit-table-card,
-.reviews-table-card,
-.pi-drawer-card,
-.auth-card {
-  background: rgba(13, 21, 38, 0.8) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border: 1px solid rgba(56, 189, 248, 0.14) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6) !important;
-  color: var(--text-primary) !important;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-.kpi-card:hover,
-.industrial-card:hover,
-.next-step-item:hover {
-  border-color: rgba(0, 240, 255, 0.35) !important;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 240, 255, 0.12) !important;
-  transform: translateY(-2px) !important;
-}
-
-/* Next Step Item */
-.next-step-item {
-  background: rgba(19, 28, 49, 0.5) !important;
-  border: 1px solid rgba(56, 189, 248, 0.1) !important;
-  border-radius: 12px !important;
-}
-
-/* Tables */
-table, .opt-candidate-table, .pi-table, .audit-table, .reviews-table {
-  background: transparent !important;
-}
-
-table th, .opt-candidate-table th, .pi-table th, .audit-table th, .reviews-table th {
-  background: rgba(19, 28, 49, 0.9) !important;
-  color: #38BDF8 !important;
-  font-family: var(--font-mono) !important;
-  font-size: 11px !important;
-  letter-spacing: 0.05em !important;
-  border-bottom: 1px solid rgba(0, 240, 255, 0.25) !important;
-}
-
-table td, .opt-candidate-table td, .pi-table td, .audit-table td, .reviews-table td {
-  border-bottom: 1px solid rgba(56, 189, 248, 0.08) !important;
-  color: var(--text-primary) !important;
-}
-
-table tbody tr:hover td, .opt-candidate-table tr:hover td {
-  background: rgba(0, 240, 255, 0.05) !important;
-}
-
-.opt-candidate-table tr.selected-row td {
-  background: rgba(0, 240, 255, 0.12) !important;
-  border-bottom-color: rgba(0, 240, 255, 0.3) !important;
-}
-
-/* Form Inputs, Selects, and Filters */
-input[type="text"]:not(.search-input),
-input[type="number"]:not(.search-input),
-input[type="password"]:not(.search-input),
-input[type="email"]:not(.search-input),
-select,
-.opt-store-select,
-.pi-filter-select,
-.audit-filter-select {
-  background-color: rgba(6, 9, 19, 0.7) !important;
-  border: 1px solid rgba(56, 189, 248, 0.2) !important;
-  border-radius: 8px !important;
-  color: var(--text-primary) !important;
-}
-
-input:not(.search-input):focus, select:focus {
-  border-color: #00F0FF !important;
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3) !important;
-}
-
-/* Action Buttons & Badges */
-.btn-run-optimization,
-.opt-run-btn-primary {
-  background: linear-gradient(135deg, #00F0FF 0%, #0284C7 100%) !important;
-  box-shadow: 0 4px 16px rgba(0, 240, 255, 0.4) !important;
-  border: none !important;
-  border-radius: 10px !important;
-  color: #020617 !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.02em !important;
-  transition: all 0.2s ease !important;
-}
-
-.btn-run-optimization:hover:not(:disabled),
-.opt-run-btn-primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, #38BDF8 0%, #0369A1 100%) !important;
-  box-shadow: 0 6px 24px rgba(0, 240, 255, 0.6) !important;
-  transform: translateY(-1px) !important;
-}
-
-.btn-refresh-overview,
-.opt-reset-btn-outline,
-.pi-action-btn,
-.audit-refresh-btn,
-.opt-change-product-btn {
-  background: rgba(19, 28, 49, 0.6) !important;
-  border: 1px solid rgba(56, 189, 248, 0.16) !important;
-  border-radius: 10px !important;
-  color: var(--text-primary) !important;
-  transition: all 0.2s ease !important;
-}
-
-.btn-refresh-overview:hover,
-.opt-reset-btn-outline:hover,
-.pi-action-btn:hover,
-.audit-refresh-btn:hover,
-.opt-change-product-btn:hover {
-  background: rgba(0, 240, 255, 0.1) !important;
-  border-color: rgba(0, 240, 255, 0.35) !important;
-  color: #00F0FF !important;
-}
-
-/* Status Badges */
-.last-updated-badge, .pi-last-updated-badge {
-  background: rgba(13, 21, 38, 0.7) !important;
-  border: 1px solid rgba(56, 189, 248, 0.14) !important;
-  color: var(--text-secondary) !important;
-}
-
-.opt-badge-in-stock {
-  background: rgba(16, 185, 129, 0.15) !important;
-  border: 1px solid rgba(16, 185, 129, 0.35) !important;
-  color: #34D399 !important;
-}
-
-.opt-badge-out-stock {
-  background: rgba(244, 63, 94, 0.15) !important;
-  border: 1px solid rgba(244, 63, 94, 0.35) !important;
-  color: #FB7185 !important;
-}
-
-.opt-badge-eligible {
-  background: rgba(16, 185, 129, 0.15) !important;
-  border: 1px solid rgba(16, 185, 129, 0.35) !important;
-  color: #34D399 !important;
-}
-
-.opt-badge-blocked {
-  background: rgba(244, 63, 94, 0.15) !important;
-  border: 1px solid rgba(244, 63, 94, 0.35) !important;
-  color: #FB7185 !important;
-}
-
-/* Global High-Contrast Readability Guarantee */
-body, .industrial-appshell, .appshell-main {
-  color: #F8FAFC;
-}
-
-h1, h2, h3, h4, h5, h6,
-.executive-title, .page-header-title, .section-title,
-.brand-name {
-  color: #F8FAFC !important;
-}
-
-/* Force override of any hardcoded dark text colors from legacy styles */
-[style*="color: #0F172A"],
-[style*="color: #1E293B"],
-[style*="color: #334155"],
-[style*="color: #475569"],
-[style*="color: #020617"],
-[style*="color: var(--text-primary, #0F172A)"] {
-  color: #F8FAFC !important;
-}
-
-[style*="color: #64748B"],
-[style*="color: var(--text-secondary, #64748B)"] {
-  color: #94A3B8 !important;
 }

@@ -1,9 +1,7 @@
 .industrial-sidebar {
   width: 260px;
-  background: rgba(11, 17, 32, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-right: 1px solid var(--border-subtle);
+  background-color: #FFFFFF;
+  border-right: 1px solid #E2E8F0;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -11,7 +9,6 @@
   top: 0;
   z-index: 40;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar-brand-header {
@@ -19,20 +16,18 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid var(--border-subtle);
 }
 
 .brand-logo-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 50%, #A855F7 100%);
-  color: #F8FAFC;
-  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.4);
 }
 
 .brand-titles {
@@ -43,27 +38,24 @@
 .brand-name {
   font-size: 15px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #0F172A;
   margin: 0;
   letter-spacing: -0.01em;
 }
 
 .brand-subtitle {
-  font-size: 11px;
-  color: #00F0FF;
+  font-size: 12px;
+  color: #64748B;
   margin: 0;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .sidebar-nav {
   flex: 1;
-  padding: 16px 14px;
+  padding: 12px 14px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .nav-link {
@@ -71,43 +63,37 @@
   align-items: center;
   gap: 12px;
   padding: 10px 14px;
-  border-radius: 10px;
-  color: var(--text-secondary);
+  border-radius: 8px;
+  color: #475569;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.15s ease;
-  border: 1px solid transparent;
 }
 
 .nav-link:hover {
-  background-color: rgba(0, 240, 255, 0.06);
-  color: var(--text-primary);
-  border-color: rgba(0, 240, 255, 0.15);
-  transform: translateX(2px);
+  background-color: #F8FAFC;
+  color: #0F172A;
 }
 
 .nav-link.active {
-  background: linear-gradient(90deg, rgba(0, 240, 255, 0.15) 0%, rgba(59, 130, 246, 0.05) 100%);
-  color: #00F0FF;
-  border-color: rgba(0, 240, 255, 0.35);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+  background-color: #EEF2FF;
+  color: #4F46E5;
   font-weight: 600;
 }
 
 .nav-icon {
-  color: var(--text-secondary);
+  color: #64748B;
   transition: color 0.15s ease;
   flex-shrink: 0;
 }
 
 .nav-link:hover .nav-icon {
-  color: var(--text-primary);
+  color: #0F172A;
 }
 
 .nav-link.active .nav-icon {
-  color: #00F0FF;
-  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.5));
+  color: #4F46E5;
 }
 
 .nav-text {
@@ -115,9 +101,8 @@
 }
 
 .nav-badge-pill {
-  background-color: rgba(244, 63, 94, 0.2);
-  color: #FB7185;
-  border: 1px solid rgba(244, 63, 94, 0.4);
+  background-color: #EF4444;
+  color: #FFFFFF;
   font-size: 11px;
   font-weight: 700;
   padding: 2px 7px;
@@ -127,7 +112,7 @@
 
 .sidebar-footer {
   padding: 16px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid #F1F5F9;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -138,8 +123,8 @@
   align-items: center;
   gap: 10px;
   padding: 8px 12px;
-  background-color: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
 }
 
@@ -147,8 +132,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #10B981;
-  box-shadow: 0 0 8px #10B981;
+  background-color: #16A34A;
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.4);
   flex-shrink: 0;
 }
 
@@ -160,44 +145,39 @@
 .system-status-label {
   font-size: 12px;
   font-weight: 600;
-  color: #10B981;
+  color: #0F172A;
 }
 
 .system-status-sub {
   font-size: 10px;
-  color: var(--text-muted);
+  color: #64748B;
 }
 
 .user-account-card {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: rgba(19, 28, 49, 0.5);
-  border: 1px solid var(--border-subtle);
+  padding: 6px 8px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease;
 }
 
 .user-account-card:hover {
-  background-color: rgba(0, 240, 255, 0.08);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
 }
 
 .user-account-avatar {
   width: 32px;
   height: 32px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.25) 0%, rgba(168, 85, 247, 0.25) 100%);
-  color: #00F0FF;
-  border: 1px solid rgba(0, 240, 255, 0.4);
+  border-radius: 50%;
+  background-color: #EEF2FF;
+  color: #4F46E5;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: 700;
-  font-family: var(--font-mono);
   flex-shrink: 0;
 }
 
@@ -211,7 +191,7 @@
 .user-account-name {
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #0F172A;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -219,12 +199,11 @@
 
 .user-account-role {
   font-size: 11px;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
+  color: #64748B;
 }
 
 .user-account-chevron {
-  color: var(--text-muted);
+  color: #94A3B8;
   flex-shrink: 0;
 }
 
@@ -249,9 +228,8 @@
     display: block;
     position: fixed;
     inset: 0;
-    background-color: rgba(6, 9, 19, 0.8);
-    backdrop-filter: blur(4px);
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(2px);
     z-index: 39;
   }
 }
-

@@ -48,14 +48,14 @@
 .pi-title {
   font-size: 24px;
   font-weight: 800;
-  color: #F8FAFC;
+  color: #0F172A;
   margin: 0;
   letter-spacing: -0.02em;
 }
 
 .pi-subtitle {
   font-size: 13px;
-  color: #94A3B8;
+  color: #64748B;
   margin: 0;
 }
 
@@ -70,12 +70,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 7px 12px;
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
   white-space: nowrap;
 }
 
@@ -83,20 +83,20 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 7px 14px;
   font-size: 13px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #0F172A;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .pi-action-btn:hover {
-  background-color: rgba(19, 28, 49, 0.6);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
 }
 
 /* ── Summary / KPI Cards (Row of 3) ── */
@@ -113,8 +113,8 @@
 }
 
 .pi-summary-card {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   padding: 18px 20px;
   display: flex;
@@ -125,7 +125,7 @@
 }
 
 .pi-summary-card:hover {
-  border-color: rgba(0, 240, 255, 0.3);
+  border-color: #CBD5E1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
@@ -163,13 +163,13 @@
 .pi-summary-label {
   font-size: 12px;
   font-weight: 500;
-  color: #94A3B8;
+  color: #64748B;
 }
 
 .pi-summary-value {
   font-size: 26px;
   font-weight: 800;
-  color: #F8FAFC;
+  color: #0F172A;
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
@@ -181,8 +181,8 @@
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 10px;
   padding: 12px 16px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -192,8 +192,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(19, 28, 49, 0.6);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 8px 12px;
   flex: 1;
@@ -203,7 +203,7 @@
 }
 
 .pi-search-box:focus-within {
-  background-color: rgba(13, 21, 38, 0.85);
+  background-color: #FFFFFF;
   border-color: #4F46E5;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.08);
 }
@@ -218,7 +218,7 @@
   border: none;
   outline: none;
   font-size: 13px;
-  color: #F8FAFC;
+  color: #0F172A;
   width: 100%;
 }
 
@@ -234,12 +234,12 @@
 
 .pi-filter-select {
   appearance: none;
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   padding: 8px 32px 8px 12px;
   font-size: 13px;
-  color: #F8FAFC;
+  color: #0F172A;
   font-weight: 500;
   cursor: pointer;
   outline: none;
@@ -247,7 +247,7 @@
 }
 
 .pi-filter-select:hover {
-  border-color: rgba(0, 240, 255, 0.3);
+  border-color: #CBD5E1;
 }
 
 .pi-filter-select:focus {
@@ -284,7 +284,7 @@
 /* ── Showing Range Text ── */
 .pi-showing-text {
   font-size: 13px;
-  color: #94A3B8;
+  color: #64748B;
   font-weight: 500;
   margin: 0;
 }
@@ -314,8 +314,8 @@
 }
 
 .pi-modal-card {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   max-width: 640px;
   width: 100%;
@@ -340,8 +340,8 @@
 
 /* ── Table Container ── */
 .pi-table-card {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -362,12 +362,12 @@
 }
 
 .pi-table thead th {
-  background-color: rgba(19, 28, 49, 0.6);
-  color: #94A3B8;
+  background-color: #F8FAFC;
+  color: #64748B;
   font-size: 12px;
   font-weight: 600;
   padding: 12px 14px;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.14);
+  border-bottom: 1px solid #E2E8F0;
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -378,7 +378,7 @@
 }
 
 .pi-table thead th.sortable:hover {
-  color: #F8FAFC;
+  color: #0F172A;
 }
 
 .pi-table tbody tr {
@@ -392,16 +392,16 @@
 }
 
 .pi-table tbody tr:hover {
-  background-color: rgba(19, 28, 49, 0.6);
+  background-color: #F8FAFC;
 }
 
 .pi-table tbody tr.selected {
-  background-color: rgba(19, 28, 49, 0.5);
+  background-color: #F1F5F9;
 }
 
 .pi-table td {
   padding: 12px 14px;
-  color: #F8FAFC;
+  color: #0F172A;
   vertical-align: middle;
 }
 
@@ -409,7 +409,7 @@
   width: 16px;
   height: 16px;
   border-radius: 4px;
-  border: 1px solid rgba(0, 240, 255, 0.3);
+  border: 1px solid #CBD5E1;
   cursor: pointer;
   accent-color: #4F46E5;
 }
@@ -424,7 +424,7 @@
 .pi-product-name {
   font-size: 13px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #0F172A;
   max-width: 240px;
   white-space: nowrap;
   overflow: hidden;
@@ -433,13 +433,13 @@
 
 .pi-product-sku {
   font-size: 11px;
-  color: #94A3B8;
+  color: #64748B;
   font-family: var(--font-mono);
 }
 
 .pi-category-cell,
 .pi-store-cell {
-  color: rgba(0, 240, 255, 0.3);
+  color: #475569;
   font-size: 13px;
   white-space: nowrap;
 }
@@ -447,7 +447,7 @@
 .pi-price-cell {
   font-size: 13px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #0F172A;
   text-align: right;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -455,7 +455,7 @@
 
 .pi-cost-margin-cell {
   font-size: 13px;
-  color: rgba(0, 240, 255, 0.3);
+  color: #475569;
   text-align: right;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -469,7 +469,7 @@
 .pi-stock-cell {
   font-size: 13px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #0F172A;
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
@@ -501,13 +501,13 @@
 }
 
 .pi-status-badge.discontinued {
-  background-color: rgba(19, 28, 49, 0.5);
-  color: #94A3B8;
+  background-color: #F1F5F9;
+  color: #64748B;
 }
 
 .pi-last-updated-cell {
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
   white-space: nowrap;
 }
 
@@ -520,9 +520,9 @@
 }
 
 .pi-view-btn {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
-  color: #F8FAFC;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
   border-radius: 6px;
   padding: 4px 10px;
   font-size: 12px;
@@ -532,8 +532,8 @@
 }
 
 .pi-view-btn:hover {
-  background-color: rgba(19, 28, 49, 0.6);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
 }
 
 .pi-view-caret {
@@ -552,8 +552,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
-  border-top: 1px solid rgba(56, 189, 248, 0.14);
-  background-color: rgba(13, 21, 38, 0.85);
+  border-top: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -568,9 +568,9 @@
   width: 32px;
   height: 32px;
   border-radius: 6px;
-  border: 1px solid rgba(56, 189, 248, 0.14);
-  background-color: rgba(13, 21, 38, 0.85);
-  color: rgba(0, 240, 255, 0.3);
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  color: #475569;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -584,8 +584,8 @@
 }
 
 .pi-page-arrow:not(:disabled):hover {
-  background-color: rgba(19, 28, 49, 0.6);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
 }
 
 .pi-page-num-btn {
@@ -593,9 +593,9 @@
   height: 32px;
   padding: 0 8px;
   border-radius: 6px;
-  border: 1px solid rgba(56, 189, 248, 0.14);
-  background-color: rgba(13, 21, 38, 0.85);
-  color: rgba(0, 240, 255, 0.3);
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  color: #475569;
   font-size: 12px;
   font-weight: 600;
   display: flex;
@@ -606,8 +606,8 @@
 }
 
 .pi-page-num-btn:hover {
-  background-color: rgba(19, 28, 49, 0.6);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
 }
 
 .pi-page-num-btn.active {
@@ -621,25 +621,25 @@
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
 }
 
 .pi-per-page-select {
   appearance: none;
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 6px;
   padding: 4px 24px 4px 8px;
   font-size: 12px;
-  color: #F8FAFC;
+  color: #0F172A;
   font-weight: 500;
   cursor: pointer;
 }
 
 /* ── Product Details Drawer (Right Panel) ── */
 .pi-details-drawer {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   display: flex;
@@ -661,14 +661,14 @@
 .pi-drawer-title {
   font-size: 16px;
   font-weight: 700;
-  color: #F8FAFC;
+  color: #0F172A;
   margin: 0;
 }
 
 .pi-drawer-close-btn {
   background: transparent;
   border: none;
-  color: #94A3B8;
+  color: #64748B;
   cursor: pointer;
   padding: 4px;
   border-radius: 4px;
@@ -679,8 +679,8 @@
 }
 
 .pi-drawer-close-btn:hover {
-  background-color: rgba(19, 28, 49, 0.5);
-  color: #F8FAFC;
+  background-color: #F1F5F9;
+  color: #0F172A;
 }
 
 /* Drawer Hero Card */
@@ -701,19 +701,19 @@
 .pi-hero-name {
   font-size: 16px;
   font-weight: 700;
-  color: #F8FAFC;
+  color: #0F172A;
 }
 
 .pi-hero-sku {
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
   font-family: var(--font-mono);
 }
 
 /* Drawer Navigation Tabs */
 .pi-drawer-tabs {
   display: flex;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.14);
+  border-bottom: 1px solid #E2E8F0;
   padding: 0 20px;
   gap: 20px;
 }
@@ -722,14 +722,14 @@
   padding: 10px 0;
   font-size: 13px;
   font-weight: 600;
-  color: #94A3B8;
+  color: #64748B;
   cursor: pointer;
   position: relative;
   transition: color 0.15s ease;
 }
 
 .pi-drawer-tab:hover {
-  color: #F8FAFC;
+  color: #0F172A;
 }
 
 .pi-drawer-tab.active {
@@ -765,7 +765,7 @@
 .pi-section-title {
   font-size: 13px;
   font-weight: 700;
-  color: #F8FAFC;
+  color: #0F172A;
   margin: 0;
 }
 
@@ -778,11 +778,11 @@
 }
 
 .pi-detail-label {
-  color: #94A3B8;
+  color: #64748B;
 }
 
 .pi-detail-value {
-  color: #F8FAFC;
+  color: #0F172A;
   font-weight: 500;
   text-align: right;
 }
@@ -809,11 +809,11 @@
 /* Drawer Footer Actions */
 .pi-drawer-footer {
   padding: 16px 20px;
-  border-top: 1px solid rgba(56, 189, 248, 0.14);
+  border-top: 1px solid #E2E8F0;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: rgba(13, 21, 38, 0.85);
+  background-color: #FFFFFF;
 }
 
 .pi-btn-go-optimize {
@@ -839,9 +839,9 @@
 }
 
 .pi-btn-drawer-close {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
-  color: #F8FAFC;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
   border-radius: 8px;
   padding: 9px 16px;
   font-size: 13px;
@@ -851,8 +851,8 @@
 }
 
 .pi-btn-drawer-close:hover {
-  background-color: rgba(19, 28, 49, 0.6);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
 }
 
 .pi-modal-card .pi-drawer-body {
@@ -873,4 +873,3 @@
   color: #94A3B8;
   font-size: 13px;
 }
-

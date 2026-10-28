@@ -24,14 +24,14 @@
 .executive-title {
   font-size: 26px;
   font-weight: 800;
-  color: #F8FAFC;
+  color: #0F172A;
   letter-spacing: -0.02em;
   margin: 0;
 }
 
 .executive-subtitle {
   font-size: 14px;
-  color: #94A3B8;
+  color: #64748B;
   margin: 0;
   font-weight: 400;
 }
@@ -47,10 +47,10 @@
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
   padding: 6px 12px;
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 8px;
   white-space: nowrap;
 }
@@ -84,20 +84,20 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: rgba(13, 21, 38, 0.85);
-  color: #F8FAFC;
+  background-color: #FFFFFF;
+  color: #0F172A;
   font-size: 13px;
   font-weight: 600;
   padding: 9px 16px;
   border-radius: 8px;
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  border: 1px solid #E2E8F0;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .btn-refresh-overview:hover {
-  background-color: rgba(19, 28, 49, 0.6);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
 }
 
 /* 4 KPI Cards Grid */
@@ -120,8 +120,8 @@
 }
 
 .kpi-card {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   padding: 20px 22px;
   display: flex;
@@ -133,7 +133,7 @@
 }
 
 .kpi-card:hover {
-  border-color: rgba(0, 240, 255, 0.3);
+  border-color: #CBD5E1;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transform: translateY(-1px);
 }
@@ -172,13 +172,13 @@
 .kpi-title {
   font-size: 13px;
   font-weight: 500;
-  color: rgba(0, 240, 255, 0.3);
+  color: #475569;
 }
 
 .kpi-value {
   font-size: 30px;
   font-weight: 800;
-  color: #F8FAFC;
+  color: #0F172A;
   margin: 16px 0 10px;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -211,7 +211,7 @@
 }
 
 .kpi-subtext.muted {
-  color: #94A3B8;
+  color: #64748B;
   font-size: 12px;
 }
 
@@ -252,8 +252,8 @@
 
 /* Next Steps Card */
 .next-steps-card {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   padding: 24px;
   display: flex;
@@ -264,13 +264,13 @@
 .section-card-title {
   font-size: 16px;
   font-weight: 700;
-  color: #F8FAFC;
+  color: #0F172A;
   margin: 0;
 }
 
 .section-card-subtitle {
   font-size: 13px;
-  color: #94A3B8;
+  color: #64748B;
   margin: 4px 0 20px;
 }
 
@@ -285,16 +285,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 16px;
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.15s ease;
 }
 
 .next-step-item:hover {
-  background-color: rgba(19, 28, 49, 0.6);
-  border-color: rgba(0, 240, 255, 0.3);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
   transform: translateX(2px);
 }
 
@@ -325,12 +325,12 @@
 .next-step-title {
   font-size: 14px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #0F172A;
 }
 
 .next-step-desc {
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
 }
 
 .next-step-chevron {
@@ -345,8 +345,8 @@
 
 /* Recent Activity Card */
 .recent-activity-card {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   padding: 24px;
   display: flex;
@@ -448,7 +448,7 @@
 .activity-title {
   font-size: 13px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #0F172A;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -456,7 +456,7 @@
 
 .activity-meta {
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -472,7 +472,7 @@
 
 .activity-date {
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
   white-space: nowrap;
 }
 
@@ -484,8 +484,8 @@
 
 /* Smarter Markdown Decisions Banner */
 .smarter-decisions-banner {
-  background-color: rgba(13, 21, 38, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.14);
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   padding: 24px 28px;
   display: flex;
@@ -524,13 +524,13 @@
 .banner-title {
   font-size: 15px;
   font-weight: 700;
-  color: #F8FAFC;
+  color: #0F172A;
   margin: 0;
 }
 
 .banner-subtitle {
   font-size: 12px;
-  color: #94A3B8;
+  color: #64748B;
   line-height: 1.45;
   margin: 0;
 }
@@ -563,16 +563,15 @@
 .workflow-step-name {
   font-size: 12px;
   font-weight: 700;
-  color: #F8FAFC;
+  color: #0F172A;
 }
 
 .workflow-step-action {
   font-size: 11px;
-  color: #94A3B8;
+  color: #64748B;
 }
 
 .workflow-step-arrow {
-  color: rgba(0, 240, 255, 0.3);
+  color: #CBD5E1;
   font-size: 18px;
 }
-
