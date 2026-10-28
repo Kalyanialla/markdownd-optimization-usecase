@@ -71,7 +71,7 @@ def list_recommendations(
 def approve_recommendation(
     recommendation_id: UUID,
     payload: ApprovalActionRequest = ApprovalActionRequest(),
-    current_user: User = Depends(require_roles(["approver", "admin"])),
+    current_user: User = Depends(require_roles(["analyst", "approver", "admin"])),
     db: Session = Depends(get_db)
 ):
     """
@@ -87,7 +87,7 @@ def approve_recommendation(
 def reject_recommendation(
     recommendation_id: UUID,
     payload: RejectionActionRequest,
-    current_user: User = Depends(require_roles(["approver", "admin"])),
+    current_user: User = Depends(require_roles(["analyst", "approver", "admin"])),
     db: Session = Depends(get_db)
 ):
     """

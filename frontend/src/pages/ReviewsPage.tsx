@@ -127,7 +127,7 @@ export const ReviewsPage: React.FC = () => {
   const [actionSuccess, setActionSuccess] = useState<string | null>(null);
 
   // RBAC permission check
-  const canApprove = user?.role === 'admin' || user?.role === 'approver';
+  const canApprove = user?.role === 'admin' || user?.role === 'approver' || user?.role === 'analyst';
 
   // Currency helper
   const fmt = (n?: number | null): string => {
