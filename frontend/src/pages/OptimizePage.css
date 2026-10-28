@@ -4,7 +4,7 @@
    ============================================================ */
 
 .opt-page-wrapper {
-  padding: 24px 32px 64px;
+  padding: 0 0 32px;
   max-width: 1560px;
   margin: 0 auto;
   display: flex;
@@ -378,7 +378,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 8px 16px;
@@ -534,7 +534,7 @@
 .opt-candidate-modal-footer {
   padding: 16px 24px;
   border-top: 1px solid var(--border-subtle);
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -653,7 +653,7 @@
 
 .opt-candidate-table th {
   padding: 10px 14px;
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   font-size: 11px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -681,15 +681,16 @@
 }
 
 .opt-candidate-table tr.clickable-row:hover {
-  background-color: #F8FAFC;
+  background-color: rgba(19, 28, 49, 0.6);
 }
 
 .opt-candidate-table tr.selected-row {
-  background-color: #EEF2FF;
+  background-color: rgba(0, 240, 255, 0.12) !important;
+  box-shadow: inset 3px 0 0 #00F0FF;
 }
 
 .opt-candidate-table tr.selected-row:hover {
-  background-color: #E0E7FF;
+  background-color: rgba(0, 240, 255, 0.18) !important;
 }
 
 /* Candidate Radio / Checkbox */
@@ -713,7 +714,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: rgba(13, 21, 38, 0.85);
 }
 
 /* Table Badges & Tags */
@@ -725,23 +726,24 @@
 }
 
 .opt-best-badge {
-  padding: 1px 6px;
+  padding: 2px 7px;
   border-radius: 4px;
-  background: #EDE9FE;
-  color: #6366F1;
+  background: rgba(168, 85, 247, 0.2);
+  color: #C084FC;
+  border: 1px solid rgba(168, 85, 247, 0.4);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 }
 
 .opt-badge-eligible {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 3px 8px;
-  background: #DCFCE7;
-  color: #166534;
-  border: 1px solid #BBF7D0;
+  padding: 3px 10px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
   border-radius: 12px;
   font-size: 11px;
   font-weight: 600;
@@ -751,10 +753,10 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 3px 8px;
-  background: #FEE2E2;
-  color: #991B1B;
-  border: 1px solid #FECACA;
+  padding: 3px 10px;
+  background: rgba(244, 63, 94, 0.15);
+  color: #FB7185;
+  border: 1px solid rgba(244, 63, 94, 0.35);
   border-radius: 12px;
   font-size: 11px;
   font-weight: 600;
@@ -831,7 +833,7 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #F1F5F9;
+  background: rgba(19, 28, 49, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1150,7 +1152,8 @@
 .opt-modal-footer {
   padding: 14px 24px;
   border-top: 1px solid var(--border-subtle);
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   display: flex;
   justify-content: flex-end;
 }
+

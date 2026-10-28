@@ -4,7 +4,7 @@
    ============================================================ */
 
 .reviews-page-wrapper {
-  padding: 24px 32px 64px;
+  padding: 0 0 32px;
   max-width: 1560px;
   margin: 0 auto;
   display: flex;
@@ -359,7 +359,7 @@
 
 .reviews-table th {
   padding: 11px 14px;
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   font-size: 11px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -387,7 +387,7 @@
 }
 
 .reviews-table tr.clickable-row:hover {
-  background-color: #F8FAFC;
+  background-color: rgba(19, 28, 49, 0.6);
 }
 
 .reviews-table tr.selected-row {
@@ -557,7 +557,7 @@
 
 /* Price Comparison Banner */
 .reviews-drawer-price-card {
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 14px 18px;
@@ -596,7 +596,7 @@
 }
 
 .reviews-drawer-kpi-box {
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 12px 14px;
@@ -629,7 +629,7 @@
 
 .reviews-accordion-header {
   padding: 10px 14px;
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -663,7 +663,7 @@
   justify-content: center;
   gap: 6px;
   padding: 11px;
-  background: #FFFFFF;
+  background: rgba(13, 21, 38, 0.85);
   border: 1px solid #FECACA;
   border-radius: var(--radius-md);
   color: #DC2626;
@@ -750,8 +750,9 @@
 .reviews-modal-footer {
   padding: 14px 24px;
   border-top: 1px solid var(--border-subtle);
-  background: #F8FAFC;
+  background: rgba(19, 28, 49, 0.6);
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 }
+

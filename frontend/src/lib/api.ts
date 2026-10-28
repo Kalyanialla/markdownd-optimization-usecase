@@ -2,28 +2,47 @@
  * Industrial API Client for UC-RT-03 Markdown Optimization
  * 
  * Session Strategy & Security Architecture:
- * - Primary: SameSite=Lax HttpOnly cookies (access_token, refresh_token) set by FastAPI backend.
- *   This mitigates browser XSS exfiltration of tokens.
- * - In-Memory Fallback: Active access token kept in JavaScript memory during active tab lifecycle.
+ * - Primary: HttpOnly cookies and persisted local session tokens.
+ * - In-Memory & Persistent Session: Access and refresh tokens stored and synchronized
+ *   so that page reloads maintain authentication seamlessly.
  * - Refresh Token Rotation: Refreshed seamlessly on 401 Unauthorized responses.
- * - Threat Model: Tokens are NEVER persisted in unencrypted localStorage to eliminate persistent
- *   storage leakage.
  */
 
 import type { ApiErrorResponse, TokenResponse } from '../types/auth';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+const BASE_URL = import.meta.env.VITE_API_URL || '/api/v1';
 
-let inMemoryAccessToken: string | null = null;
+let inMemoryAccessToken: string | null = typeof window !== 'undefined' ? localStorage.getItem('access_token') : null;
+let inMemoryRefreshToken: string | null = typeof window !== 'undefined' ? localStorage.getItem('refresh_token') : null;
 let isRefreshing = false;
 let refreshSubscribers: ((token: string) => void)[] = [];
 
-export function setAccessToken(token: string | null): void {
+export function setAccessToken(token: string | null, refreshToken?: string | null): void {
   inMemoryAccessToken = token;
+  if (typeof window !== 'undefined') {
+    if (token) {
+      localStorage.setItem('access_token', token);
+    } else {
+      localStorage.removeItem('access_token');
+    }
+
+    if (refreshToken !== undefined) {
+      inMemoryRefreshToken = refreshToken;
+      if (refreshToken) {
+        localStorage.setItem('refresh_token', refreshToken);
+      } else {
+        localStorage.removeItem('refresh_token');
+      }
+    }
+  }
 }
 
 export function getAccessToken(): string | null {
-  return inMemoryAccessToken;
+  return inMemoryAccessToken || (typeof window !== 'undefined' ? localStorage.getItem('access_token') : null);
+}
+
+export function getRefreshToken(): string | null {
+  return inMemoryRefreshToken || (typeof window !== 'undefined' ? localStorage.getItem('refresh_token') : null);
 }
 
 function onRefreshed(token: string): void {
@@ -60,9 +79,10 @@ export async function apiClient<T>(
     headers.set('Content-Type', 'application/json');
   }
 
-  // Attach in-memory bearer token if present
-  if (inMemoryAccessToken && !headers.has('Authorization')) {
-    headers.set('Authorization', `Bearer ${inMemoryAccessToken}`);
+  // Attach in-memory or persisted bearer token if present
+  const currentToken = getAccessToken();
+  if (currentToken && !headers.has('Authorization')) {
+    headers.set('Authorization', `Bearer ${currentToken}`);
   }
 
   // Always include credentials so HttpOnly cookies are transported
@@ -84,15 +104,17 @@ export async function apiClient<T>(
     if (!isRefreshing) {
       isRefreshing = true;
       try {
+        const storedRefreshToken = getRefreshToken();
         const refreshResponse = await fetch(`${BASE_URL}/auth/refresh`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',
+          body: JSON.stringify({ refresh_token: storedRefreshToken || undefined }),
         });
 
         if (refreshResponse.ok) {
           const tokenData: TokenResponse = await refreshResponse.json();
-          setAccessToken(tokenData.access_token);
+          setAccessToken(tokenData.access_token, tokenData.refresh_token);
           isRefreshing = false;
           onRefreshed(tokenData.access_token);
 
@@ -101,13 +123,13 @@ export async function apiClient<T>(
           return apiClient<T>(endpoint, { ...options, headers });
         } else {
           isRefreshing = false;
-          setAccessToken(null);
+          setAccessToken(null, null);
           window.dispatchEvent(new CustomEvent('auth:session-expired'));
           throw new ApiError(401, 'Session expired. Please log in again.', 'SESSION_EXPIRED');
         }
       } catch (err) {
         isRefreshing = false;
-        setAccessToken(null);
+        setAccessToken(null, null);
         window.dispatchEvent(new CustomEvent('auth:session-expired'));
         throw new ApiError(401, 'Session expired. Please log in again.', 'SESSION_EXPIRED');
       }

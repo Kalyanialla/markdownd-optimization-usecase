@@ -14,6 +14,7 @@ class OptimizationRunCreateRequest(BaseModel):
     planning_horizon_days: int = Field(7, ge=1, le=30, description="Planning horizon in days")
     objective_mode: Optional[str] = Field("MAX_PROFIT", description="Optimization objective: 'MAX_PROFIT' or 'CLEAR_INVENTORY'")
     clearance_holding_cost_rate: Optional[float] = Field(0.15, ge=0.0, le=1.0, description="Holding and obsolescence rate as a fraction of unit cost")
+    simulated_stock: Optional[int] = Field(None, ge=0, le=100000, description="Optional custom stock override for clearance simulation")
     idempotency_key: Optional[str] = Field(None, description="Optional idempotency key for safe retries")
 
 

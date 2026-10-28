@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import type { User, LoginPayload, SignupPayload, TokenResponse } from '../types/auth';
-import { apiClient, setAccessToken } from '../lib/api';
+import { apiClient, setAccessToken, getAccessToken } from '../lib/api';
 
 interface AuthContextType {
   user: User | null;
@@ -15,16 +15,41 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(() => {
+    if (typeof window !== 'undefined') {
+      const cached = localStorage.getItem('auth_user');
+      if (cached && getAccessToken()) {
+        try {
+          return JSON.parse(cached);
+        } catch {
+          return null;
+        }
+      }
+    }
+    return null;
+  });
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const fetchProfile = useCallback(async () => {
+    const token = getAccessToken();
+    if (!token) {
+      setUser(null);
+      setIsLoading(false);
+      return;
+    }
+
     try {
       const currentUser = await apiClient<User>('/auth/me');
       setUser(currentUser);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('auth_user', JSON.stringify(currentUser));
+      }
     } catch {
       setUser(null);
-      setAccessToken(null);
+      setAccessToken(null, null);
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('auth_user');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -35,7 +60,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     const handleSessionExpired = () => {
       setUser(null);
-      setAccessToken(null);
+      setAccessToken(null, null);
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('auth_user');
+      }
     };
 
     window.addEventListener('auth:session-expired', handleSessionExpired);
@@ -49,8 +77,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       method: 'POST',
       body: JSON.stringify(payload),
     });
-    setAccessToken(res.access_token);
+    setAccessToken(res.access_token, res.refresh_token);
     setUser(res.user);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('auth_user', JSON.stringify(res.user));
+    }
   };
 
   const signup = async (payload: SignupPayload) => {
@@ -58,8 +89,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       method: 'POST',
       body: JSON.stringify(payload),
     });
-    setAccessToken(res.access_token);
+    setAccessToken(res.access_token, res.refresh_token);
     setUser(res.user);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('auth_user', JSON.stringify(res.user));
+    }
   };
 
   const logout = async () => {
@@ -71,8 +105,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } catch (err) {
       console.warn('Logout request warning:', err);
     } finally {
-      setAccessToken(null);
+      setAccessToken(null, null);
       setUser(null);
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('auth_user');
+      }
     }
   };
 
@@ -104,3 +141,4 @@ export const useAuth = (): AuthContextType => {
   }
   return context;
 };
+

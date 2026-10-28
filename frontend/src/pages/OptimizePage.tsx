@@ -897,8 +897,7 @@ export const OptimizePage: React.FC = () => {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  background: '#F8FAFC',
-                  border: '1px solid var(--border-subtle)',
+                  background: 'rgba(13, 21, 38, 0.9)', backdropFilter: 'blur(16px)', border: '1px solid rgba(56, 189, 248, 0.25)', boxShadow: '0 8px 30px rgba(0,0,0,0.6)',
                   borderRadius: 'var(--radius-md)',
                   padding: '12px 18px',
                   marginTop: '12px',
@@ -1129,8 +1128,8 @@ export const OptimizePage: React.FC = () => {
                         </div>
                       </div>
                       {(selectedCandidate.explanation || selectedCandidate.score_details?.explanation) && (
-                        <div style={{ marginTop: '14px', padding: '10px 14px', background: '#F1F5F9', borderRadius: '6px', fontSize: '12px', color: '#334155', lineHeight: '1.5' }}>
-                          <strong style={{ display: 'block', marginBottom: '2px', color: '#0F172A' }}>Recommendation Rationale:</strong>
+                        <div style={{ marginTop: '14px', padding: '10px 14px', background: 'rgba(19, 28, 49, 0.7)', border: '1px solid rgba(56, 189, 248, 0.2)', borderRadius: '6px', fontSize: '12px', color: '#CBD5E1', lineHeight: '1.5' }}>
+                          <strong style={{ display: 'block', marginBottom: '2px', color: '#F8FAFC' }}>Recommendation Rationale:</strong>
                           {selectedCandidate.explanation || selectedCandidate.score_details?.explanation}
                         </div>
                       )}

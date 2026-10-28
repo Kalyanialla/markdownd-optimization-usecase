@@ -69,29 +69,48 @@ class OptimizationService:
         if df is not None:
             match = df[(df["sku_id"].str.upper() == sku_id.upper()) & (df["store_id"].str.upper() == store_id.upper())]
             if not match.empty:
-                row = match.sort_values(by="date", ascending=False).iloc[0].copy()
-                hist_stock = float(row.get("opening_stock_units", 0))
-                row["_inventory_source"] = "HISTORICAL_PROCESSED_DATASET"
+                if product and product.current_stock > 0:
+                    active_match = match[match["opening_stock_units"] >= 10]
+                    if not active_match.empty:
+                        idx = int(len(active_match) * 0.70)
+                        row = active_match.sort_values(by="date").iloc[idx].copy()
+                    else:
+                        pos_match = match[match["opening_stock_units"] > 0]
+                        row = (pos_match.sort_values(by="date").iloc[-1] if not pos_match.empty else match.iloc[-1]).copy()
+                    row["opening_stock_units"] = float(product.current_stock)
+                    row["_inventory_source"] = "ALIGNED_ACTIVE_INVENTORY"
+                else:
+                    zero_match = match[match["opening_stock_units"] == 0]
+                    row = (zero_match.sort_values(by="date").iloc[-1] if not zero_match.empty else match.iloc[-1]).copy()
+                    row["opening_stock_units"] = 0.0
+                    row["_inventory_source"] = "OUT_OF_STOCK_TERMINAL_ROW"
+
                 row["_inventory_effective_date"] = str(row.get("date"))
                 row["_catalog_stock_reference"] = float(product.current_stock) if product else None
-                # If historical row has 0 stock but current product catalog has available stock, sync it transparently
-                if hist_stock <= 0 and product and product.current_stock > 0:
-                    row["opening_stock_units"] = float(product.current_stock)
-                    row["_inventory_source"] = "CATALOG_ACTIVE_INVENTORY_SYNCED"
                 return row
 
             # Match on SKU alone across any store
             sku_match = df[df["sku_id"].str.upper() == sku_id.upper()]
             if not sku_match.empty:
-                row = sku_match.sort_values(by="date", ascending=False).iloc[0].copy()
+                if product and product.current_stock > 0:
+                    active_match = sku_match[sku_match["opening_stock_units"] >= 10]
+                    if not active_match.empty:
+                        idx = int(len(active_match) * 0.70)
+                        row = active_match.sort_values(by="date").iloc[idx].copy()
+                    else:
+                        pos_match = sku_match[sku_match["opening_stock_units"] > 0]
+                        row = (pos_match.sort_values(by="date").iloc[-1] if not pos_match.empty else sku_match.iloc[-1]).copy()
+                    row["opening_stock_units"] = float(product.current_stock)
+                    row["_inventory_source"] = "CROSS_STORE_ACTIVE_INVENTORY"
+                else:
+                    zero_match = sku_match[sku_match["opening_stock_units"] == 0]
+                    row = (zero_match.sort_values(by="date").iloc[-1] if not zero_match.empty else sku_match.iloc[-1]).copy()
+                    row["opening_stock_units"] = 0.0
+                    row["_inventory_source"] = "CROSS_STORE_OOS_ROW"
+
                 row["store_id"] = store_id
-                hist_stock = float(row.get("opening_stock_units", 0))
-                row["_inventory_source"] = "CROSS_STORE_DATASET_FALLBACK"
                 row["_inventory_effective_date"] = str(row.get("date"))
                 row["_catalog_stock_reference"] = float(product.current_stock) if product else None
-                if hist_stock <= 0 and product and product.current_stock > 0:
-                    row["opening_stock_units"] = float(product.current_stock)
-                    row["_inventory_source"] = "CATALOG_ACTIVE_INVENTORY_SYNCED"
                 return row
 
         # Synthesize from product catalog
@@ -146,6 +165,10 @@ class OptimizationService:
 
         optimizer = get_optimizer()
         baseline_row = OptimizationService.get_baseline_row(sku_clean, store_clean)
+        if getattr(request, "simulated_stock", None) is not None:
+            baseline_row = baseline_row.copy()
+            baseline_row["opening_stock_units"] = float(request.simulated_stock)
+            baseline_row["_inventory_source"] = "USER_SIMULATED_OVERRIDE"
 
         # Execute optimization
         obj_mode = getattr(request, "objective_mode", "MAX_PROFIT") or "MAX_PROFIT"
