@@ -844,7 +844,7 @@ export const ReviewsPage: React.FC = () => {
                         <strong>{fmtDateTime(selectedRec.reviewed_at)}</strong>
                       </div>
                     )}
-                    {selectedRec.review_reason && (
+                    {selectedRec.status === 'REJECTED' && selectedRec.review_reason && (
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <span style={{ color: 'var(--text-secondary)' }}>Reviewer reason</span>
                         <strong style={{ color: '#DC2626' }}>{selectedRec.review_reason}</strong>

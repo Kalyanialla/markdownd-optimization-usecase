@@ -755,3 +755,13 @@
   justify-content: flex-end;
   gap: 10px;
 }
+
+/* Disabled action states */
+.reviews-reject-btn:disabled,
+.reviews-approve-btn:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+  filter: grayscale(0.6);
+  box-shadow: none !important;
+  transform: none !important;
+}
