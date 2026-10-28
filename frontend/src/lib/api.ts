@@ -10,7 +10,7 @@
 
 import type { ApiErrorResponse, TokenResponse } from '../types/auth';
 
-const BASE_URL = import.meta.env.VITE_API_URL || '/api/v1';
+const BASE_URL = import.meta.env.VITE_API_URL || '/markdown-optimizer/api/v1';
 
 let inMemoryAccessToken: string | null = typeof window !== 'undefined' ? localStorage.getItem('access_token') : null;
 let inMemoryRefreshToken: string | null = typeof window !== 'undefined' ? localStorage.getItem('refresh_token') : null;

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ReviewsPage — Human-in-the-Loop Pricing Approval Queue
  * Redesigned to match the enterprise pricing reference design.
  * 
@@ -655,7 +655,7 @@ export const ReviewsPage: React.FC = () => {
         <div className="reviews-modal-overlay" onClick={() => setIsDetailModalOpen(false)}>
           <div 
             className="reviews-modal-card" 
-            style={{ maxWidth: '640px', maxHeight: '90vh', overflowY: 'auto' }}
+            style={{ maxWidth: '640px', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -678,7 +678,7 @@ export const ReviewsPage: React.FC = () => {
               </button>
             </div>
 
-            <div className="reviews-modal-body" style={{ gap: '16px' }}>
+            <div className="reviews-modal-body" style={{ gap: '16px', overflowY: 'auto', flex: 1 }}>
               {/* Status Pill */}
               <div>
                 {selectedRec.status === 'PENDING_APPROVAL' && (
@@ -856,7 +856,7 @@ export const ReviewsPage: React.FC = () => {
             </div>
 
             {/* Modal Footer / Actions */}
-            <div className="reviews-modal-footer" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="reviews-modal-footer" style={{ justifyContent: 'space-between', alignItems: 'center', flexShrink: 0, position: 'sticky', bottom: 0, zIndex: 10, background: '#F8FAFC' }}>
               <button
                 type="button"
                 className="reviews-refresh-btn"

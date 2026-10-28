@@ -14,7 +14,7 @@ import { AuditPage } from './pages/AuditPage';
 
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/markdown-optimizer">
       <AuthProvider>
         <Routes>
           {/* Public Auth Routes */}
@@ -47,4 +47,3 @@ export const App: React.FC = () => {
 };
 
 export default App;
-

@@ -1,0 +1,37 @@
+services:
+  markdown-optimizer-backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: markdown-optimizer-backend
+    restart: unless-stopped
+    expose:
+      - "9124"
+    environment:
+      - APP_ENV=production
+      - DEBUG=False
+      - API_V1_PREFIX=/api/v1
+      - DATABASE_URL=postgresql+psycopg://postgres:Dhani2710@uptodate_db:5432/markdown_optimization_db
+      - FRONTEND_ORIGIN=http://localhost
+    networks:
+      - markdown-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  markdown-optimizer-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: markdown-optimizer-frontend
+    restart: unless-stopped
+    expose:
+      - "9123"
+    networks:
+      - markdown-network
+    depends_on:
+      - markdown-optimizer-backend
+
+networks:
+  markdown-network:
+    name: dispute-chargeback_default
+    external: true
