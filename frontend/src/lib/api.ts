@@ -8,7 +8,7 @@
  * - Refresh Token Rotation: Refreshed seamlessly on 401 Unauthorized responses.
  */
 
-import type { ApiErrorResponse, TokenResponse } from '../types/auth';
+import type { TokenResponse } from '../types/auth';
 
 const BASE_URL = import.meta.env.VITE_API_URL || '/markdown-optimizer/api/v1';
 
@@ -95,7 +95,7 @@ export async function apiClient<T>(
   let response: Response;
   try {
     response = await fetch(url, fetchOptions);
-  } catch (err) {
+  } catch {
     throw new ApiError(0, 'Unable to connect to optimization server. Verify backend is running.', 'NETWORK_ERROR');
   }
 
@@ -127,7 +127,7 @@ export async function apiClient<T>(
           window.dispatchEvent(new CustomEvent('auth:session-expired'));
           throw new ApiError(401, 'Session expired. Please log in again.', 'SESSION_EXPIRED');
         }
-      } catch (err) {
+      } catch {
         isRefreshing = false;
         setAccessToken(null, null);
         window.dispatchEvent(new CustomEvent('auth:session-expired'));
@@ -148,21 +148,33 @@ export async function apiClient<T>(
 
   // Parse response
   if (!response.ok) {
-    let errorData: ApiErrorResponse | null = null;
+    let errorData: any = null;
     let message = 'An error occurred during the request.';
     let code = `HTTP_${response.status}`;
 
     try {
       errorData = await response.json();
-      if (errorData?.error) {
-        message = errorData.error.message || message;
+      if (errorData?.error?.message) {
+        message = errorData.error.message;
         code = errorData.error.code || code;
+      } else if (typeof errorData?.detail === 'string') {
+        message = errorData.detail;
+      } else if (Array.isArray(errorData?.detail)) {
+        // FastAPI / Pydantic validation errors: [{"loc": ["body", "email"], "msg": "..."}]
+        message = errorData.detail
+          .map((d: any) => {
+            const loc = Array.isArray(d.loc) ? d.loc.filter((part: any) => part !== 'body').join('.') : '';
+            return loc ? `${loc}: ${d.msg}` : (d.msg || JSON.stringify(d));
+          })
+          .join('; ');
+      } else if (errorData?.message) {
+        message = errorData.message;
       }
     } catch {
-      message = response.statusText || message;
+      message = response.statusText ? `HTTP ${response.status}: ${response.statusText}` : `Request failed with HTTP ${response.status}`;
     }
 
-    throw new ApiError(response.status, message, code, errorData?.error?.details);
+    throw new ApiError(response.status, message, code, errorData?.error?.details || errorData?.detail);
   }
 
   // 204 No Content

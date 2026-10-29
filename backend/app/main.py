@@ -14,6 +14,8 @@ if _workspace_root not in sys.path:
 from fastapi import FastAPI, Depends, status, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.exceptions import RequestValidationError
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from sqlalchemy.orm import Session
 
 from backend.app.core.config import settings
@@ -48,6 +50,8 @@ app.add_middleware(
         "http://127.0.0.1:5176",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        "http://localhost:9123",
+        "http://127.0.0.1:9123",
     ],
     allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$",
     allow_credentials=True,
@@ -65,6 +69,46 @@ async def app_exception_handler(request: Request, exc: AppException):
                 "code": exc.error_code,
                 "message": exc.detail,
                 "extra": exc.extra,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "path": request.url.path
+            }
+        }
+    )
+
+
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    errors = exc.errors()
+    error_messages = []
+    for err in errors:
+        loc = ".".join([str(l) for l in err.get("loc", []) if l != "body"])
+        msg = err.get("msg", "Invalid value")
+        error_messages.append(f"{loc}: {msg}" if loc else msg)
+    combined_message = "; ".join(error_messages) or "Validation failed on request data."
+    logger.warning(f"Validation error on {request.url.path}: {combined_message}")
+    return JSONResponse(
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        content={
+            "error": {
+                "code": "VALIDATION_ERROR",
+                "message": combined_message,
+                "extra": {"details": errors},
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "path": request.url.path
+            }
+        }
+    )
+
+
+@app.exception_handler(StarletteHTTPException)
+async def http_exception_handler(request: Request, exc: StarletteHTTPException):
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={
+            "error": {
+                "code": f"HTTP_{exc.status_code}",
+                "message": exc.detail if isinstance(exc.detail, str) else "An HTTP error occurred.",
+                "extra": {},
                 "timestamp": datetime.now(timezone.utc).isoformat(),
                 "path": request.url.path
             }
