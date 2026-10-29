@@ -136,7 +136,7 @@ export const OptimizePage: React.FC = () => {
   const navigate = useNavigate();
 
   // URL Parameters
-  const paramSku = searchParams.get('sku') || 'SKU-0002';
+  const paramSku = searchParams.get('sku') || 'SKU-0021';
   const paramStore = searchParams.get('store') || 'STORE-01';
 
   const [skuId, setSkuId] = useState(paramSku);
@@ -244,16 +244,18 @@ export const OptimizePage: React.FC = () => {
     }
   }, [searchParams, loadRunById]);
 
-  // Fetch Product Details
-  const fetchProduct = useCallback(async (sku: string) => {
+  // Fetch Product Details (with Store inventory alignment)
+  const fetchProduct = useCallback(async (sku: string, currentStore?: string) => {
     setIsLoadingProduct(true);
     try {
-      const data = await apiClient<ProductItem>(`/products/${sku.trim().toUpperCase()}`);
+      const sParam = currentStore ? `?store_id=${encodeURIComponent(currentStore)}` : '';
+      const data = await apiClient<ProductItem>(`/products/${sku.trim().toUpperCase()}${sParam}`);
       setProduct(data);
     } catch (err: any) {
       console.warn('Could not fetch single product details, checking list:', err);
       try {
-        const listData = await apiClient<{ items: ProductItem[] }>(`/products?q=${sku.trim()}&page_size=1`);
+        const sParam = currentStore ? `&store=${encodeURIComponent(currentStore)}` : '';
+        const listData = await apiClient<{ items: ProductItem[] }>(`/products?q=${sku.trim()}${sParam}&page_size=1`);
         if (listData.items && listData.items.length > 0) {
           setProduct(listData.items[0]);
         } else {
@@ -284,7 +286,7 @@ export const OptimizePage: React.FC = () => {
   // Fetch product and policy when skuId or storeId changes
   useEffect(() => {
     if (skuId) {
-      fetchProduct(skuId);
+      fetchProduct(skuId, storeId);
       fetchEffectivePolicy(skuId, storeId, product?.category);
     }
   }, [skuId, storeId, fetchProduct, fetchEffectivePolicy, product?.category]);
@@ -563,6 +565,48 @@ export const OptimizePage: React.FC = () => {
         </div>
       </div>
 
+{/* Out of Stock Warning Banner */}
+      {product && product.current_stock === 0 && (
+        <div style={{
+          background: '#FEF2F2',
+          border: '1px solid #FCA5A5',
+          borderRadius: '8px',
+          padding: '12px 16px',
+          marginBottom: '16px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '12px',
+          color: '#991B1B',
+          fontSize: '13px'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <AlertTriangle size={18} color="#DC2626" style={{ flexShrink: 0 }} />
+            <span>
+              <strong>Out of Stock at {STORE_LABELS[storeId] ?? storeId}:</strong> {product.product_name} ({product.sku_id}) currently has <strong>0 available units</strong> at this location. Because inventory is 0, the optimizer calculates $0.00 sales revenue and profit.
+            </span>
+          </div>
+          {product.store_id && product.store_id !== storeId && (
+            <button
+              type="button"
+              onClick={() => handleStoreChange(product.store_id!)}
+              style={{
+                background: '#DC2626',
+                color: '#fff',
+                border: 'none',
+                padding: '6px 14px',
+                borderRadius: '6px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              Switch to {STORE_LABELS[product.store_id] ?? product.store_id}
+            </button>
+          )}
+        </div>
+      )}
+
       {/* ── Optimization Configuration Card ── */}
       <div className="opt-config-card">
         <div className="opt-config-header">
@@ -788,6 +832,25 @@ export const OptimizePage: React.FC = () => {
             </div>
           ) : (
             <>
+              {currentRun && Number(currentRun.input_snapshot?.opening_stock_units ?? 0) === 0 && (
+                <div style={{
+                  background: '#EFF6FF',
+                  border: '1px solid #BFDBFE',
+                  borderRadius: '8px',
+                  padding: '10px 14px',
+                  marginBottom: '12px',
+                  color: '#1E40AF',
+                  fontSize: '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}>
+                  <Info size={16} style={{ flexShrink: 0 }} />
+                  <span>
+                    <strong>Notice:</strong> Financial values show $0.00 because available inventory is <strong>0 units</strong> at {STORE_LABELS[storeId] ?? storeId} (Out of Stock). Switch to an in-stock store or product to model active clearance sales lift.
+                  </span>
+                </div>
+              )}
               <div className="opt-table-responsive">
                 <table className="opt-candidate-table">
                   <thead>
@@ -1459,7 +1522,10 @@ export const OptimizePage: React.FC = () => {
                     key={p.sku_id}
                     onClick={() => {
                       setSkuId(p.sku_id);
-                      setSearchParams({ sku: p.sku_id, store: storeId });
+                      // If selected SKU has a primary store with active stock, sync store
+                      const targetStore = (p.current_stock > 0 && p.store_id) ? p.store_id : storeId;
+                      setStoreId(targetStore);
+                      setSearchParams({ sku: p.sku_id, store: targetStore });
                       setIsSkuModalOpen(false);
                       setCurrentRun(null);
                       setSelectedCandidateId(null);
