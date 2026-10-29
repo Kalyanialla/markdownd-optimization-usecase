@@ -21,7 +21,8 @@ from sqlalchemy.orm import Session
 from backend.app.core.config import settings
 from backend.app.core.logging import setup_logging, logger
 from backend.app.core.exceptions import AppException
-from backend.app.db.session import get_db, check_db_connectivity
+from backend.app.db.session import get_db, check_db_connectivity, engine
+from backend.app.db.models import Base
 from backend.app.api.v1.router import api_router
 
 setup_logging()
@@ -32,6 +33,16 @@ app = FastAPI(
     docs_url=f"{settings.API_V1_PREFIX}/docs",
     openapi_url=f"{settings.API_V1_PREFIX}/openapi.json",
 )
+
+# Startup event to ensure database tables are created in the centralized database
+@app.on_event("startup")
+def on_startup():
+    try:
+        logger.info("Verifying and initializing database schema...")
+        Base.metadata.create_all(bind=engine)
+        logger.info("Database schema initialized successfully.")
+    except Exception as exc:
+        logger.error(f"Database schema initialization warning: {exc}")
 
 # Support standard /api/v1 prefix, /markdown-optimizer/api/v1, and proxy /v1 rewrite variants
 app.include_router(api_router, prefix=settings.API_V1_PREFIX)
@@ -117,6 +128,23 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
                 "code": f"HTTP_{exc.status_code}",
                 "message": exc.detail if isinstance(exc.detail, str) else "An HTTP error occurred.",
                 "extra": {},
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "path": request.url.path
+            }
+        }
+    )
+
+
+@app.exception_handler(Exception)
+async def generic_exception_handler(request: Request, exc: Exception):
+    logger.error(f"Unhandled exception on {request.url.path}: {exc}", exc_info=True)
+    return JSONResponse(
+        status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        content={
+            "error": {
+                "code": "INTERNAL_SERVER_ERROR",
+                "message": f"Server error: {str(exc)}",
+                "extra": {"exception_type": type(exc).__name__},
                 "timestamp": datetime.now(timezone.utc).isoformat(),
                 "path": request.url.path
             }
