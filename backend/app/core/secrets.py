@@ -67,7 +67,8 @@ def load_secrets_into_environment(
 ) -> None:
     """
     Retrieves secrets and populates os.environ.
-    If override_existing is True, Secrets Manager values take precedence over local .env.
+    Handles composite fields like individual DB credentials (DB_HOST, DB_USER, etc.)
+    constructing DATABASE_URL dynamically if provided separately.
     """
     sec_name = os.getenv("AWS_SECRET_NAME", secret_name)
     reg_name = os.getenv("AWS_REGION", region_name)
@@ -77,3 +78,16 @@ def load_secrets_into_environment(
         if value is not None:
             if override_existing or key not in os.environ:
                 os.environ[key] = str(value)
+
+    # Support individual database credential keys returned from secret manager
+    if "DATABASE_URL" not in secrets and not os.getenv("DATABASE_URL"):
+        db_user = secrets.get("DB_USER") or secrets.get("POSTGRES_USER")
+        db_pass = secrets.get("DB_PASSWORD") or secrets.get("POSTGRES_PASSWORD")
+        db_host = secrets.get("DB_HOST") or secrets.get("POSTGRES_HOST")
+        db_port = secrets.get("DB_PORT") or secrets.get("POSTGRES_PORT") or "5432"
+        db_name = secrets.get("DB_NAME") or secrets.get("POSTGRES_DB")
+
+        if db_user and db_pass and db_host and db_name:
+            os.environ["DATABASE_URL"] = (
+                f"postgresql+psycopg://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
+            )
