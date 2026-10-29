@@ -33,15 +33,19 @@ app = FastAPI(
     openapi_url=f"{settings.API_V1_PREFIX}/openapi.json",
 )
 
-# Support standard /api/v1 prefix and reverse-proxy /markdown-optimizer/api/v1 prefix
+# Support standard /api/v1 prefix, /markdown-optimizer/api/v1, and proxy /v1 rewrite variants
 app.include_router(api_router, prefix=settings.API_V1_PREFIX)
 app.include_router(api_router, prefix=f"/markdown-optimizer{settings.API_V1_PREFIX}")
+app.include_router(api_router, prefix=f"{settings.API_V1_PREFIX}/v1")
+app.include_router(api_router, prefix=f"/markdown-optimizer{settings.API_V1_PREFIX}/v1")
 
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         settings.FRONTEND_ORIGIN,
+        "https://usecases.mlangles.ai",
+        "http://usecases.mlangles.ai",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:5174",
@@ -57,7 +61,7 @@ app.add_middleware(
         "http://localhost:9124",
         "http://127.0.0.1:9124",
     ],
-    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$",
+    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1|usecases\.mlangles\.ai)(:[0-9]+)?$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -124,6 +128,8 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 @app.get("/markdown-optimizer/health", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/health", tags=["System Health"])
 @app.get(f"/markdown-optimizer{settings.API_V1_PREFIX}/health", tags=["System Health"])
+@app.get(f"{settings.API_V1_PREFIX}/v1/health", tags=["System Health"])
+@app.get(f"/markdown-optimizer{settings.API_V1_PREFIX}/v1/health", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/system/health", tags=["System Health"])
 async def health_check():
     """
@@ -141,6 +147,8 @@ async def health_check():
 @app.get("/markdown-optimizer/ready", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/ready", tags=["System Health"])
 @app.get(f"/markdown-optimizer{settings.API_V1_PREFIX}/ready", tags=["System Health"])
+@app.get(f"{settings.API_V1_PREFIX}/v1/ready", tags=["System Health"])
+@app.get(f"/markdown-optimizer{settings.API_V1_PREFIX}/v1/ready", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/system/ready", tags=["System Health"])
 async def readiness_check(db: Session = Depends(get_db)):
     """
