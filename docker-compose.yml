@@ -13,6 +13,7 @@ services:
       API_V1_PREFIX: /api/v1
       AWS_REGION: us-east-1
       AWS_SECRET_NAME: Markdown-Intelligence-Console
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://postgres:Dhani2710@host.docker.internal:5432/markdown_optimization_db}
       FRONTEND_ORIGIN: http://localhost
     networks:
       - dispute-network
