@@ -1,6 +1,6 @@
 """
 Application configuration using Pydantic Settings.
-Loads configuration from environment variables and backend/.env file.
+Loads configuration from AWS Secrets Manager, environment variables, and root .env file.
 """
 
 import os
@@ -8,14 +8,23 @@ from pathlib import Path
 from typing import Optional
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from backend.app.core.secrets import load_secrets_into_environment
+
 BACKEND_DIR = Path(__file__).resolve().parents[2]
 PROJECT_ROOT = BACKEND_DIR.parent
-ENV_FILE = BACKEND_DIR / ".env"
+ENV_FILE = PROJECT_ROOT / ".env"
+BACKEND_ENV_FILE = BACKEND_DIR / ".env"
+
+# Fetch secrets from AWS Secrets Manager (Key: 'Markdown-Intelligence-Console') with graceful fallback
+load_secrets_into_environment(
+    secret_name=os.getenv("AWS_SECRET_NAME", "Markdown-Intelligence-Console"),
+    region_name=os.getenv("AWS_REGION", "us-east-1")
+)
 
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=str(ENV_FILE) if ENV_FILE.exists() else None,
+        env_file=[str(ENV_FILE), str(BACKEND_ENV_FILE)],
         env_file_encoding="utf-8",
         extra="ignore"
     )
@@ -24,6 +33,10 @@ class Settings(BaseSettings):
     APP_NAME: str = "Markdown Intelligence Console"
     API_V1_PREFIX: str = "/api/v1"
     DEBUG: bool = True
+
+    # AWS Secrets Manager Configuration
+    AWS_SECRET_NAME: str = "Markdown-Intelligence-Console"
+    AWS_REGION: str = "us-east-1"
 
     # Primary Database Configuration
     DATABASE_URL: str = "postgresql+psycopg://markdown_app:replace_password@localhost:5432/markdown_optimization"

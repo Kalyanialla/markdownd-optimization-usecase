@@ -13,3 +13,7 @@ dist/
 *.log
 .pytest_cache/
 
+.env
+.env.local
+.env.*.local
+*.db
