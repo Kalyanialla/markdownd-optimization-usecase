@@ -5,8 +5,8 @@ services:
       dockerfile: backend/Dockerfile
     container_name: markdown-optimizer-backend
     restart: unless-stopped
-    expose:
-      - "9124"
+    ports:
+      - "9124:9124"
     environment:
       APP_ENV: production
       DEBUG: "False"
@@ -25,8 +25,8 @@ services:
       dockerfile: Dockerfile
     container_name: markdown-optimizer-frontend
     restart: unless-stopped
-    expose:
-      - "9123"
+    ports:
+      - "9123:9123"
     networks:
       - dispute-network
     depends_on:
