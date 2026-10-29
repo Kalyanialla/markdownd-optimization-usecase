@@ -17,8 +17,9 @@ FROM nginx:alpine
 # Copy custom nginx configuration listening on 9123
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy production build assets
+# Copy production build assets to both /usr/share/nginx/html and /usr/share/nginx/html/markdown-optimizer
 COPY --from=build /app/dist /usr/share/nginx/html
+RUN mkdir -p /usr/share/nginx/html/markdown-optimizer && cp -r /usr/share/nginx/html/assets /usr/share/nginx/html/markdown-optimizer/ && cp /usr/share/nginx/html/index.html /usr/share/nginx/html/markdown-optimizer/
 
 # Frontend listens internally on port 9123 per Docker routing rules
 EXPOSE 9123
