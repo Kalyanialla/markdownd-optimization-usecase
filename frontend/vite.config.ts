@@ -23,13 +23,13 @@ export default defineConfig(({ mode }) => {
       host: true,
       proxy: {
         '/markdown-optimizer/api': {
-          target: 'http://localhost:8000',
+          target: 'http://localhost:9124',
           changeOrigin: true,
           secure: false,
           rewrite: (path) => path.replace(/^\/markdown-optimizer/, ''),
         },
         '/api': {
-          target: 'http://localhost:8000',
+          target: 'http://localhost:9124',
           changeOrigin: true,
           secure: false,
         },

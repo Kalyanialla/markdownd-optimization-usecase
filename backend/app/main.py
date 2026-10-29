@@ -33,7 +33,9 @@ app = FastAPI(
     openapi_url=f"{settings.API_V1_PREFIX}/openapi.json",
 )
 
+# Support standard /api/v1 prefix and reverse-proxy /markdown-optimizer/api/v1 prefix
 app.include_router(api_router, prefix=settings.API_V1_PREFIX)
+app.include_router(api_router, prefix=f"/markdown-optimizer{settings.API_V1_PREFIX}")
 
 # CORS Middleware
 app.add_middleware(
@@ -52,6 +54,8 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "http://localhost:9123",
         "http://127.0.0.1:9123",
+        "http://localhost:9124",
+        "http://127.0.0.1:9124",
     ],
     allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$",
     allow_credentials=True,
@@ -117,7 +121,9 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 
 
 @app.get("/health", tags=["System Health"])
+@app.get("/markdown-optimizer/health", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/health", tags=["System Health"])
+@app.get(f"/markdown-optimizer{settings.API_V1_PREFIX}/health", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/system/health", tags=["System Health"])
 async def health_check():
     """
@@ -132,7 +138,9 @@ async def health_check():
 
 
 @app.get("/ready", tags=["System Health"])
+@app.get("/markdown-optimizer/ready", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/ready", tags=["System Health"])
+@app.get(f"/markdown-optimizer{settings.API_V1_PREFIX}/ready", tags=["System Health"])
 @app.get(f"{settings.API_V1_PREFIX}/system/ready", tags=["System Health"])
 async def readiness_check(db: Session = Depends(get_db)):
     """
