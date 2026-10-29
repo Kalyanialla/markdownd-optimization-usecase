@@ -1,0 +1,203 @@
+deploy:
+  stage: deploy
+  environment: $CI_COMMIT_BRANCH
+
+  tags:
+    - self-hosted
+
+  image:
+    name: amazon/aws-cli:2.17.0
+    entrypoint: [""]
+
+  id_tokens:
+    GITLAB_OIDC_TOKEN:
+      aud: https://sts.amazonaws.com
+
+  script:
+    # ==========================================
+    # 1. AWS OIDC AUTHENTICATION
+    # ==========================================
+    - |
+      echo ""
+      echo "========================================"
+      echo "       AWS AUTHENTICATION"
+      echo "========================================"
+
+      CREDS=$(aws sts assume-role-with-web-identity \
+        --role-arn "$AWS_ROLE_ARN" \
+        --role-session-name "gitlab-deploy-$CI_PIPELINE_ID" \
+        --web-identity-token "$GITLAB_OIDC_TOKEN" \
+        --duration-seconds 3600 \
+        --query 'Credentials.[AccessKeyId,SecretAccessKey,SessionToken]' \
+        --output text) || {
+          echo "ERROR: Failed to assume AWS role"
+          exit 1
+        }
+
+      if [ -z "$CREDS" ] || [ "$CREDS" = "None" ]; then
+        echo "ERROR: AWS credentials were not returned"
+        exit 1
+      fi
+
+      export AWS_ACCESS_KEY_ID=$(echo "$CREDS" | awk '{print $1}')
+      export AWS_SECRET_ACCESS_KEY=$(echo "$CREDS" | awk '{print $2}')
+      export AWS_SESSION_TOKEN=$(echo "$CREDS" | awk '{print $3}')
+
+      aws sts get-caller-identity
+
+      echo "AWS authentication successful"
+
+    # ==========================================
+    # 2. ZIP SOURCE CODE
+    # ==========================================
+    - |
+      echo ""
+      echo "========================================"
+      echo "       PACKAGING SOURCE CODE"
+      echo "========================================"
+
+      git archive --format=zip -o Markdown-Intelligence-Console.zip HEAD
+
+      echo "Source code packaged successfully"
+
+    # ==========================================
+    # 3. UPLOAD TO S3
+    # ==========================================
+    - |
+      echo ""
+      echo "========================================"
+      echo "       UPLOADING TO S3"
+      echo "========================================"
+
+      aws s3 cp \
+        Markdown-Intelligence-Console.zip \
+        s3://datasynaize/source-code/Markdown-Intelligence-Console.zip
+
+      echo "S3 upload completed successfully"
+
+    # ==========================================
+    # 4. DEPLOY ON EC2 THROUGH SSM
+    # ==========================================
+    # 4. DEPLOY ON EC2 THROUGH SSM
+    # ==========================================
+    - |
+      echo "========================================"
+      echo "       STARTING EC2 DEPLOYMENT"
+      echo "========================================"
+
+      COMMAND_ID=$(aws ssm send-command \
+        --instance-ids "$EC2_INSTANCE_ID" \
+        --document-name "AWS-RunShellScript" \
+        --timeout-seconds 2400 \
+        --parameters 'commands=[
+          "set -Ee",
+          "APP_DIR=/home/ubuntu/use-cases/Markdown-Intelligence-Console",
+          "echo ===== INSTALLING UNZIP =====",
+          "sudo apt-get install -y unzip || sudo yum install -y unzip",
+          "echo ===== DOWNLOADING SOURCE =====",
+          "/usr/local/bin/aws s3 cp s3://datasynaize/source-code/Markdown-Intelligence-Console.zip /tmp/Markdown-Intelligence-Console.zip",
+          "sudo mkdir -p /home/ubuntu/use-cases/Markdown-Intelligence-Console",
+          "sudo unzip -oq /tmp/Markdown-Intelligence-Console.zip -d /home/ubuntu/use-cases/Markdown-Intelligence-Console",
+          "sudo chown -R ubuntu:ubuntu /home/ubuntu/use-cases/Markdown-Intelligence-Console",
+          "rm -f /tmp/Markdown-Intelligence-Console.zip",
+          "cd /home/ubuntu/use-cases/Markdown-Intelligence-Console",
+          "echo ===== DOCKER COMPOSE VALIDATION =====",
+          "sudo docker compose config -q",
+          "echo ===== BUILDING AND STARTING CONTAINERS =====",
+          "if ! sudo docker compose up -d --build; then echo ===== COMPOSE STATUS =====; sudo docker compose ps -a || true; echo ===== COMPOSE LOGS =====; sudo docker compose logs --tail=200 || true; exit 1; fi",
+          "echo ===== WAITING FOR CONTAINERS =====",
+          "for i in $(seq 1 24); do FAILED=0; COUNT=0; for ID in $(sudo docker compose ps -q); do COUNT=$((COUNT+1)); STATE=$(sudo docker inspect --format \"{{.State.Status}}\" \"$ID\"); HEALTH=$(sudo docker inspect --format \"{{if .State.Health}}{{.State.Health.Status}}{{else}}none{{end}}\" \"$ID\"); if [ \"$STATE\" != running ] || { [ \"$HEALTH\" != healthy ] && [ \"$HEALTH\" != none ]; }; then FAILED=1; fi; done; if [ \"$COUNT\" -gt 0 ] && [ \"$FAILED\" -eq 0 ]; then break; fi; sleep 5; done",
+          "echo ===== FINAL CONTAINER STATUS =====",
+          "sudo docker compose ps -a",
+          "echo ===== BACKEND AND FRONTEND SERVICE LOGS =====",
+          "sudo docker compose logs --tail=200 2>&1 || true",
+          "echo ===== CONTAINER HEALTH CHECK =====",
+          "FAILED=0; COUNT=0; for ID in $(sudo docker compose ps -q); do COUNT=$((COUNT+1)); NAME=$(sudo docker inspect --format \"{{.Name}}\" \"$ID\"); STATE=$(sudo docker inspect --format \"{{.State.Status}}\" \"$ID\"); HEALTH=$(sudo docker inspect --format \"{{if .State.Health}}{{.State.Health.Status}}{{else}}none{{end}}\" \"$ID\"); echo \"$NAME state=$STATE health=$HEALTH\"; if [ \"$STATE\" != running ] || { [ \"$HEALTH\" != healthy ] && [ \"$HEALTH\" != none ]; }; then FAILED=1; fi; done; if [ \"$COUNT\" -eq 0 ] || [ \"$FAILED\" -ne 0 ]; then echo ===== FAILED CONTAINER DIAGNOSTICS =====; sudo docker compose ps -a || true; sudo docker compose logs --tail=200 2>&1 || true; exit 1; fi",
+          "echo DEPLOYMENT COMMANDS COMPLETED SUCCESSFULLY"
+        ]' \
+        --timeout-seconds 2400 \
+        --query 'Command.CommandId' \
+        --output text) || {
+          echo "ERROR: Failed to submit deployment command to SSM"
+          exit 1
+        }
+
+      echo "SSM Command ID: $COMMAND_ID"
+
+    # ==========================================
+    # 5. WAIT AND PRINT REMOTE LOGS
+    # ==========================================
+    - |
+      echo "========================================"
+      echo "       WAITING FOR REMOTE DEPLOYMENT"
+      echo "========================================"
+
+      STATUS="Pending"
+
+      for i in $(seq 1 180); do
+        RESULT=$(aws ssm get-command-invocation \
+          --command-id "$COMMAND_ID" \
+          --instance-id "$EC2_INSTANCE_ID" \
+          --region us-east-1 \
+          --output json 2>/dev/null) || {
+            echo "[$i/180] SSM invocation not available yet"
+            sleep 10
+            continue
+          }
+
+        STATUS=$(printf '%s' "$RESULT" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("Status","Unknown"))')
+        DETAILS=$(printf '%s' "$RESULT" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("StatusDetails",""))')
+
+        echo "[$i/180] SSM status=$STATUS details=$DETAILS"
+
+        case "$STATUS" in
+          Success|Failed|TimedOut|Cancelled|Cancelling)
+            break
+            ;;
+        esac
+
+        sleep 10
+      done
+
+      echo "========================================"
+      echo "       FINAL REMOTE EXECUTION OUTPUT"
+      echo "========================================"
+
+      RESULT=$(aws ssm get-command-invocation \
+        --command-id "$COMMAND_ID" \
+        --instance-id "$EC2_INSTANCE_ID" \
+        --region us-east-1 \
+        --output json 2>&1) || {
+          echo "ERROR: Could not retrieve final SSM output"
+          echo "$RESULT"
+          echo "Check the EC2 instance and SSM agent if the command is still running."
+          exit 1
+        }
+
+      printf '%s' "$RESULT" | python3 -c '
+      import json,sys
+      r=json.load(sys.stdin)
+      print("Status:",r.get("Status"))
+      print("Details:",r.get("StatusDetails"))
+      print("Response code:",r.get("ResponseCode"))
+      print("\n========== STANDARD OUTPUT ==========")
+      print(r.get("StandardOutputContent") or "No standard output returned.")
+      print("\n========== STANDARD ERROR ==========")
+      print(r.get("StandardErrorContent") or "No standard error returned.")
+      '
+
+      STATUS=$(printf '%s' "$RESULT" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("Status","Unknown"))')
+
+      if [ "$STATUS" != "Success" ]; then
+        echo "DEPLOYMENT FAILED: SSM status=$STATUS"
+        exit 1
+      fi
+
+      echo "DEPLOYMENT SUCCESSFUL"           
+
+
+  after_script:
+    - rm -f Markdown-Intelligence-Console.zip
+
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev"'
